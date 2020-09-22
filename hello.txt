@@ -1,4 +1,4 @@
 Hello, World!
 I am so excited to be joining the Jupiter Cohort at Codeup!
 During my time at Codeup I will be learning all about Full-Stack Web Development.
-Full-Stack Web Development includes: HTML, CSS, Git, JavaScript, TDD, Web Design, jQuery, Java I, Java II, MySQL, Java III, Spring, and Capstone.
+The Full-Stack Web Development program at Codeup includes: HTML, CSS, Git, JavaScript, TDD, Web Design, jQuery, Java I, Java II, MySQL, Java III, Spring, and Capstone.
