@@ -5,3 +5,4 @@ The Full-Stack Web Development program at Codeup includes: HTML, CSS, Git, JavaS
 The program is approximately 22 weeks in length.
 The program starts September 2020.
 The program ends March 2021.
+The program is currently taking place online via Zoom.
