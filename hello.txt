@@ -1,3 +1,3 @@
 Hello, World!
-
 I am so excited to be joining the Jupiter Cohort at Codeup!
+During my time at Codeup I will be learning all about Full-Stack Web Development.
