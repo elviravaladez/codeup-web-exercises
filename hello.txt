@@ -3,3 +3,4 @@ I am so excited to be joining the Jupiter Cohort at Codeup!
 During my time at Codeup I will be learning all about Full-Stack Web Development.
 The Full-Stack Web Development program at Codeup includes: HTML, CSS, Git, JavaScript, TDD, Web Design, jQuery, Java I, Java II, MySQL, Java III, Spring, and Capstone.
 The program is approximately 22 weeks in length.
+The program starts September 2020.
