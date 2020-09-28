@@ -44,3 +44,35 @@ they pay you a different rate per hour. Google pays $400, Amazon $380, and Faceb
 will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
 */
 
+var googlePayRate = Number(prompt("What is your Google pay rate?"));
+console.log("Google pay rate is $" + googlePayRate);
+
+var amazonPayRate = Number(prompt("What is your Amazon pay rate?"));
+console.log("Amazon pay rate is $" + amazonPayRate);
+
+var facebookPayRate = Number(prompt("What is your Facebook pay rate?"));
+console.log("Facebook pay rate is $" + facebookPayRate);
+
+var googleHours = Number(prompt("How many hours did you work at Google this week?"));
+console.log("Google Hours: " + googleHours);
+
+var amazonHours = Number(prompt("How many hours did you work at Amazon this week?"));
+console.log("Amazon Hours: " + amazonHours);
+
+var facebookHours = Number(prompt("How many hours did you work at Facebook this week?"));
+console.log("Facebook Hours: " + facebookHours);
+
+var googlePayment= googlePayRate * googleHours;
+var amazonPayment = amazonPayRate * amazonHours;
+var facebookPayment = facebookPayRate * facebookHours;
+
+var totalPayment = googlePayment + amazonPayment + facebookPayment;
+
+var customerPayment = alert("Your total payment will be $" + totalPayment + ".");
+console.log("Customer will receive $" + totalPayment + " in payment");
+
+/*
+Scenario 3:
+A student can be enrolled in a class only if the class is not full and
+the class schedule does not conflict with her current schedule.
+*/
