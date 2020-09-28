@@ -2,12 +2,13 @@
 
 console.log("Hello from external JavaScript");
 
+//1. Alert - welcome to my website
+
 alert("Welcome to my Website!");
 
-var userResponse = prompt("What is your favorite color?");
-console.log("User's favorite color is: " + userResponse);
-
-alert("Great, " + userResponse + " is my favorite color too!");
+//2. User prompt for favorite color
+var userColor = prompt("What is your favorite color?");
+alert("Great, " + userColor + " is my favorite color too!");
 
 //Exercise 3: Complete exercise 3 from the previous lesson,
 // but write your code in the external.js file instead of in the console.
@@ -16,51 +17,33 @@ alert("Great, " + userResponse + " is my favorite color too!");
 
 
 /*
-Scenario 1: You have rented some movies for your kids: The little mermaid (for 3 days),
+3.1 Scenario 1: You have rented some movies for your kids: The little mermaid (for 3 days),
 Brother Bear (for 5 days, they love it), and Hercules (1 day, you don't know yet if they're going to like it).
 If price for a movie per day is $3, how much will you have to pay?
 */
 
 var rentalRate= Number(prompt("How much is the daily movie rental rate?"));
-console.log("The daily movie rental rate is: $" + rentalRate);
 
 var daysRentedLittleMermaid = Number(prompt("For how many days did you rent The Little Mermaid?"));
-console.log("Little Mermaid days: " + daysRentedLittleMermaid);
-
 var daysRentedBrotherBear = Number(prompt("For how many days did you rent Brother Bear?"));
-console.log("Brother Bear days: " + daysRentedBrotherBear);
-
 var daysRentedHercules = Number(prompt("For how many days did you rent Hercules?"));
-console.log("Hercules days: " + daysRentedHercules);
 
 var totalPrice = ((daysRentedLittleMermaid + daysRentedBrotherBear + daysRentedHercules) * rentalRate);
-
-var customerTotalPrice = alert("You will pay $" + totalPrice + ".");
-console.log("Customer will pay $" + totalPrice);
+var customerTotalPrice = alert("You will pay $" + totalPrice.toFixed(2) + ".");
 
 /*
-Scenario 2: Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook,
+3.2 Scenario 2: Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook,
 they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350. How much
 will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
 */
 
 var googlePayRate = Number(prompt("What is your Google pay rate?"));
-console.log("Google pay rate is $" + googlePayRate);
-
 var amazonPayRate = Number(prompt("What is your Amazon pay rate?"));
-console.log("Amazon pay rate is $" + amazonPayRate);
-
 var facebookPayRate = Number(prompt("What is your Facebook pay rate?"));
-console.log("Facebook pay rate is $" + facebookPayRate);
 
 var googleHours = Number(prompt("How many hours did you work at Google this week?"));
-console.log("Google Hours: " + googleHours);
-
 var amazonHours = Number(prompt("How many hours did you work at Amazon this week?"));
-console.log("Amazon Hours: " + amazonHours);
-
 var facebookHours = Number(prompt("How many hours did you work at Facebook this week?"));
-console.log("Facebook Hours: " + facebookHours);
 
 var googlePayment= googlePayRate * googleHours;
 var amazonPayment = amazonPayRate * amazonHours;
@@ -68,11 +51,24 @@ var facebookPayment = facebookPayRate * facebookHours;
 
 var totalPayment = googlePayment + amazonPayment + facebookPayment;
 
-var customerPayment = alert("Your total payment will be $" + totalPayment + ".");
-console.log("Customer will receive $" + totalPayment + " in payment");
+var customerPayment = alert("Your total payment will be $" + totalPayment.toFixed(2) + ".");
 
 /*
-Scenario 3:
+3.3 Scenario 3:
 A student can be enrolled in a class only if the class is not full and
 the class schedule does not conflict with her current schedule.
 */
+
+//if class is full (true) we can enroll
+var classNotFull = confirm("Class is not full"); //boolean
+
+//if class schedule does not conflict (true), we can enroll
+var noConflictsWithSchedule = confirm("Schedules do not conflict"); //boolean
+
+//true && true = student can enroll
+//true && false = student cannot enroll b/c of schedule conflict
+//false && true = student cannot enroll b/c class is full
+//false && false = student cannot enroll b/c class is full & there is a schedule conflict
+var enrollInClass = classNotFull && noConflictsWithSchedule;
+
+alert("Student enrolled: " + enrollInClass);
