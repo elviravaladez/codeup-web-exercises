@@ -9,6 +9,10 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
+function sayHello(name) {
+    return "Hello, " + name + "!";
+}
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -17,12 +21,19 @@
  * console.log 'helloMessage' to check your work
  */
 
+sayHello("Elvira");
+var helloMessage = sayHello("Elvira");
+console.log(helloMessage);
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
+var myName = "Elvira";
+sayHello(myName);
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -46,6 +57,15 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+function isTwo(num) {
+    return num === 2;
+}
+
+isTwo(random);
+
+console.log(isTwo(random));
+
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -58,12 +78,22 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+function calculateTip(tipPercentage, totalBill) {
+    return Number(totalBill * (tipPercentage / 100));
+}
+
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+var checkBill = Number(prompt("What is the bill total?"));
+var checkTip = Number(prompt("What is the tip percentage you would like to tip?"));
+
+var finalTip = calculateTip(checkTip, checkBill);
+var alertTip = Number(alert("Tip: $" + finalTip.toFixed(2)));
 
 /**
  * TODO:
@@ -75,7 +105,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  * Example:
  * > var originalPrice = 100;
  * > var dicountPercent = .2; // 20%
- * > applyDiscount(originalPrice, dicountPercent) // 80
+ * > applyDiscount(originalPrice, discountPercent) // 80
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
