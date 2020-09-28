@@ -88,11 +88,11 @@
 
 	//TODO TOGETHER: Write an alert ---> alert("Message goes here.");
 
-	alert("This is an alert!!!!");
-
-	//TODO: Write an alert with an alert message
-
-
+	// alert("This is an alert!!!!");
+	//
+	// //TODO: Write an alert with an alert message
+	//
+	// alert("This is another alert!!!");
 
 	/*  *******************************
 					Confirm
@@ -100,7 +100,14 @@
 
 
 	//TODO TOGETHER: Write a confirm interaction and console.log the result
-
+	// var userConfirm = confirm("Would you like to exit?");
+	//
+	// console.log(userConfirm);
+	// //when the user selects OK the console will log true
+	// //when the user selects CANCEL the console will log false
+	//
+	// alert("The user selected: " + userConfirm);
+	// //the alert will say true or false
 
 	// TODO: Select the OK option. View the result. Select the cancel option. View the result.
 
@@ -109,8 +116,14 @@
 	 			Prompts
 	 ******************************/
 	// TODO TOGETHER: Write a prompt interaction. Console.log the result
+	var userPrompt = prompt("What is your favorite animal?");
+	console.log(userPrompt);
+	console.log(typeof userPrompt); // will result in a string b/c they are typing in the response
 
-
+	var userNumber = Number(prompt("What is your favorite number?")); //added Number so that the typeof will result in a number, not a string
+	console.log(userNumber);
+	console.log(typeof userNumber); //if you DON'T user Number b/c they are typing in the response
+	//to convert this prompt to number use Number
 
 	// TODO: Write an additional prompt. Console.log the result
 
