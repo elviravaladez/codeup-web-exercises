@@ -72,3 +72,25 @@ var noConflictsWithSchedule = confirm("Schedules do not conflict"); //boolean
 var enrollInClass = classNotFull && noConflictsWithSchedule;
 
 alert("Student enrolled: " + enrollInClass);
+
+/*
+3.4 Scenario 4: A product offer can be applied only if a person buys more than 2 items,
+and the offer has not expired. Premium members do not need to buy a
+specific amount of products.
+ */
+
+//1. Offer has to be valid no matter what
+//2.a If they are a premium member, number of items does not matter
+//2.b If they are NOT a premium member, they must buy more than 2 items  (have to use OR (||)
+
+
+var numberOfItems = Number(prompt("How many items for checkout?")); //Number
+var offerIsValid = confirm("Is the offer valid?"); //boolean
+var isPremiumMember = confirm("Are you a premium member?"); //boolean
+
+// true && (true || false)
+// true && (false || true)
+// false && (true || true)
+var discountApplied = offerIsValid && (isPremiumMember || numberOfItems > 2);
+
+alert("Discount applied: " + discountApplied);
