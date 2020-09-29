@@ -1,7 +1,7 @@
 "use strict";
 
 /* ########################################################################## */
-
+console.log('Note to Elvira: Do not forget the IIFE!');
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
@@ -27,16 +27,76 @@
 //                  will contain a different color every time the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+
+// function analyzeColor(randomColor) {
+//     if(randomColor === 'blue') {
+//         return 'blue is the color of the sky';
+//     } else if(randomColor === 'red') {
+//         return 'red is the color of lipstick';
+//     } else if(randomColor === 'orange') {
+//         return 'orange is the color of a basketball';
+//     } else if(randomColor === 'yellow') {
+//         return 'yellow is the color of a lemon';
+//     } else if(randomColor === 'green') {
+//         return 'green is the color of grass';
+//     } else if(randomColor === 'indigo') {
+//         return 'indigo is the color of my shirt';
+//     } else if(randomColor === 'violet') {
+//         return 'violet is the color of an eggplant';
+//     } else {
+//         return 'not one of the colors defined in the rainbow';
+//     }
+// }
+//
+// console.log(analyzeColor('yellow'));
+// console.log(analyzeColor('purple'));
+// console.log(analyzeColor('green'));
+
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
 
+// console.log(analyzeColor(randomColor));
+
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+function analyzeColor(randomColor){
+    switch(randomColor) {
+        case 'blue':
+            return 'blue is the color of the sky';
+            break;
+        case 'red':
+            return 'red is the color of lipstick';
+            break;
+        case 'orange':
+            return 'orange is the color of a basketball';
+            break;
+        case 'yellow':
+            return 'yellow is the color of a lemon';
+            break;
+        case 'green':
+            return 'green is the color of grass';
+            break;
+        case 'indigo':
+            return 'indigo is the color of my shirt';
+            break;
+        case 'violet':
+            return 'violet is the color of an eggplant';
+            break;
+        default:
+            return 'not one of the colors defined in the rainbow';
+            break;
+    }
+}
+
+console.log(analyzeColor(randomColor));
+
 
 /**
  * TODO:
