@@ -115,5 +115,10 @@
     function applyDiscount(originalPrice, discountPercent) {
         return Number(originalPrice * (1 - discountPercent));
     }
+    //another way
 
+    // function applyDiscount(originalPrice, discountPercent) {
+    //     var discountAmount = originalPrice * discountPercent;
+    //     return (originalPrice - discountAmount).toFixed(2);
+    // }
 })();
