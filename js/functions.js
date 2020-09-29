@@ -80,7 +80,7 @@
      */
 
     function calculateTip(tipPercentage, totalBill) {
-        return Number(totalBill * (tipPercentage / 100));
+        return Number(totalBill * tipPercentage);
     }
 
 
@@ -91,10 +91,11 @@
      * then display the dollar amount they should tip
      */
     var checkBill = Number(prompt("What is the bill total?"));
-    var checkTip = Number(prompt("What is the tip percentage you would like to tip?"));
+    var checkTip = Number(prompt("What is the tip percentage you would like to tip? Enter a number from 1-100"));
+    var tipPercentage = checkTip / 100; //do this to get the decimal when they type in the percentage as a whole number
+    var finalTip = calculateTip(tipPercentage, checkBill).toFixed(2);
 
-    var finalTip = calculateTip(checkTip, checkBill);
-    var alertTip = Number(alert("Tip: $" + finalTip.toFixed(2)));
+    alert("Tip: $" + finalTip);
 
     /**
      * TODO:
