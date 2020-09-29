@@ -27,6 +27,39 @@
 //                  will contain a different color every time the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+
+
+function analyzeColor(randomColor) {
+    if(randomColor === 'blue') {
+        console.log('blue is the color of the sky');
+        return 'blue is the color of the sky';
+    } else if(randomColor === 'red') {
+        console.log('red is the color of lipstick');
+        return 'red is the color of lipstick';
+    } else if(randomColor === 'orange') {
+        console.log('orange is the color of a basketball');
+        return 'orange is the color of a basketball';
+    } else if(randomColor === 'yellow') {
+        console.log('yellow is the color of a lemon');
+        return 'yellow is the color of a lemon';
+    } else if(randomColor === 'green') {
+        console.log('green is the color of grass');
+        return 'green is the color of grass';
+    } else if(randomColor === 'indigo') {
+        console.log('indigo is the color of my shirt');
+        return 'indigo is the color of my shirt';
+    } else if(randomColor === 'violet') {
+        console.log('violet is the color of an eggplant');
+        return 'violet is the color of an eggplant';
+    } else {
+        console.log('not one of the colors defined in the rainbow');
+        return 'not one of the colors defined in the rainbow';
+    }
+}
+
+analyzeColor(randomColor);
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your function and console.log the results.
