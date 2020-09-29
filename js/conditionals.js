@@ -1,7 +1,7 @@
 "use strict";
 
 /* ########################################################################## */
-console.log('Note to Elvira: Do not forget the IIFE!');
+
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
@@ -25,8 +25,11 @@ console.log('Note to Elvira: Do not forget the IIFE!');
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+
+
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 
 // function analyzeColor(randomColor) {
@@ -60,42 +63,46 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
-// console.log(analyzeColor(randomColor));
+//console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
-function analyzeColor(randomColor){
-    switch(randomColor) {
-        case 'blue':
-            return 'blue is the color of the sky';
-            break;
-        case 'red':
-            return 'red is the color of lipstick';
-            break;
-        case 'orange':
-            return 'orange is the color of a basketball';
-            break;
-        case 'yellow':
-            return 'yellow is the color of a lemon';
-            break;
-        case 'green':
-            return 'green is the color of grass';
-            break;
-        case 'indigo':
-            return 'indigo is the color of my shirt';
-            break;
-        case 'violet':
-            return 'violet is the color of an eggplant';
-            break;
-        default:
-            return 'not one of the colors defined in the rainbow';
-            break;
-    }
-}
 
-console.log(analyzeColor(randomColor));
+
+// function analyzeColor(randomColor){
+//     var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//     var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//     switch(randomColor) {
+//         case 'blue':
+//             return 'blue is the color of the sky';
+//             break;
+//         case 'red':
+//             return 'red is the color of lipstick';
+//             break;
+//         case 'orange':
+//             return 'orange is the color of a basketball';
+//             break;
+//         case 'yellow':
+//             return 'yellow is the color of a lemon';
+//             break;
+//         case 'green':
+//             return 'green is the color of grass';
+//             break;
+//         case 'indigo':
+//             return 'indigo is the color of my shirt';
+//             break;
+//         case 'violet':
+//             return 'violet is the color of an eggplant';
+//             break;
+//         default:
+//             return 'not one of the colors defined in the rainbow';
+//             break;
+//     }
+// }
+
+//console.log(analyzeColor(randomColor));
 
 
 /**
@@ -104,6 +111,9 @@ console.log(analyzeColor(randomColor));
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+// var userColor = prompt("Type in your favorite color");
+// alert(analyzeColor(userColor));
+
 
 /* ########################################################################## */
 
@@ -126,6 +136,30 @@ console.log(analyzeColor(randomColor));
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+var luckyNumber = 2;
+var total = 100;
+
+function calculateTotal(luckyNumber, total){
+    if(luckyNumber === 0) {
+        return total;
+    } else if(luckyNumber === 1) {
+        return (total -(total * .1));
+    } else if(luckyNumber === 2) {
+        return (total - (total * .25));
+    } else if(luckyNumber === 3) {
+        return (total - (total * .35));
+    } else if(luckyNumber === 4) {
+        return total * .5;
+    } else if(luckyNumber === 5) {
+        return 0;
+    } else {
+        return "Sorry, your number was not part of the promotion.";
+    }
+}
+
+calculateTotal(luckyNumber, total);
+
 
 /**
  * TODO:
