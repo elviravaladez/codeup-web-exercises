@@ -137,8 +137,8 @@
  * return value.
  */
 
-var luckyNumber = 2;
-var total = 100;
+// var luckyNumber = 2;
+// var total = 100;
 
 function calculateTotal(luckyNumber, total){
     if(luckyNumber === 0) {
@@ -158,7 +158,7 @@ function calculateTotal(luckyNumber, total){
     }
 }
 
-calculateTotal(luckyNumber, total);
+//calculateTotal(luckyNumber, total);
 
 
 /**
@@ -169,7 +169,11 @@ calculateTotal(luckyNumber, total);
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+var initialPrice = Number(prompt("What is your total bill?")).toFixed(2);
+var discountedPrice = calculateTotal(luckyNumber, initialPrice).toFixed(2);
+
+alert("Your lucky number was " + luckyNumber + ". Your price before the discount was $" + initialPrice + ". Your price after the discount is $" + discountedPrice + "." );
 
 /**
  * TODO:
@@ -187,3 +191,29 @@ calculateTotal(luckyNumber, total);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+
+var confirmNumber = confirm("Would you like to enter a number?");
+var promptUserNumber = Number(prompt("Enter a number:"));
+
+function userNumber(confirmNumber) {
+    if (confirmNumber === true) {
+        return promptUserNumber;
+    } else if(promptUserNumber === NaN) {
+        alert( promptUserNumber + " is not a number");
+    } else if(promptUserNumber % 2 === 0) {
+        alert(promptUserNumber + " is even");
+    } else if(promptUserNumber % 2 === 1) {
+        alert(promptUserNumber + " is odd");
+    } else if(promptUserNumber > 0) {
+        alert(promptUserNumber + " is positive");
+    } else if(promptUserNumber < 0) {
+        alert(promptUserNumber + " is negative");
+    } else if(promptUserNumber) {
+        alert(promptUserNumber + " + 100 is " (promptUserNumber + 100));
+    } else {
+        alert("Got it. You don't want to enter a number.");
+    }
+}
+
+userNumber(confirmNumber);
