@@ -140,23 +140,53 @@
 // var luckyNumber = 2;
 // var total = 100;
 
-function calculateTotal(luckyNumber, total){
-    if(luckyNumber === 0) {
-        return total;
-    } else if(luckyNumber === 1) {
-        return (total -(total * .1));
-    } else if(luckyNumber === 2) {
-        return (total - (total * .25));
-    } else if(luckyNumber === 3) {
-        return (total - (total * .35));
-    } else if(luckyNumber === 4) {
-        return total * .5;
-    } else if(luckyNumber === 5) {
+function calculateTotal(luckyNum, total){
+    var discountedPrice = 0;
+    if(luckyNum === 0) {
+        return discountedPrice = total;
+    } else if(luckyNum === 1) {
+        return discountedPrice = (total -(total * .1));
+    } else if(luckyNum === 2) {
+        return discountedPrice = (total - (total * .25));
+    } else if(luckyNum === 3) {
+        return discountedPrice = (total - (total * .35));
+    } else if(luckyNum === 4) {
+        return discountedPrice = total * .5;
+    } else if(luckyNum === 5) {
         return 0;
     } else {
-        return "Sorry, your number was not part of the promotion.";
+        return discountedPrice = total;
     }
 }
+
+
+//refactored code as a switch statement
+
+// function calculateTotal(luckynum, total) {
+//     var discountedPrice = 0;
+//     switch (luckynum) {
+//         case 0:
+//             return discountedPrice = total;
+//             break;
+//         case 1:
+//            return discountedPrice = (total -(total * .1));
+//             break;
+//         case 2:
+//             return discountedPrice = (total -(total * .25));
+//             break;
+//         case 3:
+//             return discountedPrice = (total - (total * .35));
+//             break;
+//         case 4:
+//             return discountedPrice = total * .5;
+//             break;
+//         case 5:
+//             return 0;
+//             break;
+//         default:
+//             return discountedPrice = total;
+//     }
+// }
 
 //calculateTotal(luckyNumber, total);
 
@@ -169,11 +199,12 @@ function calculateTotal(luckyNumber, total){
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
-var initialPrice = Number(prompt("What is your total bill?")).toFixed(2);
-var discountedPrice = calculateTotal(luckyNumber, initialPrice).toFixed(2);
+var luckyNumber = Math.floor(Math.random() * 6); //returns 0-5
 
-alert("Your lucky number was " + luckyNumber + ". Your price before the discount was $" + initialPrice + ". Your price after the discount is $" + discountedPrice + "." );
+var initialPrice = Number(prompt("What is your total bill?")).toFixed(2);
+var totalDiscountedPrice = calculateTotal(luckyNumber, initialPrice).toFixed(2);
+
+alert("Your lucky number was " + luckyNumber + ". Your price before the discount was $" + initialPrice + ". Your price after the discount is $" + totalDiscountedPrice + "." );
 
 /**
  * TODO:
@@ -197,9 +228,10 @@ var confirmNumber = confirm("Would you like to enter a number?");
 var promptUserNumber = Number(prompt("Enter a number:"));
 
 function userNumber(confirmNumber) {
-    if (confirmNumber === true) {
+
+    if (confirmNumber) {
         return promptUserNumber;
-    } else if(promptUserNumber === NaN) {
+    } else if(isNaN(promptUserNumber)) {
         alert( promptUserNumber + " is not a number");
     } else if(promptUserNumber % 2 === 0) {
         alert(promptUserNumber + " is even");
@@ -211,8 +243,8 @@ function userNumber(confirmNumber) {
         alert(promptUserNumber + " is negative");
     } else if(promptUserNumber) {
         alert(promptUserNumber + " + 100 is " (promptUserNumber + 100));
-    } else {
-        alert("Got it. You don't want to enter a number.");
+    } else if(confirmNumber === 0) {
+        return alert("Got it. You don't want to enter a number.");
     }
 }
 
