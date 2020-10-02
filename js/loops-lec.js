@@ -107,7 +107,7 @@ while (i < 10) {
 
 // TODO TOGETHER: Refactor the example above using a do-while loop. What behavior do we notice?
 
-var i = 0; //if var i = 10; the do while loop will run at least once to run console.log(i); i++;
+// var i = 0; //if var i = 10; the do while loop will run at least once to run console.log(i); i++;
 
 do {
     console.log(i);
@@ -157,30 +157,82 @@ alert("Blue is my favorite color too!");
 // 	// body
 // }
 
+//CAN ONLY HAVE ONE CONDITION IN A FOR LOOP
+
 //TODO TOGETHER: Explore basic for loop syntax
+
+for (var i = 0; i < 10; i++) {
+    console.log('for loop iteration #' + i);
+}
 
 
 // TODO TOGETHER: Write a for loop that loops through numbers 0 - 5 (inclusive);
 
+// for(initialize; condition(when to stop); increment) {
+//     //body
+// }
+
+for(var i = 0; i <= 5; i++) {
+   console.log(i);
+}
 
 // TODO TOGETHER: Why are loops beneficial?
 
+//To do things over and over again without repeating yourself (in code)!
+//Because we want code to be reusable
 
 // TODO TOGETHER: Console.log each color from the array randomColors
-//  var randomColors = ["red","orange","yellow","blue","green"]
+
+//iteration: going over each item in a list
+
+var randomColors = ["red","orange","yellow","blue","green"]
+
+console.log(randomColors[0]);
+console.log(randomColors[1]);
+console.log(randomColors[2]);
+console.log(randomColors[3]);
+console.log(randomColors[4]);
 
 
-// for (var i = 0; i < randomColors.length; i++){
-// 	console.log(randomColors[i]);;
-// }
+// randomColors.length == 5 | final index == 4
+//the syntax is useful is we don't know how many elements are in an Array
+
+for(var index = 0; index < randomColors.length; i++) {
+    console.log(randomColors[index]);
+}
+
+
+//same code below
+for (var i = 0; i < randomColors.length; i++){
+	console.log(randomColors[i]);;
+}
 
 
 
 // TODO TOGETHER: Using a for loop, log all even numbers 0 - 100;
 
 
+for(var i = 0; i <= 100; i++) {
+    if(i % 2 === 0) {
+        console.log(i);
+    }
+}
+
+
+
 // TODO: Using a for loop, log all numbers divisible by 5, from 0 - 100;
 
+
+for(var i = 0; i <= 100; i++) {
+    if(i % 5 === 0) {
+        console.log(i);
+    }
+}
+
+
+
+
+//FizzBuzz challenge is used in job interviews
 
 // TODO: Using a for loop, complete the FizzBuzz challenge:
 //  Your program should count up to 100.
@@ -190,37 +242,55 @@ alert("Blue is my favorite color too!");
 //  All other cases, just log the number.
 
 
+//check for the least likely(more specific) condition in the if statements first
+
+for(var i = 0; i <= 100; i++) {
+    if(i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if(i % 5 === 0) {
+        console.log("Buzz");
+    } else if(i % 3 === 0) {
+        console.log("Fizz");
+    } else {
+        console.log(i);
+    }
+}
+
+
 
 /*********************************************
  *              BREAKS & CONTINUES
  *********************************************/
 // We can get a loop to stop using break;
 
-// var numberToStopAt = 5;
-//
-// for (var i = 1; i < 100; i++) {
-//
-// 	console.log('Loop counter is: ' + i);
-//
-// 	if (i === numberToStopAt) {
-// 		console.log('We have reached the stopping point: break!');
-// 		// use the break keyword to exit from the while loop
-// 		break;
-// 		// nothing after the break will get processed
-// 		console.log('You will never see this line.');
-// 	}
-// }
+var numberToStopAt = 5;
+
+for (var i = 1; i < 100; i++) {
+
+	console.log('Loop counter is: ' + i);
+
+	if (i === numberToStopAt) {
+		console.log('We have reached the stopping point: break!');
+		// use the break keyword to exit from the while loop
+		break;
+		// nothing after the break will get processed
+		console.log('You will never see this line.');
+	}
+}
 
 
 // We can get an iteration to skip using continue;
-// for (var i = 1; i < 100; i++) {
-//
-// 	if (i % 2 !== 0) {
-// 		// skipping all odd numbers;
-// 		continue;
-// 	}
-//
-// 	console.log('Here is a lovely even number: ' + i);
-// }
+
+for (var i = 1; i < 100; i++) {
+
+	if (i % 2 !== 0) {
+		// skipping all odd numbers;
+        console.log("Skipping an odd number!");
+		continue; //forces the loop to go to the next iteration and runs the loop again from that point
+        console.log("test"); //you will not see this line
+	}
+    //console.log("You won't see this if the number is odd");
+	console.log('Here is a lovely even number: ' + i);
+}
 
 
