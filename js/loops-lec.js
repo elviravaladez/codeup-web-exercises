@@ -93,27 +93,59 @@ while(!myQuestion) {
 // } while (condition)
 
 
-// var i = 10;
-//
-// while (i < 10) {
-// 	console.log('while loop iteration #' + i);
-// 	i++;
-// }
+var i = 10;
+
+while (i < 10) {
+	console.log('while loop iteration #' + i);
+	i++;
+}
 
 
 // TODO TOGETHER: Why doesnt the example above run?
 
+// Answer: Because 10 is not less than 10. i < 10 is never true
 
 // TODO TOGETHER: Refactor the example above using a do-while loop. What behavior do we notice?
+
+var i = 0; //if var i = 10; the do while loop will run at least once to run console.log(i); i++;
+
+do {
+    console.log(i);
+    i++;
+} while(i < 10);
+
+
+//The above loop is the same as the first loop in the while loops
+
 
 
 //TODO TOGETHER: Create a do-while loop that asks the user to confirm: "Would you like to exit?" What difference do you notice?
 
+do {
+    var myOtherQuestion = confirm("Would you like to exit?");
+} while(!myOtherQuestion);
+
+
+
 //TODO TOGETHER: Create a do-while loop that counts up to 20 (inclusive) by 2s (0, 2, 4...)
 // (0, 2, 4...20)
 
+var i = 0;
+do {
+   console.log(i);
+   i+=2;
+} while(i <= 20);
+
+
 
 //TODO: Create a do-while loop that prompts the user for a color and continues to prompt until the string passed is "blue"
+
+//don't have to put var color BEFORE/OUT OF the loop
+
+do {
+    var color = prompt("Type in a color:").toLowerCase();
+} while(color !== "blue");
+alert("Blue is my favorite color too!");
 
 
 /*********************************************
