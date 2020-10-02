@@ -272,7 +272,7 @@ if(confirmNumber) {
         alert(evenMessage);
 
         //add and alert 100 to user number
-    .
+
         alert(userNumber + 100);
 
 
