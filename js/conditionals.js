@@ -20,42 +20,39 @@
  * console.logging the function's return value
  */
 
+
+function analyzeColor(randomColor) {
+    if(randomColor === 'blue') {
+        return 'blue is the color of the sky';
+    } else if(randomColor === 'red') {
+        return 'red is the color of lipstick';
+    } else if(randomColor === 'orange') {
+        return 'orange is the color of a basketball';
+    } else if(randomColor === 'yellow') {
+        return 'yellow is the color of a lemon';
+    } else if(randomColor === 'green') {
+        return 'green is the color of grass';
+    } else if(randomColor === 'indigo') {
+        return 'indigo is the color of my shirt';
+    } else if(randomColor === 'violet') {
+        return 'violet is the color of an eggplant';
+    } else {
+        return 'not one of the colors defined in the rainbow';
+    }
+}
+
+console.log(analyzeColor('yellow'));
+console.log(analyzeColor('purple'));
+console.log(analyzeColor('green'));
+
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-
-
-
-// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-// var randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-
-// function analyzeColor(randomColor) {
-//     if(randomColor === 'blue') {
-//         return 'blue is the color of the sky';
-//     } else if(randomColor === 'red') {
-//         return 'red is the color of lipstick';
-//     } else if(randomColor === 'orange') {
-//         return 'orange is the color of a basketball';
-//     } else if(randomColor === 'yellow') {
-//         return 'yellow is the color of a lemon';
-//     } else if(randomColor === 'green') {
-//         return 'green is the color of grass';
-//     } else if(randomColor === 'indigo') {
-//         return 'indigo is the color of my shirt';
-//     } else if(randomColor === 'violet') {
-//         return 'violet is the color of an eggplant';
-//     } else {
-//         return 'not one of the colors defined in the rainbow';
-//     }
-// }
-//
-// console.log(analyzeColor('yellow'));
-// console.log(analyzeColor('purple'));
-// console.log(analyzeColor('green'));
-
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 /**
  * TODO:
@@ -63,7 +60,7 @@
  * You should see a different message every time you refresh the page
  */
 
-//console.log(analyzeColor(randomColor));
+console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
@@ -71,38 +68,38 @@
  */
 
 
-// function analyzeColor(randomColor){
-//     var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-//     var randomColor = colors[Math.floor(Math.random() * colors.length)];
-//     switch(randomColor) {
-//         case 'blue':
-//             return 'blue is the color of the sky';
-//             break;
-//         case 'red':
-//             return 'red is the color of lipstick';
-//             break;
-//         case 'orange':
-//             return 'orange is the color of a basketball';
-//             break;
-//         case 'yellow':
-//             return 'yellow is the color of a lemon';
-//             break;
-//         case 'green':
-//             return 'green is the color of grass';
-//             break;
-//         case 'indigo':
-//             return 'indigo is the color of my shirt';
-//             break;
-//         case 'violet':
-//             return 'violet is the color of an eggplant';
-//             break;
-//         default:
-//             return 'not one of the colors defined in the rainbow';
-//             break;
-//     }
-// }
+function analyzeColorSwitch(randomColor){
+    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    switch(randomColor) {
+        case 'blue':
+            return 'blue is the color of the sky';
+            break;
+        case 'red':
+            return 'red is the color of lipstick';
+            break;
+        case 'orange':
+            return 'orange is the color of a basketball';
+            break;
+        case 'yellow':
+            return 'yellow is the color of a lemon';
+            break;
+        case 'green':
+            return 'green is the color of grass';
+            break;
+        case 'indigo':
+            return 'indigo is the color of my shirt';
+            break;
+        case 'violet':
+            return 'violet is the color of an eggplant';
+            break;
+        default:
+            return 'not one of the colors defined in the rainbow';
+            break;
+    }
+}
 
-//console.log(analyzeColor(randomColor));
+console.log(analyzeColorSwitch(randomColor));
 
 
 /**
@@ -111,8 +108,8 @@
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-// var userColor = prompt("Type in your favorite color");
-// alert(analyzeColor(userColor));
+var userColor = prompt("Type in your favorite color");
+alert(analyzeColor(userColor));
 
 
 /* ########################################################################## */
@@ -137,8 +134,6 @@
  * return value.
  */
 
-// var luckyNumber = 2;
-// var total = 100;
 
 function calculateTotal(luckyNum, total){
     var discountedPrice = 0;
@@ -162,33 +157,36 @@ function calculateTotal(luckyNum, total){
 
 //refactored code as a switch statement
 
-// function calculateTotal(luckynum, total) {
-//     var discountedPrice = 0;
-//     switch (luckynum) {
+// function calculateTotal(luckyNum, total) {
+//     var discountedRate = 0;
+
+//     switch (luckyNum) {
 //         case 0:
-//             return discountedPrice = total;
+//             return discountedRate = 0;
 //             break;
 //         case 1:
-//            return discountedPrice = (total -(total * .1));
+//            return discountedRate = .1;
 //             break;
 //         case 2:
-//             return discountedPrice = (total -(total * .25));
+//             return discountedRate = .25;
 //             break;
 //         case 3:
-//             return discountedPrice = (total - (total * .35));
+//             return discountedRate = .35;
 //             break;
 //         case 4:
-//             return discountedPrice = total * .5;
+//             return discountedRate = .5;
 //             break;
 //         case 5:
-//             return 0;
+//             return discountedRate = 1;
 //             break;
-//         default:
-//             return discountedPrice = total;
 //     }
+//     return total - (total * discountedRate);
 // }
 
-//calculateTotal(luckyNumber, total);
+//console.log(calculateTotal(0, 100)); //returns 100
+//console.log(calculateTotal(4, 100)); //returns 50
+//console.log(calculateTotal(5, 100)); //returns 0
+
 
 
 /**
@@ -224,28 +222,66 @@ alert("Your lucky number was " + luckyNumber + ". Your price before the discount
  */
 
 
-var confirmNumber = confirm("Would you like to enter a number?");
-var promptUserNumber = Number(prompt("Enter a number:"));
+// function userNumber() {
+//     var confirmNumber = confirm("Do you want to enter a number?");
+//     //var promptUserNumber = Number(prompt("Enter a number"));
+//
+//     if (confirmNumber === true) {
+//         var promptUserNumber = Number(prompt("Enter a number"));
+//     } else if(isNaN(promptUserNumber)) {
+//         alert( promptUserNumber + " is not a number");
+//     } else if(promptUserNumber % 2 === 0) {
+//         alert(promptUserNumber + " is even");
+//     } else if(promptUserNumber % 2 === 1) {
+//         alert(promptUserNumber + " is odd");
+//     } else if(promptUserNumber > 0) {
+//         alert(promptUserNumber + " is positive");
+//     } else if(promptUserNumber < 0) {
+//         alert(promptUserNumber + " is negative");
+//     } else if(promptUserNumber) {
+//         alert(promptUserNumber + " + 100 is " + (promptUserNumber + 100));
+//     } else if(confirmNumber === 0) {
+//         return alert("Got it. You don't want to enter a number.");
+//     }
+// }
+//
+// userNumber();
 
-function userNumber(confirmNumber) {
 
-    if (confirmNumber) {
-        return promptUserNumber;
-    } else if(isNaN(promptUserNumber)) {
-        alert( promptUserNumber + " is not a number");
-    } else if(promptUserNumber % 2 === 0) {
-        alert(promptUserNumber + " is even");
-    } else if(promptUserNumber % 2 === 1) {
-        alert(promptUserNumber + " is odd");
-    } else if(promptUserNumber > 0) {
-        alert(promptUserNumber + " is positive");
-    } else if(promptUserNumber < 0) {
-        alert(promptUserNumber + " is negative");
-    } else if(promptUserNumber) {
-        alert(promptUserNumber + " + 100 is " (promptUserNumber + 100));
-    } else if(confirmNumber === 0) {
-        return alert("Got it. You don't want to enter a number.");
+var confirmNumber = confirm("Do you want to enter a number?");
+
+if(confirmNumber) {
+    //true path ==> user did want to enter a number
+
+    var promptUserNumber = (prompt("Enter a number"));
+
+    console.log("User entered the following " + promptUserNumber);
+
+    //check to see if user input is a number
+    var isNumber = !isNaN(promptUserNumber);
+
+    if(isNumber) {
+        var userNumber = Number(promptUserNumber);
+
+        //checking to see if number is even
+        var isEven = userNumber % 2 === 0;
+        console.log("The user's number is even: " + isEven);
+
+        //Use ternary statement to determine the message, if even, use even message, if odd ,use odd message
+        var evenMessage = (isEven) ? "Your number is even!" : "Your number is odd!";
+        alert(evenMessage);
+
+        //add and alert 100 to user number
+    .
+        alert(userNumber + 100);
+
+
+        //Use ternary statement to determine positive or negative
+        var posOrNeg = (userNumber >= 0) ? "Your number is positive" : "Your number is negative";
+        alert(posOrNeg);
+
+    } else {
+        //sad path ==> not a number
+        alert("Not a number");
     }
 }
-
-userNumber(confirmNumber);
