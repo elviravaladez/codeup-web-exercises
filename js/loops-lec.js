@@ -222,3 +222,5 @@ alert("Blue is my favorite color too!");
 //
 // 	console.log('Here is a lovely even number: ' + i);
 // }
+
+
