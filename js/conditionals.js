@@ -272,7 +272,7 @@ if(confirmNumber) {
         alert(evenMessage);
 
         //add and alert 100 to user number
-    .
+
         alert(userNumber + 100);
 
 
@@ -285,3 +285,5 @@ if(confirmNumber) {
         alert("Not a number");
     }
 }
+
+//adding to master branch
