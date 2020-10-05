@@ -16,7 +16,7 @@
      * array.
      */
 
-    // console.log(names.length);
+    console.log(names.length);
 
     /**
      * TODO:
@@ -25,10 +25,10 @@
      */
 
 
-    // console.log(names[0]);
-    // console.log(names[1]);
-    // console.log(names[2]);
-    // console.log(names[3]);
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
 
 
     /**
@@ -38,9 +38,9 @@
      */
 
 
-    // for(var i = 0; i < names.length; i++) {
-    //     console.log(names[i]);
-    // }
+    for(var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
 
 
     /**
@@ -48,9 +48,9 @@
      * Refactor your above code to use a `forEach` loop
      */
 
-    // names.forEach(function (name) {
-    //     console.log(name);
-    // })
+    names.forEach(function (name) {
+        console.log(name);
+    })
 
     /**
      * TODO:
