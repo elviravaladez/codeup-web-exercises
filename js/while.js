@@ -26,9 +26,8 @@
 
 var i = 1;
 
-while (i < 65537) {
-    console.log(i * 2);
-    i++;
+while (i < 32769) {
+    console.log(i = i * 2);
 }
 
 
