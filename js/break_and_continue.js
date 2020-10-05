@@ -27,6 +27,9 @@ do {
         break;
     }
 } while (true);
+//adding true in the do-while statement will run infinitely, unless a break embedded in the do while loop
+
+
 
 for(var i = 1; i < 51; i++) {
 
