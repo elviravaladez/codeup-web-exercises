@@ -48,6 +48,8 @@ numbers for this exercise.
 // This is how you get a random number between 50 and 100
 
 var allCones = Math.floor(Math.random() * 50) + 50;
+
+
 // This expression will generate a random number between 1 and 5
 Math.floor(Math.random() * 5) + 1;
 
@@ -60,3 +62,19 @@ Yay! I sold them all! // If there are no more cones
  */
 
 
+var allCones = Math.floor(Math.random() * 50) + 50;
+console.log("I have this many cones to sell: " + allCones);
+
+do {
+    var conesPurchased = Math.floor(Math.random() * 5) + 1;
+
+    if(conesPurchased > allCones) {
+        var outOfStock = "Cannot sell you " + conesPurchased + ". I only have " + allCones;
+        console.log(outOfStock);
+    } else {
+        //subtracting purchased cones from total amount
+        allCones -= conesPurchased;
+        var soldCones = conesPurchased + " cones sold..." + allCones + " cones to go";
+        console.log(soldCones);
+    }
+} while(allCones > 0);
