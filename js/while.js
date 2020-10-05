@@ -24,8 +24,12 @@
 65536
  */
 
+var i = 1;
 
-
+while (i < 65537) {
+    console.log(i * 2);
+    i++;
+}
 
 
 
