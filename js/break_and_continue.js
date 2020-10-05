@@ -39,8 +39,8 @@ for(var i = 1; i < 51; i++) {
     }
 
     if(i === userNumber) {
-        console.log("Yikes! Skipping number " + userNumber);
+        console.log("Yikes! Skipping number: " + userNumber);
     } else {
-        console.log("Here is an odd number " + i);
+        console.log("Here is an odd number: " + i);
     }
 }
