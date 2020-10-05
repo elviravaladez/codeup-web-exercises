@@ -11,17 +11,36 @@
 
 //prompt("Type in an odd number between 1 and 50");
 
-for (var i = 0; i < 50; i++) {
-    var userNumber = prompt("Type in an odd number between 1 and 50");
 
-    if( 0 >= userNumber > 50 || userNumber % 2 === 0 || null) {
-        console.log('Number is less than 0, greater than 50, OR even');
-        prompt("Type in an odd number between 1 and 50");
-        continue;
+
+do {
+    var userNumber = Number(prompt("Type in an odd number between 1 and 50"));
+
+    if(userNumber < 1 || userNumber > 50) {
+        alert("Number not in range. Try again.");
+    } else if(userNumber % 2 === 0) {
+        alert("Number not odd. Try again.");
+    } else if(isNaN(userNumber)) {
+        alert("Not a number. Try again.");
     } else {
-        console.log('Your number is ' + i );
-        alert('Your number is ' + i);
+        alert("Yay! Number in range!");
         break;
     }
-}
+} while (true);
 
+for(var i = 1; i < 51; i++) {
+
+    if(i === 1) {
+        console.log("Number to skip is: " + userNumber);
+    }
+
+    if(i % 2 === 0) {
+        continue;
+    }
+
+    if(i === userNumber) {
+        console.log("Yikes! Skipping number " + userNumber);
+    } else {
+        console.log("Here is an odd number " + i);
+    }
+}
