@@ -12,9 +12,9 @@
 //prompt("Type in an odd number between 1 and 50");
 
 for (var i = 0; i < 50; i++) {
-    var oddNumber = prompt("Type in an odd number between 1 and 50");
+    var userNumber = prompt("Type in an odd number between 1 and 50");
 
-    if( 0 >= oddNumber > 50 || oddNumber % 2 === 0 || null) {
+    if( 0 >= userNumber > 50 || userNumber % 2 === 0 || null) {
         console.log('Number is less than 0, greater than 50, OR even');
         prompt("Type in an odd number between 1 and 50");
         continue;
@@ -24,3 +24,4 @@ for (var i = 0; i < 50; i++) {
         break;
     }
 }
+
