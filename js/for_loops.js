@@ -36,6 +36,28 @@ for (var i = 0; i <= 9; i++) {
 }
 
 
+/*
+NOTE: Another way
+
+//runs 10 times
+//random number must be between 20 - 200
+//say whether number is odd or even
+
+for(var i =0; i < 10: i++) {
+    var randomNumber = Math.floor(Math.random() * 180) + 20;
+
+    if(randomNumber $ 2 === 0) {
+        console.log(randomNumber + " is even");
+    } else {
+        console.log(randomNumber + " is odd");
+    }
+}
+
+
+//180 in randomNumber is the difference between 200 and 20
+
+ */
+
 
 
 //4 Create a for loop that uses console.log to create the output shown below.
@@ -60,6 +82,28 @@ numberPyramid();
 
 
 
+//Another Solution for Pyramid: Using a nested loop
+
+// for(var outerLoop = 1; outerLoop <= 9; outerLoop++) {
+//     var output = '';
+//
+//     for(var innerLoop = 1; innerLoop <= outerLoop; innerLoop++) {
+//         output += outerLoop;
+//     }
+//
+//     console.log(output);
+// }
+
+
+//Another Solution for Pyramid (AWESOME!)
+
+// for(var i = 1; i <= 9; i++) {
+//     console.log(i.toString().repeat(i));
+// }
+
+
+
+
 
 //5 Create a for loop that uses console.log to create the output shown below.
 
@@ -70,3 +114,10 @@ for(var i = 100; i > 0; i--) {
         console.log(i);
     }
 }
+
+
+//Another Solution
+
+// for(var i = 100; i >= 5; i-=5) {
+//     console.log(i);
+// }
