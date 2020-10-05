@@ -67,25 +67,25 @@
      */
 
 
-    function firstItem(array) {
+    function first(array) {
         console.log(array[0])
         return array[0];
     }
-    firstItem([1, 2, 3, 4, 5]);
+    first([1, 2, 3, 4, 5]);
 
 
-    function secondItem(array) {
+    function second(array) {
         console.log(array[1]);
         return array[1];
     }
 
-    secondItem([1, 2, 3, 4, 5]);
+    second([1, 2, 3, 4, 5]);
 
-    function lastItem(array) {
+    function last(array) {
         console.log(array[array.length - 1]);
         return array[array.length - 1];
     }
 
-    lastItem([1, 2, 3, 4, 5]);
+    last([1, 2, 3, 4, 5]);
 
 })();
