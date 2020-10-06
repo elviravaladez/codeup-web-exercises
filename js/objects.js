@@ -42,7 +42,9 @@
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
-     * discount. Write a JS program, using conditionals, that logs to the
+     * discount.
+     *
+     * Write a JS program, using conditionals, that logs to the
      * browser, how much Ryan, Cameron and George need to pay. We know that
      * Cameron bought $180, Ryan $250 and George $320. Your program will have to
      * display a line with the name of the person, the amount before the
@@ -53,11 +55,50 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    //if shoppers buy products costing > 200 ---> shoppers receive 12% discount
+        //else ---> no discount( amount stays the same)
+
+    //use conditionals
+
+    //code must display a line with
+        //name of person
+        //amount before discount
+        //the discount (if any)
+        //the amount after the discount
+
+    //use a foreach loop to iterate through the array and console.log relevant info
+
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+
+    shoppers.forEach(function (shopper) {
+        console.log("Shopper Name: " + shopper.name);
+
+        shoppers.forEach(function (amount) {
+            var beforeDiscountPrice = shopper.amount;
+            console.log( "Amount Before Discount: $" + beforeDiscountPrice.toFixed(2));
+        });
+
+        if(shopper.amount > 200) {
+            var total;
+            total = shopper.amount.toFixed(2);
+            var discount = total * .12;
+            var afterDiscountPrice = (total - discount );
+            console.log("Discount: $" + discount.toFixed(2));
+            console.log("Amount After Discount: $" + afterDiscountPrice.toFixed(2));
+        } else {
+            console.log("Discount: $0.00");
+            console.log("Amount After Discount: $ " + shopper.amount.toFixed(2));
+            //could not replace shopper.amount.toFixed(2) with total for some reason
+        }
+
+        console.log("======================");
+    });
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
