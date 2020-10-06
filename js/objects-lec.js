@@ -10,14 +10,14 @@ console.log("Welcome to Intro to Objects!");
  * key:value pairs
  */
 
-// var rubberDuck = {
-//     color: "yellow",
-//     role: "emotional support",
-//     name: "cody"
-// };
-//
-//
-// console.log(rubberDuck); //this console.logs the word Object and shows the items within the object
+var rubberDuck = {
+    color: "yellow",
+    role: "emotional support",
+    name: "cody"
+};
+
+
+console.log(rubberDuck); //this console.logs the word Object and shows the items within the object
 
 
 /*********************************************
@@ -38,63 +38,63 @@ console.log("Welcome to Intro to Objects!");
 // //Object Literal Example: use when you have certain properties in mind already
 
 
-// var myPhone = {
-//     color: "gold",
-//     model: "iPhone 7",
-//     storage: "35GB",
-//     ring: function () {
-//         console.log("Ring ring!");
-//     },
-//     picture: function () {
-//         console.log("Take a picture!");
-//     }
-// };
+var myPhone = {
+    color: "gold",
+    model: "iPhone 7",
+    storage: "35GB",
+    ring: function () {
+        console.log("Ring ring!");
+    },
+    picture: function () {
+        console.log("Take a picture!");
+    }
+};
 
 
 
-// //The way you access items in myPhone use dot notation:
-//
-// console.log(myPhone.color);
-//
-// console.log(myPhone.model);
-//
-// console.log(myPhone.storage);
-//
-// // With dot notation you can also call a method that is in the object assigned to a key
-//
-// myPhone.ring();
-//
-// myPhone.picture();
+//The way you access items in myPhone use dot notation:
+
+console.log(myPhone.color);
+
+console.log(myPhone.model);
+
+console.log(myPhone.storage);
+
+// With dot notation you can also call a method that is in the object assigned to a key
+
+myPhone.ring();
+
+myPhone.picture();
 
 
 
 // //Object Instance:
-//
-// //var myPhone = new Object(); //currently empty in this object
-// var myPhone = new Object();
-//
-//
-// //when dealing with an empty object, you can create new properties using dot notation
-//
-// myPhone.color = "gold";
-// myPhone.model = "iPhone 7";
-// myPhone.storage = "32GB";
-// myPhone.ring = function () {
-//     console.log("Ring ring!");
-// };
-//
-// console.log(myPhone);
-//
-//
-// //Use dot notation to assign new properties or access existing values
+
+//var myPhone = new Object(); //currently empty in this object
+var myPhone = new Object();
+
+
+//when dealing with an empty object, you can create new properties using dot notation
+
+myPhone.color = "gold";
+myPhone.model = "iPhone 7";
+myPhone.storage = "32GB";
+myPhone.ring = function () {
+    console.log("Ring ring!");
+};
+
+console.log(myPhone);
+
+
+//Use dot notation to assign new properties or access existing values
 
 /**
  * TODO: Create a new Object and call it 'myMac'. use either the constructor or Object literal notation.
  */
 
-// var myMac = {};
-//
-// console.log(myMac);
+var myMac = {};
+
+console.log(myMac);
 
 
 /*********************************************
@@ -108,25 +108,25 @@ console.log("Welcome to Intro to Objects!");
  */
 
 
-// myPhone.name = {
-//     firstName: 'Elvira',
-//     lastName: 'Valadez'
-// };
-//
-// console.log(myPhone);
-// console.log(myPhone.name);
-// console.log(myPhone.name.firstName);
-//
-// myPhone.apps = ["Slack", "Gmail", "Instagram"];
-//
-// console.log(myPhone.apps[2]); //to reach index 2
+myPhone.name = {
+    firstName: 'Elvira',
+    lastName: 'Valadez'
+};
+
+console.log(myPhone);
+console.log(myPhone.name);
+console.log(myPhone.name.firstName);
+
+myPhone.apps = ["Slack", "Gmail", "Instagram"];
+
+console.log(myPhone.apps[2]); //to reach index 2
 
 
-//to access all elements in an array do what's below
+to access all elements in an array do what's below
 
-// myPhone.apps.forEach(function (app) {
-//     console.log(app);
-// });
+myPhone.apps.forEach(function (app) {
+    console.log(app);
+});
 
 
 
@@ -136,13 +136,13 @@ console.log("Welcome to Intro to Objects!");
  * information was stored properly
  */
 
-// myMac.model = "iMac";
-//
-// myMac.size = "27 inch";
-//
-// myMac.year = "2020";
-//
-// console.log(myMac);
+myMac.model = "iMac";
+
+myMac.size = "27 inch";
+
+myMac.year = "2020";
+
+console.log(myMac);
 
 
 /**
@@ -156,7 +156,7 @@ console.log("Welcome to Intro to Objects!");
  * an Array representing different folders in your system.
  */
 
-// myMac.folders = ["Documents", "Desktop", "Recent"];
+myMac.folders = ["Documents", "Desktop", "Recent"];
 
 
 
@@ -166,13 +166,13 @@ console.log("Welcome to Intro to Objects!");
  */
 
 
-// myMac.login = {
-//     username: "cody",
-//     fakePassword: "duck",
-//     email: "cody@codeup.com"
-// };
-//
-// console.log(myMac);
+myMac.login = {
+    username: "cody",
+    fakePassword: "duck",
+    email: "cody@codeup.com"
+};
+
+console.log(myMac);
 
 /*********************************************
  *                  METHODS
@@ -185,11 +185,11 @@ console.log("Welcome to Intro to Objects!");
  */
 
 
-// myPhone.call = function() {
-//     console.log("Dialing");
-// };
-//
-// myPhone.call(); //the opening and closing parentheses NEED to be included to work
+myPhone.call = function() {
+    console.log("Dialing");
+};
+
+myPhone.call(); //the opening and closing parentheses NEED to be included to work
 
 
 /**
@@ -198,9 +198,9 @@ console.log("Welcome to Intro to Objects!");
  * "Powering on..."
  */
 
-// myMac.powerOn = function () {
-//     console.log("Powering On");
-// };
+myMac.powerOn = function () {
+    console.log("Powering On");
+};
 
 /**
  * TO DO TOGETHER: Let's add one more piece of functionality. Create a
@@ -209,11 +209,11 @@ console.log("Welcome to Intro to Objects!");
  */
 
 
-// myPhone.currentUser = function() {
-//     console.log("Current user: " + this.name.firstName + " " + this.name.lastName); //the this is referring to the myPhone object. It's good to use this when you don't know the name of the object you are currently in
-// };
-//
-// myPhone.currentUser();
+myPhone.currentUser = function() {
+    console.log("Current user: " + this.name.firstName + " " + this.name.lastName); //the this is referring to the myPhone object. It's good to use this when you don't know the name of the object you are currently in
+};
+
+myPhone.currentUser();
 
 /**
  * TO DO: One last thing. Let's add a 'currentUser' method that displays the
@@ -222,11 +222,11 @@ console.log("Welcome to Intro to Objects!");
  */
 
 
-// myMac.currentUser = function() {
-//     console.log("username: " + this.login.username + " " + this.login.email);
-// };
-//
-// myMac.currentUser();
+myMac.currentUser = function() {
+    console.log("username: " + this.login.username + " " + this.login.email);
+};
+
+myMac.currentUser();
 
 /*********************************************
  *                  NESTED VALUES
