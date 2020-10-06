@@ -17,10 +17,14 @@
      * Example Input: ['a', 3, '3', 3, null]
      * Example Output: 6
      */
+
+    //function takes in an array
+    //adds any NUMBER 3s in the array
+    //strings not count
     function sum3s(numbers) {
-        var output;
+        var output = 0;
         numbers.forEach(function(number) {
-            if (number = 3) {
+            if (number === 3) {
                 output += 3;
             }
         });
@@ -29,6 +33,8 @@
 
     console.log(sum3s(['a', 3, '3', 3, null])); // should see 6 in the console when written correctly
 
+
+
     /**
      * OPTIONAL EXTRA CHALLENGE!!
      * Write a function that takes in an array of strings and returns an array of the same string values but uppercased.
@@ -36,6 +42,7 @@
      * Example Input: ['a', 'cat', 'BOb'];
      * Example Output: ['A', 'CAT', 'BOB'];
      */
+
     function upCaseArr(arr) {
         arr.forEach(function(element, index, array) {
             element = element.toUpperCase();
