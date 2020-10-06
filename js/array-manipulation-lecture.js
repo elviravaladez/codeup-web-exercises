@@ -1,13 +1,47 @@
 "use strict";
-// var pies = [
-//     "apple",
-//     "cherry",
-//     "key lime",
-//     "huckleberry",
-//     "rhubarb"
-// ];
+var pies = [
+    "apple",
+    "cherry",
+    "key lime",
+    "huckleberry",
+    "rhubarb"
+];
 
 // TODO: given the above array how do we log each element to the console?
+
+// // manually
+//
+// console.log(pies[0]);
+// console.log(pies[1]);
+// console.log(pies[2]);
+// console.log(pies[3]);
+// console.log(pies[4]);
+//
+//
+//
+// // log the whole array in the console: works best when we want all elements in the array
+//
+// console.log(pies);
+//
+//
+//
+//
+// // for loop (better tool than the while and do-while loops)
+//
+// for(var i =0; i < pies.length; i++) {
+//     console.log(pies[i]);
+// }
+//
+//
+//
+// // forEach: is more simple than the for loop
+//
+// pies.forEach(function(pie) {
+//     console.log(pie);
+// })
+
+
+
 
 /**
  * ===== Concepts to cover:
@@ -60,24 +94,32 @@
 //     "huckleberry",
 //     "rhubarb"
 // ];
-
-// add element to beginning
-
+//
+// // add element to beginning
+//
 // pies.unshift('blueberry'); // returns the new total number of items in the array
 // console.log(pies);
-
-// add element to end
-
+//
+//
+// // add element to end
+//
 // pies.push('chocolate'); // again returns the new total number of items in the array
-
-// remove element from the front of an array
-
+//
+// // remove element from the front of an array
+//
 // pies.shift();
-
-// remove an element from the end of an array
-
+// console.log(pies);
+//
+// // remove an element from the end of an array
+//
 // pies.pop();
 
+
+// //TODO: remove the last element and add to beginning
+//
+// var poppedElement = pies.pop();
+// pies.unshift(poppedElement);
+// console.log(pies);
 
 // ============================= Searching
 
@@ -89,19 +131,20 @@
 //     "rhubarb",
 //     "key lime"
 // ];
-
-// find index of first matching result in array
-
-// pies.indexOf('key lime');
-
-// returns -1 if no matching result
-
-// pies.indexOf('chocolate');
-
-
-// find the index of the last occurrence of a matching element in the array
-
-// pies.lastIndexOf("key lime");
+//
+// // find index of first matching result in array
+//
+// console.log(pies.indexOf('key lime')); // 2
+//
+//
+// // returns -1 if no matching result
+//
+// console.log(pies.indexOf('chocolate')); // -1
+//
+//
+// // find the index of the last occurrence of a matching element in the array
+//
+// console.log(pies.lastIndexOf("key lime")); // 5
 
 
 // ============================= Slicing
@@ -116,32 +159,40 @@
 
  */
 
-// var pies = [
-//     "apple",
-//     "cherry",
-//     "key lime",
-//     "huckleberry",
-//     "rhubarb",
-//     "key lime"
-// ];
+var pies = [
+    "apple",
+    "cherry",
+    "key lime",
+    "huckleberry",
+    "rhubarb",
+    "key lime"
+];
+
 
 // TODO GROUP: find various combinations of output
 
-// TODO EXERCISE: create a function that takes in an array of pies baked and return the 3 most recently baked pies
+// TODO EXERCISE: create a function that takes in an array of pies baked and return the 3 most recently baked pies (the three at the end)
 
+
+// function threePies(pies) {
+//     var pieSlice = pies.slice(pies.length - 3);
+//     return pieSlice;
+// }
+//
+// console.log(threePies(pies), 'Expected output is: ' + ["huckleberry", "rhubarb", "key lime"]);
 
 
 // ============================= Reversing
 
-// var pies = [
-//     "apple",
-//     "cherry",
-//     "key lime",
-//     "huckleberry",
-//     "rhubarb",
-//     "key lime"
-// ];
-//
+var pies = [
+    "huckleberry",
+    "apple",
+    "key lime",
+    "cherry",
+    "rhubarb",
+    "key lime"
+];
+// //
 // pies.reverse();
 
 
@@ -149,7 +200,10 @@
 
 // sort an array in alphabetical order
 
-// pies.sort();
+// console.log(pies);
+// pies.sort(); // mutates the original. returns a copy as well as mutates the original
+// console.log(pies); //
+
 
 // sort in chronological order
 
@@ -166,11 +220,15 @@
 
 // var names = "Bob Sally Mary";
 //
-// var namesArr = names.split(" ");
+// var namesArr = names.split(" "); // ["Bob" ,"Sally", "Mary"]
 //
-// var namesString = namesArr.join("");
+// var namesString = namesArr.join(" "); // "Bob Sally Mary"
 //
 // console.log(namesString);
+
+
+
+
 
 // splitting on an empty string
 
@@ -178,8 +236,13 @@
 
 // joining array into a string
 
+
+
 // var bondsArray = ["Connery", "Lazenby", "Moore", "Dalton", "Brosnan", "Craig"];
 // var bondsString = bondsArray.join("_");
+
+
+
 
 
 // TODO DEMONSTRATION: Create a function that will take in a formatted string of numbers
@@ -200,17 +263,31 @@
 
 */
 
-// var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
-//
-// function cleanPhoneNumbers(phoneNums) {
-//
-// }
-//
-// var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
-//
-// for (var i = 0; i < cleanNumsArr.length; i += 1) {
-//     console.log(cleanNumsArr[i]);
-// }
+var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
+
+function cleanPhoneNumbers(phoneNums) {
+    var output = [];
+    //split input on newline character into an array of numbers
+
+    var phoneNumsArr = phoneNums.split('\n');
+    //create an output array of numbers with the dash removed
+    phoneNumsArr.forEach(function(phoneNum) {
+        var phoneNumArr = phoneNum.split('-');
+        //console.log(phoneNumArr);
+        //combine into a single string without dashes
+        var phoneNumWithoutDashes = phoneNumArr.join(""); // empty string so it can
+        //console.log(phoneNumWithoutDashes);
+        output.push(phoneNumWithoutDashes);
+    });
+    //return output
+    return output;
+}
+
+var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
+
+for (var i = 0; i < cleanNumsArr.length; i += 1) {
+    console.log(cleanNumsArr[i]);
+}
 
 
 
