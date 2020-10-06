@@ -13,8 +13,8 @@
      */
 
     var person = {
-      firstName: 'Elvira',
-      lastName: 'Valadez',
+      firstName: "Elvira",
+      lastName: "Valadez",
     };
 
     console.log(person.firstName); //'Elvira'
@@ -30,6 +30,14 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+
+    person.sayHello = function () {
+        return "Hello from " + person.firstName + " " + person.lastName + "!";
+    };
+
+    console.log(person.sayHello()); //"Hello from Elvira Valadez!"
+
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
