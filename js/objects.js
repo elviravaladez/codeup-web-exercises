@@ -1,4 +1,4 @@
-(function() {
+(function (searchElement, fromIndex) {
     "use strict";
 
     /**
@@ -151,6 +151,7 @@
         }
     ];
 
+    //console.log(books); //to assure array of objects was coded correctly
     console.log(books[0].title);
     console.log(books[0].author.firstName);
     console.log(books[0].author.lastName);
@@ -179,6 +180,21 @@
      *      ---
      *      ...
      */
+
+    books.forEach(function (book) {
+        var bookNum = (books.indexOf(book) + 1);
+        console.log("Book # " + bookNum);
+
+        books.forEach(function(title) {
+            console.log(("Title: " + book.title));
+        });
+
+        books.forEach(function (author) {
+            console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        });
+
+        console.log("---");
+    });
 
     /**
      * Bonus:
