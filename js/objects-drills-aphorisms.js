@@ -271,7 +271,8 @@ console.log(aphorisms);
 
 //TODO: Assign the first quote/author object to the variable firstQuote. Log the quote from the variable. Log the author from the variable.
 
-
+var firstQuote = aphorisms.shift();
+console.log(firstQuote);
 
 //TODO: Assign the last quote/author object to the variable lastQuote. Log the quote from the variable. Log the author from the variable.
 
