@@ -122,7 +122,7 @@ myPhone.apps = ["Slack", "Gmail", "Instagram"];
 console.log(myPhone.apps[2]); //to reach index 2
 
 
-to access all elements in an array do what's below
+//to access all elements in an array do what's below
 
 myPhone.apps.forEach(function (app) {
     console.log(app);
