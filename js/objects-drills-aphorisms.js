@@ -247,11 +247,31 @@ var aphorisms = [
 
 //TODO: What variable represents the array of aphorisms
 
+//var aphorisms
+
 //TODO: Console.log 'aphorisms'. Explore the data structure. What are some things you notice?
+
+console.log(aphorisms);
+
+//I notice the following is displayed: Array(61)
+//There is also a small arrow, pointing down, to the left of Array(61),
+// that lets you expand the array.
+
+//When you expand you see 0: {quote: "words go here..}...
+//This is for 0: to 60:
+
+//These objects also allow you to expand them with a small arrow, pointing down,
+// to the left of each number (right here) ---> 0:
+//When you expand this, you see all the contents in the object
+
 
 //TODO:How long is this array?
 
+//length: 61
+
 //TODO: Assign the first quote/author object to the variable firstQuote. Log the quote from the variable. Log the author from the variable.
+
+
 
 //TODO: Assign the last quote/author object to the variable lastQuote. Log the quote from the variable. Log the author from the variable.
 
