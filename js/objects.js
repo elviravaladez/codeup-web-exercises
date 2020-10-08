@@ -69,9 +69,18 @@
         //use a foreach loop to iterate through the array and console.log relevant info
 
     var shoppers = [
-            {name: 'Cameron', amount: 180},
-            {name: 'Ryan', amount: 250},
-            {name: 'George', amount: 320}
+            {
+                name: 'Cameron',
+                amount: 180
+            },
+            {
+                name: 'Ryan',
+                amount: 250
+            },
+            {
+                name: 'George',
+                amount: 320
+            }
         ];
 
 
