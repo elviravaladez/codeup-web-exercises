@@ -18,7 +18,7 @@
     };
 
     console.log(person.firstName); //'Elvira'
-    console.log(person.lastName); //'Valadez
+    console.log(person.lastName); //'Valadez'
 
 
     /**
@@ -223,7 +223,16 @@
         return book;
     }
 
-    createBook();
+
+    var books =[
+    createBook("How Not to Die", "Michael", "Greger"),
+    createBook("Chicka Chicka Boom Boom", "Bill", "Martin"),
+    createBook("JavaScript: The Good Parts", "Douglas", "Crockford"),
+    createBook("She Persisted", "Chelsea", "Clinton"),
+    createBook("Dragons Love Tacos", "Adam", "Salmieri")
+    ]
+
+    console.log(books);
 
 
 })();
