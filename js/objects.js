@@ -212,16 +212,18 @@
      */
 
 
-    function createBook(title, author) {
+    function createBook(title, firstName, lastName) {
         var book = {
             title: title,
             author: {
-                firstName: author,
-                lastName: author
+                firstName: firstName,
+                lastName: lastName
             }
         };
         return book;
     }
+
+    createBook();
 
 
 })();
