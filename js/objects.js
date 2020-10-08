@@ -266,6 +266,8 @@
         return book;
     }
 
+    books.push(createBook("How Not to Die "))
+    //books.push({});
 
     var books = [
         createBook("How Not to Die", "Michael", "Greger"),
@@ -277,16 +279,15 @@
 
     console.log(books);
 
-    function showBookInfo(bookInfo, index) {
-        console.log("Book # " + bookInfo.indexOf(bookInfo) + 1 );
 
-        console.log(("Title: " + bookInfo.title));
-
-        console.log("Author: " + bookInfo.author.firstName + " " + bookInfo.author.lastName);
-
-        console.log("---");
+    //Last BONUS Exercise
+    function showBookInfo(book, i) {
+        var output = "";
+            output += "Book # " + (i + 1) + "\n";
+            output += "Title: " + book.title + "\n";
+            output += "Author: " + book.author.firstName + book.author.lastName + "\n";
+            output += "---"
+            console.log(output);
     }
-
-    console.log(books.forEach(showBookInfo));
 
 })();
