@@ -209,6 +209,7 @@
      *      ...
      */
 
+
     books.forEach(function (book) {
         var bookNum = (books.indexOf(book) + 1);
         console.log("Book # " + bookNum);
@@ -223,6 +224,23 @@
 
         console.log("---");
     });
+
+
+    //Another Solution
+
+    //A forEach CAN take in 3 parameters element, index, array.
+    //When writing the forEach add the index parameter + 1 (so it can show Book # 1 NOT Book # 0
+
+
+    // books.forEach(function (book, i) {
+    //     var output = "";
+    //     output += "Book # " + (i + 1) + "\n";
+    //     output += "Title: " + book.title + "\n";
+    //     output += "Author: " + book.author.firstName + book.author.lastName + "\n";
+    //     output += "---"
+    //     console.log(output);
+    // });
+
 
     /**
      * Bonus:
