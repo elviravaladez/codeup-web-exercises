@@ -13,8 +13,8 @@
      */
 
     var person = {
-      firstName: "Elvira",
-      lastName: "Valadez",
+        firstName: "Elvira",
+        lastName: "Valadez",
     };
 
     console.log(person.firstName); //'Elvira'
@@ -55,48 +55,48 @@
      * and console.log the relevant messages for each person
      */
 
-    //if shoppers buy products costing > 200 ---> shoppers receive 12% discount
+        //if shoppers buy products costing > 200 ---> shoppers receive 12% discount
         //else ---> no discount( amount stays the same)
 
-    //use conditionals
+        //use conditionals
 
-    //code must display a line with
+        //code must display a line with
         //name of person
         //amount before discount
         //the discount (if any)
         //the amount after the discount
 
-    //use a foreach loop to iterate through the array and console.log relevant info
+        //use a foreach loop to iterate through the array and console.log relevant info
 
     var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
+            {name: 'Cameron', amount: 180},
+            {name: 'Ryan', amount: 250},
+            {name: 'George', amount: 320}
+        ];
 
 
     shoppers.forEach(function (shopper) {
         var shopperName = "Shopper Name: " + shopper.name;
 
-            var beforeDiscountPrice = shopper.amount;
-            var amountBeforeDiscount = "Amount Before Discount: $" + beforeDiscountPrice.toFixed(2);
+        var beforeDiscountPrice = shopper.amount;
+        var amountBeforeDiscount = "Amount Before Discount: $" + beforeDiscountPrice.toFixed(2);
 
-        if(shopper.amount > 200) {
+        if (shopper.amount > 200) {
             var total;
 
             total = shopper.amount.toFixed(2);
 
             var discount = total * .12;
-            var afterDiscountPrice = (total - discount );
+            var afterDiscountPrice = (total - discount);
 
             var discountMsg = "Discount: $" + discount.toFixed(2);
             var afterDiscountMsg = "Amount After Discount: $" + afterDiscountPrice.toFixed(2);
 
             console.log(shopperName + " | " + discountMsg + " | " + afterDiscountMsg);
         } else {
-            var amountAfterDiscount ="Amount After Discount: $" + shopper.amount.toFixed(2);
+            var amountAfterDiscount = "Amount After Discount: $" + shopper.amount.toFixed(2);
 
-            console.log(shopperName + " | " + "Discount: $0.00" + " | " + amountAfterDiscount );
+            console.log(shopperName + " | " + "Discount: $0.00" + " | " + amountAfterDiscount);
         }
 
         console.log("======================");
@@ -188,7 +188,7 @@
         var bookNum = (books.indexOf(book) + 1);
         console.log("Book # " + bookNum);
 
-        books.forEach(function(title) {
+        books.forEach(function (title) {
             console.log(("Title: " + book.title));
         });
 
@@ -224,15 +224,26 @@
     }
 
 
-    var books =[
-    createBook("How Not to Die", "Michael", "Greger"),
-    createBook("Chicka Chicka Boom Boom", "Bill", "Martin"),
-    createBook("JavaScript: The Good Parts", "Douglas", "Crockford"),
-    createBook("She Persisted", "Chelsea", "Clinton"),
-    createBook("Dragons Love Tacos", "Adam", "Salmieri")
+    var books = [
+        createBook("How Not to Die", "Michael", "Greger"),
+        createBook("Chicka Chicka Boom Boom", "Bill", "Martin"),
+        createBook("JavaScript: The Good Parts", "Douglas", "Crockford"),
+        createBook("She Persisted", "Chelsea", "Clinton"),
+        createBook("Dragons Love Tacos", "Adam", "Salmieri")
     ]
 
     console.log(books);
 
+    function showBookInfo(bookInfo, index) {
+        console.log("Book # " + bookInfo.indexOf(bookInfo) + 1 );
+
+        console.log(("Title: " + bookInfo.title));
+
+        console.log("Author: " + bookInfo.author.firstName + " " + bookInfo.author.lastName);
+
+        console.log("---");
+    }
+
+    console.log(books.forEach(showBookInfo));
 
 })();
