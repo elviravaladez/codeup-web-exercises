@@ -111,6 +111,22 @@
         console.log("======================");
     });
 
+    //Another Solution
+
+    // shoppers.forEach(function(shopper) {
+    //     var initialAmount = shopper.amount;
+    //     var discount = shopper.amount * .12;
+    //     var finalAmount = initialAmount - discount;
+    //
+    //     //check for customers who spent > $200
+    //
+    //     if(initialAmount > 200) {
+    //         console.log(shopper.name + " spent " + initialAmount + ". They get a discount of " + discount + ". The total" + " paid was: " + finalAmount);
+    //     } else {
+    //         console.log(shopper.name + " paid " + initialAmount);
+    //     }
+    // });
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
