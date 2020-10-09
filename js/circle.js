@@ -2,6 +2,10 @@
     "use strict";
 
     // create a circle object
+
+
+    //****START: The scope of the circle where we can use the THIS keyword starts here****//
+
     var circle = {
         radius: 3,
 
@@ -17,18 +21,32 @@
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
 
-            if(doRounding === false) {
-                console.log("Area of a circle with radius: " + this.radius + ", is: " + circle.getArea(this.radius));
-                return circle.getArea(this.radius);
-            } else {
-                console.log("Area of a circle with radius: " + this.radius + ", is: " + Math.round(circle.getArea(this.radius)));
-                return Math.round(circle.getArea(this.radius));
+            // if(doRounding === false) {
+            //     console.log("Area of a circle with radius: " + this.radius + ", is: " + circle.getArea(this.radius));
+            //     return circle.getArea(this.radius);
+            // } else {
+            //     console.log("Area of a circle with radius: " + this.radius + ", is: " + Math.round(circle.getArea(this.radius)));
+            //     return Math.round(circle.getArea(this.radius));
+            // }
+            //
+            // console.log("Area of a circle with radius: " + this.radius + ", is: " + circle.logInfo());
+
+
+
+            //Simpler Way
+            var circleArea = this.getArea();
+
+            if(doRounding) {
+                circleArea = Math.round(circleArea);
             }
 
-            console.log("Area of a circle with radius: " + this.radius + ", is: " + circle.logInfo());
+            console.log("Area of a circle with radius: " + this.radius + ", is: " + circleArea);
 
         }
     };
+
+    //**********END: Cannot use this after this point! *********//
+
 
     // log info about the circle
     console.log("Raw circle information");
