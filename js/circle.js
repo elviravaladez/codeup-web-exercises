@@ -8,19 +8,25 @@
         getArea: function () {
             // TODO: complete this method
             // hint: area = pi * radius^2
-            return (Math.PI * Math.pow(this.radius, 2)).toFixed(2); // TODO: return the proper value
+            return (Math.PI * Math.pow(this.radius, 2)); // TODO: return the proper value
         },
 
         logInfo: function (doRounding) {
-            if(doRounding === true) {
-
-            }
             // TODO: complete this method.
 
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
 
-            console.log("Area of a circle with radius: " + this.radius + ", is: " + circle.getArea());
+            if(doRounding === false) {
+                console.log("Area of a circle with radius: " + this.radius + ", is: " + circle.getArea(this.radius));
+                return circle.getArea(this.radius);
+            } else {
+                console.log("Area of a circle with radius: " + this.radius + ", is: " + Math.round(circle.getArea(this.radius)));
+                return Math.round(circle.getArea(this.radius));
+            }
+
+            console.log("Area of a circle with radius: " + this.radius + ", is: " + circle.logInfo());
+
         }
     };
 
