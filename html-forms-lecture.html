@@ -158,24 +158,24 @@
     -->
 
 
-    <!-- Text -->
-    <h4>Text Input</h4>
-    <label for="movie">Favorite movie</label>
-    <input id="movie" type="text" name="movie" placeholder="Enter favorite movie">
+<!--    &lt;!&ndash; Text &ndash;&gt;-->
+<!--    <h4>Text Input</h4>-->
+<!--    <label for="movie">Favorite movie</label>-->
+<!--    <input id="movie" type="text" name="movie" placeholder="Enter favorite movie">-->
 
-    <!-- Password -->
-    <h4>Password Input</h4>
-    <label for="password">Password</label>
-    <input id="password" type="password" name="password" placeholder="Enter password">
+<!--    &lt;!&ndash; Password &ndash;&gt;-->
+<!--    <h4>Password Input</h4>-->
+<!--    <label for="password">Password</label>-->
+<!--    <input id="password" type="password" name="password" placeholder="Enter password">-->
 
-    <!-- Hidden Inputs -->
-    <h4>Hidden Inputs</h4>
-    <input type="hidden" name="user_id" value="432">
+<!--    &lt;!&ndash; Hidden Inputs &ndash;&gt;-->
+<!--    <h4>Hidden Inputs</h4>-->
+<!--    <input type="hidden" name="user_id" value="432">-->
 
-    <!-- Text area -->
-    <h4>Textarea Input</h4>
-    <label for="blog-post">Blog Postt</label>
-    <textarea id="blog-post" name="blog-post" rows="4" cols="50" placeholder="Write blog post"></textarea>
+<!--    &lt;!&ndash; Text area &ndash;&gt;-->
+<!--    <h4>Textarea Input</h4>-->
+<!--    <label for="blog-post">Blog Post</label>-->
+<!--    <textarea id="blog-post" name="blog-post" rows="4" cols="50" placeholder="Write blog post"></textarea>-->
 
     <!-- Checkboxes -->
     <h4>Checkbox Input</h4>
@@ -185,12 +185,20 @@
 
     <!-- Multiple Checkboxes -->
     <h4>Multiple Checkboxes</h4>
-    <fieldset>
-        <legend>Choose Toppings</legend>
-        <label><input name="topping" value="pepperoni" type="checkbox">Pepperoni</label>
-        <label><input name="topping" value="peppers" type="checkbox">Peppers</label>
-        <label><input name="topping" value="mushrooms" type="checkbox">Mushrooms</label>
-        <label><input name="topping" value="olives" type="checkbox">Olives</label>
+    <fieldset> <!-- Wraps a box around the choices -->
+        <legend>Choose Toppings</legend> <!-- Will add the words in the box described with the fieldset  -->
+        <label for="pepperoni">
+            <input id="pepperoni" name="topping" value="pepperoni" type="checkbox">Pepperoni
+        </label>
+        <label>
+            <input name="topping" value="peppers" type="checkbox">Peppers
+        </label>
+        <label>
+            <input name="topping" value="mushrooms" type="checkbox">Mushrooms
+        </label>
+        <label>
+            <input name="topping" value="olives" type="checkbox">Olives
+        </label>
     </fieldset>
 
     <!-- Radio Buttons -->
