@@ -19,13 +19,9 @@
                 <label for="password">Password: </label>
                 <input id="password" name="password" type="password" required="required" placeholder="Enter password">
             </div>
-
-            <div>
-                <label for="bio">Bio: </label>
-                <br>
-                <textarea id="bio" name="bio" placeholder="Tell us about yourself" rows="5" cols="30"></textarea>
-            </div>
-
+            <label for="bio">Bio: </label>
+            <br>
+            <textarea id="bio" name="bio" placeholder="Tell us about yourself" rows="5" cols="30"></textarea>
             <div>
                 <fieldset>
                     <legend>How did you hear about us?</legend>
@@ -90,21 +86,17 @@
                     </label>
                 </fieldset>
             </div>
-
+            <label for="browser">What browser are you using?<br></label>
+            <select name="browser" id="browser">
+                <option value="google-chrome">Google Chrome</option>
+                <option value="mozilla-firefox">Mozilla Firefox</option>
+                <option value="internet-explorer">Internet Explorer</option>
+                <option value="safari">Safari</option>
+                <option value="other">Other</option>
+            </select>
             <div>
-                <label for="browser">What browser are you using?<br></label>
-
-                <select name="browser" id="browser">
-                    <option value="google-chrome">Google Chrome</option>
-                    <option value="mozilla-firefox">Mozilla Firefox</option>
-                    <option value="internet-explorer">Internet Explorer</option>
-                    <option value="safari">Safari</option>
-                    <option value="other">Other</option>
-                </select>
+                <button>Submit</button>
             </div>
-            <br>
-            <br>
-            <button>Submit</button>
         </form>
     </main>
 </body>
