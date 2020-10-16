@@ -21,3 +21,24 @@ h2 {
 ul {
     list-style: square;
 }
+
+table {
+    table-layout: auto;
+    width: 50%;
+    background-color: black;
+    text-align: center;
+    border: .05em solid;
+    font-size: 1em;
+}
+
+th {
+    font-width: bold;
+    background-color: deepskyblue;
+    color: #ffffff;
+    border: blue;
+}
+
+td {
+    padding: 0.5em;
+    background-color: white;
+}
