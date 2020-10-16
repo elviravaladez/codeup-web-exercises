@@ -42,3 +42,19 @@ td {
     padding: 0.5em;
     background-color: white;
 }
+
+a:link {
+    color: dodgerblue;
+}
+
+a:visited {
+    color:mediumslateblue;
+}
+
+a:hover {
+    color: chocolate;
+}
+
+a:active {
+    color: white;
+}
