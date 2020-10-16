@@ -1,6 +1,7 @@
 body {
-    background-image: url(../img/pastel-hearts.jpeg);
-    background-size: 10px;
+    /*background-image: url(../img/pastel-hearts.jpeg);*/
+    /*background-size: 10px;*/
+    background-color: #effad3;
     font-family: 'Montserrat', sans-serif;
 }
 
