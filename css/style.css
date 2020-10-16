@@ -1,6 +1,7 @@
 body {
     background-image: url(../img/pastel-hearts.jpeg);
     background-size: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -19,4 +20,41 @@ h2 {
 
 ul {
     list-style: square;
+}
+
+table {
+    table-layout: auto;
+    width: 50%;
+    background-color: black;
+    text-align: center;
+    border: .05em solid;
+    font-size: 1em;
+}
+
+th {
+    font-width: bold;
+    background-color: deepskyblue;
+    color: #ffffff;
+    border: blue;
+}
+
+td {
+    padding: 0.5em;
+    background-color: white;
+}
+
+a:link {
+    color: dodgerblue;
+}
+
+a:visited {
+    color:mediumslateblue;
+}
+
+a:hover {
+    color: chocolate;
+}
+
+a:active {
+    color: white;
 }
