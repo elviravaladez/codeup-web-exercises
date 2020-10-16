@@ -1,3 +1,8 @@
+body {
+    background-image: url(../img/white-texture.jpeg);
+    background-size: 10px;
+}
+
 header {
     text-align: center;
 }
@@ -8,10 +13,6 @@ header {
 }
 
 h2 {
-    color: #5c969e;
+    color: #b52b65;
     text-decoration: underline;
-}
-
-body {
-    background-color: #fff8cd;
 }
