@@ -14,3 +14,24 @@ header {
     margin: 15px auto;
     font-size: 30px;
 }
+
+
+.flag {
+    margin: 3em;
+    width: 24em;
+    height: 16em;
+    background: linear-gradient(white 50%, #BF0A30 50%);
+}
+
+.flag::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1em;
+    width: 33%;
+    height: 100%;
+    content: '★';
+    font-size: 6em;
+    color: white;
+    background-color: #002868;
+}
