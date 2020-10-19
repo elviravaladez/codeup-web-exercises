@@ -23,6 +23,9 @@ fieldset {
     /* There must be 1em between the content and the border of this element */
     /* It should have no border */
     /* Its background should be white */
+    padding: 1em;
+    border: none;
+    background-color: white;
 }
 
 .width-80 {
