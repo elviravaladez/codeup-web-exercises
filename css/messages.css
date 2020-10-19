@@ -1,3 +1,10 @@
+   /*Using CSS variables with : root */
+
+   /* : root {*/
+   /*     --bg-info: #D0DDFC;*/
+   /*     --text-info: #312B89;*/
+   /* }*/
+
 body, html {
     height: 100%;
     width: 100%;
@@ -16,6 +23,8 @@ body, html {
 .message.message-info {
     background-color: #D0DDFC;
     color: #312B89;
+    /*background-color: var(--bg-info);*/
+    /*color: var(--text-info);*/
 }
 
 .message.message-success {
