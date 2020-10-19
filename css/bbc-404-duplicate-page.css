@@ -13,6 +13,7 @@ body, html {
 
 li {
     display: inline;
+    font-weight: bold;
 
 }
 
