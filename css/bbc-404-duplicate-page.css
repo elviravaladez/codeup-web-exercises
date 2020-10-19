@@ -1,18 +1,24 @@
 * {
     padding: 0;
     margin: 0;
+    border: 0;
     box-sizing: border-box;
 
 }
 
 body, html {
-    font-family: Arial, Ubuntu, sans-serif;
+    font-family: ReithSans, Arial, Helvetica, sans-serif;
 
 }
 
+.links {
+    color: black;
+    text-decoration: none;
+}
 
 li {
     display: inline;
+    font-weight: bold;
 
 }
 
@@ -27,6 +33,7 @@ li {
 }
 .bbc-homepage {
     color: #4847AF;
+    text-decoration: none;
 }
 
 main {
