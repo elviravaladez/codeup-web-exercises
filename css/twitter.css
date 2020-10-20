@@ -51,7 +51,7 @@ a {
 }
 .profile-image {
     position: absolute;
-    top:220px;
+    top:240px;
 }
 .profile {
     background: var(--light-bg);
@@ -99,5 +99,29 @@ a {
     margin: 0em .5em;
 }
 .container {
-    padding: 2em; /*adding padding */
+    padding-top:2em ; /*adding padding */
+}
+.media {
+    width: 100%;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--separator-color);
+    padding: .5em;
+    overflow: auto;
+}
+.media-image {
+    width: 50px;
+    float: left;
+    margin-top: 1.33em;
+}
+.media-body {
+    float: left;
+    /*width: calc(100% - 2.66em);*/
+    width: 80%;
+}
+.profile-items {
+    list-style-type: none;
+    padding: 0;
+}
+.profile-entry {
+    margin: .5em;
 }
