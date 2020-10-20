@@ -27,22 +27,39 @@ a {
 }
 .top-nav {
     background: var(--light-bg);
+    position: fixed;
+    width: 100%;
+    z-index: 20;
 }
 .nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+.nav-item {
+    display: inline-block;
+    padding: 1.5em;
+}
 .nav-link {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
+    display: inline-block;
 }
 .nav-link:hover {
     color: var(--link-color);
 }
+.profile-image {
+    position: absolute;
+    top:240px;
+}
 .profile {
     background: var(--light-bg);
+    height: 80px;
+}
+.profile-form {
+    float: right;
+    line-height: 80px;
 }
 .btn {
     border: 1px solid var(--main-link-color);
@@ -65,4 +82,46 @@ a {
 }
 .text-muted {
     color: var(--main-link-color);
+}
+.profile-details {
+    float: left;
+    width: calc(25% - 1em);
+    margin: 0em .5em;
+}
+.timeline {
+    float: left;
+    width: calc(50% - 1em);
+    margin: 0em .5em;
+}
+.who-to-follow {
+    float: right;
+    width: calc(25% - 1em);
+    margin: 0em .5em;
+}
+.container {
+    padding-top:2em ; /*adding padding */
+}
+.media {
+    width: 100%;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--separator-color);
+    padding: .5em;
+    overflow: auto;
+}
+.media-image {
+    width: 50px;
+    float: left;
+    margin-top: 1.33em;
+}
+.media-body {
+    float: left;
+    /*width: calc(100% - 2.66em);*/
+    width: 80%;
+}
+.profile-items {
+    list-style-type: none;
+    padding: 0;
+}
+.profile-entry {
+    margin: .5em;
 }
