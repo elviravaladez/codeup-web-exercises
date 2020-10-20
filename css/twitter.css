@@ -115,7 +115,7 @@ a {
 }
 .media-body {
     float: left;
-    width: calc(100% - 4em);
+    width: calc(100% - 50px);
 }
 .profile-items {
     list-style-type: none;
