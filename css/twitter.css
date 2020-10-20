@@ -98,3 +98,6 @@ a {
     width: calc(25% - 1em);
     margin: 0em .5em;
 }
+.container {
+    padding: 2em; /*adding padding */
+}
