@@ -35,6 +35,7 @@ h2, h3 {
     margin: 0 auto;
     /* enter needed declarations here */
     display: flex;
+    flex-direction: column;
 }
 
 section {
