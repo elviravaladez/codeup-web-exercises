@@ -34,16 +34,25 @@ h2, h3 {
     padding: 1em;
     margin: 0 auto;
     /* enter needed declarations here */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 section {
     /* enter needed declarations here */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
     /* enter needed declarations here */
+    justify-content: space-between;
+    align-items: center;
 }
 section:nth-of-type(1) div:last-child {
     /* enter needed declarations here */
@@ -57,10 +66,12 @@ section:nth-of-type(1) div:last-child {
 
 .purple-box:nth-of-type(1) {
     /* enter needed declarations here */
+    flex-grow: 2;
 }
 
 .purple-box:nth-of-type(2) {
     /* enter needed declarations here */
+    flex-grow: 1;
 }
 
 .blue-box {
