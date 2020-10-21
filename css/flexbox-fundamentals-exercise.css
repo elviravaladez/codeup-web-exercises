@@ -36,10 +36,14 @@ h2, h3 {
     /* enter needed declarations here */
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 section {
     /* enter needed declarations here */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 section:nth-of-type(1) {
