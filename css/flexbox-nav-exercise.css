@@ -25,3 +25,8 @@ nav a {
 nav a:hover {
     background-color: blue;
 }
+nav ul li:nth-child(5) {
+    margin: auto;
+    font-size: 3em;
+    font-family: 'Work Sans', sans-serif;
+}
