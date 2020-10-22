@@ -19,16 +19,20 @@ ul {
 nav a {
     text-decoration: none;
     color: black;
-    font-family: 'Work Sans', sans-serif;
     display: inline-block;
+}
+
+li:not(.logo) {
+    font-family: 'Work Sans', sans-serif;
     margin: 1em;
 }
+
 nav a:hover {
     background-color: blue;
 }
 nav ul li:nth-child(5) {
+    font-family: 'Montserrat', sans-serif;
     margin-left: auto;
     margin-right: auto;
     font-size: 3em;
-    font-family: 'Montserrat', sans-serif;
 }
