@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+nav {
+    background-color: lightgrey;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Work Sans', sans-serif;
+    display: inline-block;
+    margin: 1em;
+}
+nav a:hover {
+    background-color: blue;
+}
