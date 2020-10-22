@@ -22,3 +22,6 @@ nav a {
     display: inline-block;
     margin: 1em;
 }
+nav a:hover {
+    background-color: blue;
+}
