@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<!--    <meta charset="UTF-8">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Media Queries Practice</title>
     <style>
+        * {
+            text-align: center;
+        }
 
+        /* Small devices (phones and pocket devices, 576 and up) */
+        @media screen and (min-width:576px) {
+            body {
+                background-color: blue;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media screen and (min-width:768px) {
+            body {
+                background-color: purple;
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media screen and (min-width:1200px) {
+            body {
+                background-color: yellow;
+            }
+        }
     </style>
 </head>
 <body>
     <h1>Media Queries</h1>
+
 
 </body>
 </html>
