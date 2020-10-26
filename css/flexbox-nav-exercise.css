@@ -28,7 +28,7 @@ li:not(.logo) {
 }
 
 nav a:hover {
-    background-color: blue;
+    color: blue;
 }
 nav ul li:nth-child(5) {
     font-family: 'Montserrat', sans-serif;
