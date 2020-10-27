@@ -9,11 +9,14 @@
     <title>Order Pizza Exercise</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="https://kit.fontawesome.com/5eae995560.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!--Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Pizza World</a>
+        <a class="navbar-brand text-secondary" href="#">Pizza World</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,17 +29,26 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Menu</a>
                 </li>
+
+                <li>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Zip code">
+                        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search stores near you!</button>
+                    </form>
+                </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Zip code">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
-            </form>
+            <a class="nav-link text-secondary" href="#"><i class="fas fa-user"></i> Sign Up</a>
         </div>
     </nav>
 
     <!--Main Container-->
     <div class="container" id="main-container">
-
+        <!--Jumbotron -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Welcome to Pizza World!</h1>
+            </div>
+        </div>
     </div>
 
 

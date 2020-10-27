@@ -1,0 +1,13 @@
+.jumbotron {
+    background-image: url("../img/pizza.png");
+    background-size: cover;
+    /*height: 100%;*/
+}
+
+h1 {
+    font-family: Arial, Ubuntu, sans-serif;
+    text-align: center;
+    background-color: white;
+    opacity: 0.6;
+    margin: auto -1em;
+}
