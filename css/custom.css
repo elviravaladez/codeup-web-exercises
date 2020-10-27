@@ -10,3 +10,9 @@ h1 {
     opacity: 0.6;
     margin: auto -1em;
 }
+
+@media screen and (max-width: 576px) {
+    .jumbotron {
+        display: none;
+    }
+}
