@@ -72,17 +72,18 @@
                     </a>
                 </li>
             </ul>
-            <!--Trying to use Dynamic Tab Content -->
+            <!--Dynamic Tab Content -->
             <div class="tab-content" id="myTabContent">
+                <!-- Size and Crust Tab-->
                 <div class="tab-pane fade show active" id="size-and-crust" role="tabpanel" aria-labelledby="size-and-crust-tab">
                     <!--Choose size and crust card (Main Card) -->
                     <div class="card">
                         <div class="card-header bg-primary text-white">
-                            Choose size and crust
+                            Choose Size and Crust
                         </div>
                         <div class="card-body">
 
-                            <!--Card 1: inside the Main Card -->
+                            <!--Size and Crust Card 1-->
                             <div class="card">
                                 <div class="card-header">
                                     Hand Tossed
@@ -111,7 +112,7 @@
                                 </ul>
                             </div>
                             <br>
-                            <!--Card 2: inside the Main Card -->
+                            <!--Size and Crust Card 2 -->
                             <div class="card">
                                 <div class="card-header">
                                     Crispy Thin
@@ -144,11 +145,72 @@
                             <a href="#" class="btn btn-primary ">Next Step ></a>
                         </div>
                     </div>
+                </div>
+
+                <!-- Cheese and Sauce Tab-->
+                <div class="tab-pane fade" id="cheese-and-sauce" role="tabpanel" aria-labelledby="cheese-and-sauce-tab">
+                    <!-- Choose cheese and sauce main card-->
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            Choose Cheese and Sauce
+                        </div>
+                        <div class="card-body">
+
+                            <!--Cheese and Sauce Card 1-->
+                            <div class="card">
+                                <div class="card-header">
+                                    Cheese
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        How Much?
+                                        <select class="custom-select">
+                                            <option value="light" selected>Light</option>
+                                            <option value="normal">Normal</option>
+                                            <option value="extra">Extra</option>
+                                            <option value="double">Double</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                            <br>
+                            <!--Cheese and Sauce Card 2 -->
+                            <div class="card">
+                                <div class="card-header">
+                                    Sauce
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        What Type?
+                                        <select class="custom-select">
+                                            <option value="tomato" selected>Tomato sauce</option>
+                                            <option value="marinara">Marinara sauce</option>
+                                            <option value="bbq">BBQ sauce</option>
+                                            <option value="alfredo">Alfredo Sauce</option>
+                                        </select>
+                                    </li>
+                                    <li class="list-group-item">
+                                        How Much?
+                                        <select class="custom-select">
+                                            <option value="light-sauce" selected>Light</option>
+                                            <option value="normal-sauce">Normal</option>
+                                            <option value="extra-sauce">Extra</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right">
+                            <div class="btn-group" role="group" aria-label="Cheese Buttons">
+                                <button type="button" class="btn btn-primary">< Previous Step</button>
+                                <button type="button" class="btn btn-primary">Next Step ></button>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-                <div class="tab-pane fade" id="cheese-and-sauce" role="tabpanel" aria-labelledby="cheese-and-sauce-tab">
-                    Hi
-                </div>
+
+                <!-- Toppings Tab -->
                 <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
                     Hello
                 </div>
