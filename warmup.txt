@@ -22,3 +22,7 @@ Write out all the different ways you can group 12 columns
 - 9 and 3
 - 8 and 4
 - 7 and 5
+
+//Can also group into small groups
+
+- 3 and 3 and 3 and 3
