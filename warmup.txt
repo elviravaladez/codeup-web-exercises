@@ -11,3 +11,14 @@ WARMUPS
     Password
 - This element represents a document section that contains interactive controls for submitting information to a web server.
     <FORM>
+
+
+
+ 10-28-20
+Write out all the different ways you can group 12 columns
+- 6 and 6
+- 11 and 1
+- 10 and 2
+- 9 and 3
+- 8 and 4
+- 7 and 5
