@@ -13,7 +13,76 @@
     <script>
         (function (){
             "use strict";
+            var interval = 1000;
+            var counter = 0;
+            var intervalId = setInterval(playSinging, interval);
 
+            function playSinging() {
+                counter++;
+                switch(counter) {
+                    case 1:
+                        console.log("All a-...");
+                        break;
+                    case 2:
+                        console.log("-round the ...");
+                        break;
+                    case 3:
+                        console.log("mulberry...");
+                        break;
+                    case 4:
+                        console.log("bush, The...");
+                        break;
+                    case 5:
+                        console.log("monkey...");
+                        break;
+                    case 6:
+                        console.log("chased the...");
+                        break;
+                    case 7:
+                        console.log("wea-...");
+                        break;
+                    case 8:
+                        console.log("-sel...");
+                        break;
+                    case 9:
+                        console.log("The monkey...");
+                        break;
+                    case 10:
+                        console.log("stopped to...");
+                        break;
+                    case 11:
+                        console.log("pull up his...");
+                        break;
+                    case 12:
+                        console.log("sock,...");
+                        break;
+                    case 13:
+                        console.log("Pop!...");
+                        break;
+                    case 14:
+                        console.log("goes the...");
+                        break;
+                    case 15:
+                        console.log("wea-...");
+                        break;
+                    case 16:
+                        console.log("-sel.");
+                        break;
+                    default:
+                        console.log("Song over :)");
+                        break;
+                }
+
+            }
+
+            var delay = 8000;
+            var timeoutId = setTimeout(stopSinging, delay);
+
+            function stopSinging() {
+                clearTimeout();
+                console.log("STOP! SINGING");
+                clearInterval(intervalId);
+            }
         })();
     </script>
 </body>
