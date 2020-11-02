@@ -16,8 +16,8 @@
     var detonationTimer = 5;
 
     // TODO: This function needs to be called once every second
-    var stopTime = 1000;
-    var intID = setInterval(updateTimer, stopTime);
+    var interval = 1000; // time in milliseconds
+    var intervalId = setInterval(updateTimer, interval);
 
     function updateTimer() {
         if (detonationTimer == 0) {
@@ -30,10 +30,17 @@
         detonationTimer--;
     }
 
-    // TODO: When this function runs, it needs to
-    // cancel the interval/timeout for updateTimer()
-    function defuseTheBOM() {
+    // TODO: When this function runs, it needs to cancel the interval/timeout for updateTimer()
 
+    var delay = 5000; //milliseconds
+    var timeoutId = setTimeout(defuseTheBOM, delay);
+
+    function defuseTheBOM() {
+        clearTimeout(timeoutId);
+        console.log("canceling the timeout");
+
+        clearInterval(intervalId);
+        console.log("canceling the interval");
     }
 
     // Don't modify anything below this line!
