@@ -32,15 +32,9 @@
 
     // TODO: When this function runs, it needs to cancel the interval/timeout for updateTimer()
 
-    var delay = 5000; //milliseconds
-    var timeoutId = setTimeout(defuseTheBOM, delay);
-
     function defuseTheBOM() {
-        clearTimeout(timeoutId);
-        console.log("canceling the timeout");
-
         clearInterval(intervalId);
-        console.log("canceling the interval");
+        alert("You defused the BOM!");
     }
 
     // Don't modify anything below this line!
