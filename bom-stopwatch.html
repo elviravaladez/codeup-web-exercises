@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Build a Stopwatch Bonus</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: "Arial", Monaco, monospace;
+            background-color: lightskyblue;
+        }
+
+        #stopwatch-title {
+            margin-bottom: 2em;
+        }
+
+        div.time-container {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid black .5em;
+            border-radius: 15px;
+            margin: auto;
+            height: 10em;
+            width: 20em;
+        }
+
+        #current-time {
+            font-size: 6em;
+        }
+        button {
+            margin-top: 4em;
+            margin-right: 1em;
+            height: 5em;
+            width: 10em;
+            font-size: 1.2em;
+            font-weight: bolder;
+        }
+
+        #start {
+            background-color: lawngreen;
+        }
+
+        #pause {
+            background-color: yellow;
+        }
+
+        #reset {
+            background-color: #FE4C40;
+        }
+    </style>
+</head>
+<body>
+<h1 id="stopwatch-title">Stopwatch</h1>
+<h2>Current Time</h2>
+<div class="time-container">
+    <h1 id="current-time"></h1>
+</div>
+
+<div class="button-container">
+    <button id="start">Start</button>
+    <button id="pause">Pause</button>
+    <button id="reset">Reset</button>
+</div>
+
+
+<script>
+    (function() {
+        "use strict";
+        var intervalId = 0;
+        var count = 0;
+
+        var stopWatch = {
+            start: function () {
+                intervalId = setInterval(function () {
+                    if(isNaN(count)){
+                        count = 0;
+                    }
+                    count++;
+                    document.getElementById("current-time").innerText = count;
+                }, 1000);
+            },
+            pause: function () {
+                clearInterval(intervalId);
+            },
+            reset: function (){
+                count = 0;
+                clearInterval(intervalId);
+                document.getElementById("current-time").innerText = count;
+            }
+        }
+
+        var startButton = document.getElementById("start");
+        var pauseButton = document.getElementById("pause");
+        var resetButton = document.getElementById("reset");
+
+        startButton.addEventListener("click", stopWatch.start);
+        pauseButton.addEventListener("click", stopWatch.pause);
+        resetButton.addEventListener("click", stopWatch.reset);
+
+    })();
+</script>
+</body>
+</html>
