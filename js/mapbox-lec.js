@@ -72,6 +72,14 @@ var popup = new mapboxgl.Popup()
 
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the alamo marker.
 
+var alamoPopup = new mapboxgl.Popup()
+    .setHTML("<p>Remember the Alamo</p>") // can also use .setText()
+    .addTo(map);
+
+
+
+
+alamoMarker.setPopup(alamoPopup);
 
 // TODO: Review the popup docs. What are some additional options we can pass to the popup?
 // TODO: Try setting the text by using ".setText()" instead of ".setHTML()"
