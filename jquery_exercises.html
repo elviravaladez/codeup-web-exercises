@@ -24,7 +24,9 @@
             <li>Blissful Burgers</li>
         </ul>
         <br>
-        <div class="codeup">Enjoy!</div>
+        <!--Class Selectors Exercise 4: Remove the class from one of the elements. Refresh and test that the border has been removed.-->
+        <!--Class Selectors Exercise 5: Give another element an id of codeup. Does this element get a border now? ANSWER: NO, it does not-->
+        <div id="codeup">Enjoy!</div>
 
     </main>
 
@@ -34,10 +36,17 @@
         $(document).ready(function() {
            "use strict";
 
-           //Class Selectors Exercise 3. Using jQuery, create a border around all elements with the class codeup that is 1 pixel wide and red.
-           $(".codeup").css("border", "1px solid red");
+           //Element Selectors Exercise 1: Remove your custom jQuery code from previous exercises.
+           //Element Selectors Exercise 2: Using jQuery, set the font-size of all li elements to 20px.
+           $('li').css('font-size', '20px');
+
+           //Element Selectors Exercise 3: Craft selectors that highlight all the h1, p, and li elements.
+           $("h1, p, li").css("background-color", "yellow");
 
 
+           //Element Selectors Exercise 4: Create a jQuery statement to alert the contents of your h1 element(s).
+           var headerElement = $('h1');
+           alert(headerElement.html());
         });
     </script>
 </body>
