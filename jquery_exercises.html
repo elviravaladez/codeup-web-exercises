@@ -22,7 +22,7 @@
             <li class="vegan-list-item">Blissful Burgers</li>
         </ul>
         <br>
-        <div>Enjoy!</div>
+        <div id="title">Enjoy!</div>
 
     </main>
 
@@ -31,15 +31,18 @@
     <script>
         $(document).ready(function() {
            "use strict";
-            //Exercise 3. Using jQuery to select an element by the id. Alert the contents of the element.
+            // //Exercise 3. Using jQuery to select an element by the id. Alert the contents of the element.
             // var title = $('#title');
             // alert(title.html());
 
-            //Exercise 4. Update the jQuery code to select and alert a different id.
+            // //Exercise 4. Update the jQuery code to select and alert a different id.
+            // var veganList = $('#vegan-list');
+            // alert(veganList.text()); //using .text to access the text within the ul with an id of vegan-list. If .html() is used the <li> tags show up
 
-            var veganList = $('#vegan-list');
-            alert(veganList.text()); //using .text to access the text within the ul with an id of vegan-list. If .html() is used the <li> tags show up
-
+            //Exercise 5. Use the same id on 2 elements. How does this change the jQuery selection?
+            var title = $('#title');
+            alert(title.html());
+            //After completing exercise 5, I've noticed that only the first element with the ID of title displays in the alert
 
         });
     </script>
