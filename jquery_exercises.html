@@ -5,25 +5,26 @@
     <title>jQuery Exercises</title>
 </head>
 <body>
-    <!--Exercise 1. Create content in your HTML file using at least the following elements: h1, p, ul, li, div.-->
-    <main class="container">
-        <!--Exercise 2. Add several attributes to your elements; you will need both id and class attributes.-->
+    <!--Id Selectors Exercise 1. Create content in your HTML file using at least the following elements: h1, p, ul, li, div.-->
 
-        <h1 id="title">Best Vegan Restaurants in San Antonio</h1>
+    <main class="container">
+        <!--Id Selectors Exercise 2. Add several attributes to your elements; you will need both id and class attributes.-->
+        <!--Class Selectors Exercise 2: Update your code so that at least 3 different elements have the same class named codeup.-->
+
+        <h1 id="title" class="codeup">Best Vegan Restaurants in San Antonio</h1>
         <p class="paragraph">
             Here is a list of the <strong>BEST</strong> Vegan Restaurants in the great city of San Antonio, Texas.
         </p>
 
-        <ul id="vegan-list">
-            <!--Class Selectors Exercise 2: Update your code so that at least 3 different elements have the same class named codeup.-->
-            <li class="codeup">Viva Vegeria</li>
-            <li class="codeup">Vegan Avenue</li>
-            <li class="codeup">Earth Burger</li>
-            <li class="codeup">Tapatio Vegan Tacos</li>
-            <li class="codeup">Blissful Burgers</li>
+        <ul id="vegan-list" class="codeup">
+            <li>Viva Vegeria</li>
+            <li>Vegan Avenue</li>
+            <li>Earth Burger</li>
+            <li>Tapatio Vegan Tacos</li>
+            <li>Blissful Burgers</li>
         </ul>
         <br>
-        <div id="title">Enjoy!</div>
+        <div class="codeup">Enjoy!</div>
 
     </main>
 
@@ -32,6 +33,10 @@
     <script>
         $(document).ready(function() {
            "use strict";
+
+           //Class Selectors Exercise 3. Using jQuery, create a border around all elements with the class codeup that is 1 pixel wide and red.
+           $(".codeup").css("border", "1px solid red");
+
 
         });
     </script>
