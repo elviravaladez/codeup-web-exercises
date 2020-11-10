@@ -6,16 +6,46 @@
     <style>
         body {
             text-align: center;
+            background-color: mediumpurple;
+            font-family: "Arial", Monaco, monospace;
+            color: white;
         }
+
+        button {
+            padding: 15px 25px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            outline: none;
+            background-color: lawngreen;
+            border: none;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 9px lightgrey;
+        }
+
+        .button:hover {
+            background-color: limegreen;
+        }
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
     </style>
 </head>
 <body>
     <!--Heading -->
     <h1 class="text-center">TIC-TAC-TOE</h1>
 
-
+    <br>
     <!--Start Button -->
-    <button type="button">Start Game</button>
+    <button type="button" class="button">Start Game</button>
 
 
 
