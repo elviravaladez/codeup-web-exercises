@@ -5,9 +5,11 @@
     <title>jQuery Exercises</title>
 </head>
 <body>
+    <!--Exercise 1. Create content in your HTML file using at least the following elements: h1, p, ul, li, div.-->
     <main class="container">
+        <!--Exercise 2. Add several attributes to your elements; you will need both id and class attributes.-->
 
-        <h1>Best Vegan Restaurants in San Antonio</h1>
+        <h1 id="title">Best Vegan Restaurants in San Antonio</h1>
         <p class="paragraph">
             Here is a list of the <strong>BEST</strong> Vegan Restaurants in the great city of San Antonio, Texas.
         </p>
@@ -26,11 +28,14 @@
 
 
     <script src="js/jquery-2.2.4.js"></script>
-
     <script>
         $(document).ready(function() {
            "use strict";
-            // alert("DOM Loaded!");
+            //Exercise 3. Using jQuery to select an element by the id. Alert the contents of the element.
+            var title = $('#title');
+            alert(title.html());
+
+
         });
     </script>
 </body>
