@@ -5,7 +5,7 @@ body {
     font-family: "Arial", Monaco, monospace;
     color: white;
 }
-
+/*Button Styling*/
 div.btn-container {
     display: inline-block;
 }
@@ -39,6 +39,7 @@ div.btn-container {
 
 /* screen sizes 280px and up */
 @media screen and (min-width:280px) {
+    /*Button Styling*/
     div.btn-container {
         height: 100px;
         width: 150px;
@@ -52,6 +53,7 @@ div.btn-container {
 
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width:768px) {
+    /*Button Styling*/
     div.btn-container {
         height: 172px;
         width: 200px;
