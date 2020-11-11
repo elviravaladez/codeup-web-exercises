@@ -1,6 +1,5 @@
 body {
     text-align: center;
-    /*background-color: #ffa5a5;*/
     background-color: #686d76;
     font-family: "Arial", Monaco, monospace;
     color: white;
@@ -37,8 +36,23 @@ div.btn-container {
     transform: translateY(4px);
 }
 
-/* screen sizes 280px and up */
-@media screen and (min-width:280px) {
+/*Game Board Styling*/
+.row-1, .row-2 {
+    border-bottom: 2px solid black;
+}
+
+.col-1, .col-2 {
+    border-right: 2px solid black;
+}
+
+.square {
+    width: 33.3333%;
+}
+
+
+
+/* screen sizes 320px and up */
+@media screen and (min-width:320px) {
     /*Button Styling*/
     div.btn-container {
         height: 100px;
@@ -48,6 +62,23 @@ div.btn-container {
     button.btn {
         height: 100px;
         width: 100px;
+    }
+
+    /*Setting the Game Board Container*/
+    div.game-board-container {
+        display: block;
+        max-width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    /*Styling the Game Board Rows*/
+    .row {
+        width: 100%;
+        background-color: white;
+        height: 100px;
+        margin: auto;
+        display: flex;
     }
 }
 
@@ -63,5 +94,22 @@ div.btn-container {
         height: 160px;
         width: 160px;
         font-size: 30px;
+    }
+
+    /*Setting the Game Board Container*/
+    div.game-board-container {
+        display: block;
+        max-width: 600px;
+        height: 600px;
+        margin: 0 auto;
+    }
+
+    /*Styling the Game Board Rows*/
+    .row {
+        width: 100%;
+        background-color: white;
+        height: 200px;
+        margin: auto;
+        display: flex;
     }
 }
