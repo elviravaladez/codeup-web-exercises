@@ -5,11 +5,7 @@
     <title>jQuery Exercises</title>
 </head>
 <body>
-    <!--Id Selectors Exercise 1. Create content in your HTML file using at least the following elements: h1, p, ul, li, div.-->
-
     <main class="container">
-        <!--Id Selectors Exercise 2. Add several attributes to your elements; you will need both id and class attributes.-->
-        <!--Class Selectors Exercise 2: Update your code so that at least 3 different elements have the same class named codeup.-->
 
         <h1 id="title" class="codeup">Best Vegan Restaurants in San Antonio</h1>
         <p class="paragraph">
@@ -24,8 +20,6 @@
             <li>Blissful Burgers</li>
         </ul>
         <br>
-        <!--Class Selectors Exercise 4: Remove the class from one of the elements. Refresh and test that the border has been removed.-->
-        <!--Class Selectors Exercise 5: Give another element an id of codeup. Does this element get a border now? ANSWER: NO, it does not-->
         <div id="codeup">Enjoy!</div>
 
     </main>
@@ -35,19 +29,25 @@
     <script>
         $(document).ready(function() {
            "use strict";
+            //Mouse Events Exercise 1: Remove your custom jQuery code from previous exercises.
 
-           //Element Selectors Exercise 1: Remove your custom jQuery code from previous exercises.
-           //Element Selectors Exercise 2: Using jQuery, set the font-size of all li elements to 20px.
-           $('li').css('font-size', '20px');
+            // Mouse Events Exercise 2: Add jQuery code that will change the background color of an h1 element when clicked.
+            $('h1').click(function () {
+                $('h1').css('background', 'yellow');
+            });
 
-           //Element Selectors Exercise 3: Craft selectors that highlight all the h1, p, and li elements.
-            //Combine selectors to highlight all the h1, p, and li elements.
-           $("h1, p, li").css("background-color", "yellow");
+            // Mouse Events Exercise 3: Make all paragraphs have a font size of 18px when they are double clicked.
+            $('p').dblclick(function() {
+                $('p').css('font-size', '18px');
+            });
 
+            // Mouse Events Exercise 4: Set all li text color to red when the mouse is hovering; reset to black when it is not.
+            $('li').hover(function() {
+                $('li').css('color', 'red');
+            }, function () {
+                $('li').css('color', 'black');
+            });
 
-           //Element Selectors Exercise 4: Create a jQuery statement to alert the contents of your h1 element(s).
-           var headerElement = $('h1');
-           alert(headerElement.html());
         });
     </script>
 </body>
