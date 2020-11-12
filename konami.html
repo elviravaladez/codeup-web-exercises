@@ -4,15 +4,26 @@
     <title>Konami Code</title>
 </head>
 <body>
-<h1>Konami Code</h1>
+    <h1>Konami Code</h1>
 
-<script src="/js/jquery-2.2.4.js"></script>
-<script>
-    "use strict";
+    <script src="js/jquery-2.2.4.js"></script>
+    <script>
+        "use strict";
+        var pressedKeys = [];
+        var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 65, 66, 13];
 
-    $(document).keyup(function(event){
-        console.log(event.keyCode);
-    });
-</script>
+        $(document).keyup(function(event){
+            // console.log(event.keyCode);
+            pressedKeys.push(event.keyCode);
+            pressedKeys.splice(-konamiCode.length - 1, pressedKeys.length - konamiCode.length);
+            console.log(pressedKeys);
+
+            if(pressedKeys.join(" ") === konamiCode.join(" ")) {
+                alert("You have added 30 lives!");
+                $("*").css("background-color", "pink");
+            }
+        });
+
+    </script>
 </body>
 </html>
