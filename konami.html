@@ -2,6 +2,12 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <style>
+        * {
+            font-family: Arial;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1>Konami Code</h1>
@@ -19,8 +25,16 @@
             console.log(pressedKeys);
 
             if(pressedKeys.join(" ") === konamiCode.join(" ")) {
-                alert("You have added 30 lives!");
-                $("*").css("background-color", "pink");
+                alert("Success! You have unlocked the tunes!");
+                $('h1').html("Enjoy :)");
+                $("*").css("color", "white");
+                $("*").css("font-family", "HelloFirstieBig");
+                $("*").css("font-size", "2em");
+                $("<audio></audio>").attr( {
+                    "src" : "audio/sunflower.m4a",
+                    "autoplay": "autoplay"
+                }).appendTo("body");
+                $("body").css("background-image", "url(./video/spiderman.gif)");
             }
         });
 
