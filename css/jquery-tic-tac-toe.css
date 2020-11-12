@@ -60,7 +60,7 @@ div.btn-container {
 }
 
 #start-btn {
-    background-color: lawngreen;
+    background-color: limegreen;
 }
 #reset-btn {
     /*background-color: orangered;*/
@@ -68,7 +68,7 @@ div.btn-container {
 }
 
 #start-btn.btn:hover {
-    background-color: limegreen;
+    background-color: lawngreen;
 }
 .btn:active {
     box-shadow: 0 5px #666;
