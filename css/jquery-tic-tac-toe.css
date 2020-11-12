@@ -1,6 +1,7 @@
 body {
     text-align: center;
-    background-color: #686d76;
+    /*background-color: #686d76;*/
+    background-color: #595b83;
     font-family: "Arial", Monaco, monospace;
     color: white;
 }
@@ -51,7 +52,6 @@ div.btn-container {
     transition-duration: 0.4s;
     text-decoration: none;
     outline: none;
-    background-color: lawngreen;
     border: none;
     height: 170px;
     width: 18%;
@@ -59,14 +59,31 @@ div.btn-container {
     box-shadow: 0 9px lightgrey;
 }
 
-.btn:hover {
-    background-color: limegreen;
+#start-btn {
+    background-color: lawngreen;
+}
+#reset-btn {
+    /*background-color: orangered;*/
+    background-color: #ff414d;
 }
 
+#start-btn.btn:hover {
+    background-color: limegreen;
+}
 .btn:active {
-    background-color: #3e8e41;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+}
+
+#start-btn.btn:active {
+    background-color: #3e8e41;
+}
+#reset-btn.btn:active {
+    background-color: yellow;
+}
+
+#reset-btn.btn:hover {
+    background-color: red;
 }
 
 /**************** MEDIA QUERIES ***************/
@@ -112,7 +129,7 @@ div.btn-container {
         margin-top: 1em;
         margin-bottom: 1em;
         height: 100px;
-        width: 150px;
+        width: 100px;
     }
 
     button.btn {
