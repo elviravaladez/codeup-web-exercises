@@ -32,11 +32,14 @@
             //Mouse Events Exercise 1: Remove your custom jQuery code from previous exercises.
 
             // Mouse Events Exercise 2: Add jQuery code that will change the background color of an h1 element when clicked.
-            $('h1').click(function (e) {
-                $('h1').css('background', "yellow");
+            $('h1').click(function () {
+                $('h1').css("background", "yellow");
             });
 
-
+            // Mouse Events Exercise 3: Make all paragraphs have a font size of 18px when they are double clicked.
+            $('p').dblclick(function(e) {
+                $('p').css("font-size", "18px");
+            });
         });
     </script>
 </body>

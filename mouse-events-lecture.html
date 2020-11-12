@@ -73,32 +73,32 @@
 
         // jQuery with anon function
 
-        $('#container').click(function(e) {
-            console.log(e);
-        });
+        // $('#container').click(function(e) {
+        //     console.log(e);
+        // });
 
 
 
         // jQuery with defined handler
 
-        function logEventOb(e) {
-            console.log(e);
-        }
-
-        $('#container').click(logEventOb);
+        // function logEventOb(e) {
+        //     console.log(e);
+        // }
+        //
+        // $('#container').click(logEventOb);
 
 
         // Double click and using "this" or "e.target"
 
-        // $('li').dblclick(function() {
-        //     console.log(this);
-        //     $(this).css("background", "yellow");
-        // });
-        //
-        // $('li').dblclick(function(e) {
-        //     // console.log(e.target);
-        //     $(e.target).css("background", "yellow");
-        // });
+        $('li').dblclick(function() {
+            console.log(this);
+            $(this).css("background", "yellow");
+        });
+
+        $('li').dblclick(function(e) {
+            // console.log(e.target);
+            $(e.target).css("background", "yellow");
+        });
 
         // Hover
 
