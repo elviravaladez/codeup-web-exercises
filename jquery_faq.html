@@ -16,6 +16,10 @@
         .invisible {
             visibility: hidden;
         }
+
+        ul {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -110,6 +114,11 @@
            //When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
             $('h3').click(function() {
                 $(this).next().children().css('font-weight', 'bold');
+
+                //The uls next to each h3 that contain facts about each park should start out hidden, and
+                // when the corresponding h3 is clicked, the display of the ul should be toggled
+                // with a sliding effect.
+                $(this).next().slideToggle();
             });
 
             //When any list item is clicked, first li of the parent ul should have a font color of blue.
@@ -117,11 +126,13 @@
                 $(this).parent().children().first().css('color', 'blue');
             });
 
-
             //When the 'x' is clicked, hide the entire div element.
             $('span').click(function() {
                $(this).parentsUntil("body").hide();
             });
+
+            //After the user has been on the page for 8 seconds, an h2 should fade in that asks the user to register for the site.
+
         });
     </script>
 </body>
