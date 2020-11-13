@@ -16,6 +16,7 @@
     </style>
 </head>
 <body>
+    <!--Fun Facts-->
     <h1>10 Fun Facts!</h1>
     <dl>
         <dt>Andromeda</dt>
@@ -49,6 +50,7 @@
         <dd class="invisible">Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined.</dd>
     </dl>
 
+    <!--National Parks-->
     <h3>Arches National Park</h3>
     <ul id="arches">
         <li>Is in Grand County, Utah</li>
@@ -73,6 +75,11 @@
         <li>Stalactites cling to the roof of the Big Room, a huge underground change in the cavern</li>
     </ul>
 
+    <!--Button-->
+    <button id="click-me" type="button">Click Me!</button>
+
+
+    <!--JS-->
     <script src="js/jquery-2.2.4.js"></script>
     <script>
         $(document).ready(function() {
@@ -81,6 +88,15 @@
             $('dt').click(function() {
                 $(this).toggleClass("highlight");
                 $(this).next().toggleClass("invisible");
+            });
+
+            //when button is clicked, it makes the last li in each ul have a yellow background.
+            $('#click-me').click(function () {
+                $('li').each(function(index) {
+                    if (index === 3 || index === 7 || index === 11) {
+                        $(this).css('background-color', '#FF0');
+                    }
+                });
             });
         });
     </script>
