@@ -11,7 +11,7 @@
             background: yellow;
         }
         .invisible {
-            visibility: visible;
+            visibility: hidden;
         }
     </style>
 </head>
@@ -53,11 +53,8 @@
     <script>
         $(document).ready(function() {
             "use strict";
-            var link = $('dt');
 
-            $('.invisible').css({'visibility' : 'hidden'});
-
-            link.click(function() {
+            $('dt').click(function() {
                 $(this).toggleClass("highlight");
                 $(this).next().toggleClass("invisible");
 
