@@ -75,7 +75,6 @@ div.btn-container {
     background-color: limegreen;
 }
 #reset-btn {
-    /*background-color: orangered;*/
     background-color: #ff414d;
 }
 
@@ -108,10 +107,6 @@ div.btn-container {
     }
 
     .game-information {
-        /*display: block;*/
-        /*background-color: white;*/
-        /*color: black;*/
-        /*text-align: center;*/
         height: 80px;
         max-width: 200px;
         padding: 1em 0em;
@@ -169,10 +164,6 @@ div.btn-container {
     }
 
     .game-information {
-        /*display: block;*/
-        /*background-color: white;*/
-        /*color: black;*/
-        /*text-align: center;*/
         height: 130px;
         max-width: 200px;
         margin: 0.65em auto 1em auto;

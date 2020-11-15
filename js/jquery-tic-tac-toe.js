@@ -69,7 +69,6 @@ $(document).ready(function() {
 
     //Function to reset game
     $('#reset-btn').click(function() {
-
         $('.square').empty();
         $('.square').removeClass('fas fa-times');
         $('.square').removeClass('far fa-circle');
