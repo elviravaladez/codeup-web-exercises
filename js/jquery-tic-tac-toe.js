@@ -13,14 +13,14 @@ $(document).ready(function() {
         $('.square').click(function(e) {
             var squareSelected = $(this);
 
-            //Statement checks to see is the square selected has a class of x or o. If it does not, it adds an x or o class and sets player as one or two
-            if(squareSelected.hasClass('x') || squareSelected.hasClass('o')){
+            //Statement checks to see is the square selected has a class of fas fa-times or far fa-circle. If it does not, it adds one of the classes and sets player as one or two
+            if(squareSelected.hasClass('fas fa-times') || squareSelected.hasClass('far fa-circle')){
                 alert('Whoops! Looks like this square is already taken. Try Again!');
             } else {
                 if(player === 1) {
-                    squareSelected.addClass('x');
-                    if(playerWon('x')) {
-                        alert('Congrats Player ' + player + '! You just won!');
+                    squareSelected.addClass('fas fa-times');
+                    if(playerWon('fas fa-times')) {
+                        alert('Congrats Player 1! You just won!');
                         updatePlayerOneScore += 1;
                         document.getElementById('p-1-wins').innerHTML = updatePlayerOneScore;
                     } else {
@@ -28,9 +28,9 @@ $(document).ready(function() {
                         changePlayerDisplay.innerText = "2";
                     }
                 } else {
-                    squareSelected.addClass('o');
-                    if(playerWon('o')) {
-                        alert('Congrats! Player ' + player + '. You just won!');
+                    squareSelected.addClass('far fa-circle');
+                    if(playerWon('far fa-circle')) {
+                        alert('Congrats! Player 2! You just won!');
                         updatePlayerTwoScore += 1;
                         document.getElementById('p-2-wins').innerHTML = updatePlayerTwoScore;
                     } else {
@@ -65,5 +65,14 @@ $(document).ready(function() {
             return false;
         }
     }
+
+
+    //Function to reset game
+    $('#reset-btn').click(function() {
+
+        $('.square').empty();
+        $('.square').removeClass('fas fa-times');
+        $('.square').removeClass('far fa-circle');
+    });
 
 });
