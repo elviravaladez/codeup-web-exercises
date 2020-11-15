@@ -1,19 +1,25 @@
 body {
     text-align: center;
-    /*background-color: #686d76;*/
     background-color: #595b83;
     font-family: "Arial", Monaco, monospace;
-    color: white;
 }
 
 /*Game Information(Player Information) Styling*/
 h1 {
     font-size: 2em;
     margin-bottom: 0;
+    color: white;
 }
 
 h3 {
     font-size: 1em;
+}
+
+.game-information {
+    display: block;
+    background-color: white;
+    color: black;
+    text-align: center;
 }
 
 #player-1-score {
@@ -36,6 +42,12 @@ h3 {
 
 .square {
     width: 33.3333%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /*font-size: 10em;*/
 }
 
 /*Button Styling*/
@@ -96,15 +108,19 @@ div.btn-container {
     }
 
     .game-information {
-        display: block;
+        /*display: block;*/
+        /*background-color: white;*/
+        /*color: black;*/
+        /*text-align: center;*/
         height: 80px;
         max-width: 200px;
-        background-color: white;
-        color: black;
-        text-align: center;
         padding: 1em 0em;
         margin: 0em auto 0.5em auto;
         border-radius: 25px;
+    }
+
+    .square {
+        font-size: 5em;
     }
 
     /*Setting the Game Board Container*/
@@ -153,14 +169,18 @@ div.btn-container {
     }
 
     .game-information {
-        display: block;
+        /*display: block;*/
+        /*background-color: white;*/
+        /*color: black;*/
+        /*text-align: center;*/
         height: 130px;
         max-width: 200px;
-        background-color: white;
-        color: black;
-        text-align: center;
         margin: 0.65em auto 1em auto;
         border-radius: 25px;
+    }
+
+    .square {
+        font-size: 10em;
     }
 
     /*Setting the Game Board Container*/
