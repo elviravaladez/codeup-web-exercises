@@ -1,12 +1,14 @@
 "use strict";
 
 $(document).ready(function() {
+    var updatePlayerOneScore = 0;
+    var updatePlayerTwoScore = 0;
     var player = 1;
     var changePlayerDisplay = document.getElementById('turn');
 
 
     //Function starts game when start button is clicked
-    $('#start-btn').click(function(e) {
+    var startFunction = $('#start-btn').click(function(e) {
         //Function activates once a square is clicked
         $('.square').click(function(e) {
             var squareSelected = $(this);
@@ -18,7 +20,9 @@ $(document).ready(function() {
                 if(player === 1) {
                     squareSelected.addClass('x');
                     if(playerWon('x')) {
-                        alert('Congrats! Player ' + player + '. You just won!');
+                        alert('Congrats Player ' + player + '! You just won!');
+                        updatePlayerOneScore += 1;
+                        document.getElementById('p-1-wins').innerHTML = updatePlayerOneScore;
                     } else {
                         player = 2;
                         changePlayerDisplay.innerText = "2";
@@ -27,6 +31,8 @@ $(document).ready(function() {
                     squareSelected.addClass('o');
                     if(playerWon('o')) {
                         alert('Congrats! Player ' + player + '. You just won!');
+                        updatePlayerTwoScore += 1;
+                        document.getElementById('p-2-wins').innerHTML = updatePlayerTwoScore;
                     } else {
                         player = 1;
                         changePlayerDisplay.innerText = "1";
@@ -59,6 +65,5 @@ $(document).ready(function() {
             return false;
         }
     }
-
 
 });
