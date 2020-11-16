@@ -36,6 +36,48 @@
 
         // simple request
 
+            // make an AJAX request to the Star Wars API
+            //THIS CODE JUST SHOWS THE REQUEST OBJECT, NOT THE DATA
+
+            // console.log($.ajax('https://swapi.dev/api/people/1'));
+
+
+
+            //The code below would be described as a jqXhr: a jQuery object that represents the Ajax request
+            // var jqXhr = $.ajax('https://swapi.dev/api/people/1');
+
+
+
+            // .done() method expects something to be passed within it
+            //it expects the function within it to capture some parameters
+
+                //EXAMPLE OF WHAT .done() method kind of looks like
+
+                // function done(callbackFunction) {
+                //     //wait for the request
+                //     //when request fulfilled...
+                //     //capture the data
+                //     var data = //fulfilled data
+                //     //pass the data to the callbackFunction
+                //     callbackFunction(data);
+                // }
+
+
+
+
+            //THIS CODE ACTUALLY GIVES THE DATA, BC IT SAYS WHAT TO DO ONCE YOU GET THE OBJECT. IN THIS CASE, LOG THE DATA
+            //NOTICE THE .done() method at end of request. That's why the code below works
+
+            // $.ajax('https://swapi.dev/api/people/1').done(function(data) {
+            //     console.log(data);
+            //     console.log(data["eye_color"]); //To get eye color
+            //     // console.log(data.eye_color); //To get eye color. Same as above, just diff. syntax
+            //     // console.log(data["vehicles"][0]);
+            //     console.log(data.vehicles[0]);
+            // });
+
+
+
         // $.ajax('./data/orders.json'); // jQuery request object
         //
         // $.ajax("./data/orders.json").done(function(responseData){
