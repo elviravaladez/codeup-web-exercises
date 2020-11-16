@@ -80,49 +80,58 @@
 
         //PRACTICE with making AJAX requests and getting data from the orders.json file
 
-        $.ajax("./data/orders.json"); // jQuery request object
+        // $.ajax("./data/orders.json"); // jQuery request object
+        //
+        // //Request and seeing the full object data
+        // $.ajax("./data/orders.json").done(function(responseData){
+        //     console.log(responseData);
+        // });
+        //
+        //
+        // //Requesting to log the order number of Silly Shirt
+        // $.ajax("./data/orders.json").done(function(responseData){
+        //     console.log(responseData[1].orderNumber);
+        // });
+        //
+        //
+        // //Requesting to log the item ordered at the first index of the array
+        // $.ajax("./data/orders.json").done(function(responseData){
+        //     console.log(responseData[0].itemOrdered);
+        // });
+        //
+        //
+        // //Requesting to log who ordered the item in the last index of the array
+        // $.ajax("./data/orders.json").done(function(responseData){
+        //     console.log(responseData[responseData.length - 1].orderedBy);
+        // });
+        //
+        //
+        //
+        // //PRACTICE with making AJAX requests and getting data from the Star Wars API
+        // $.ajax('https://swapi.dev/api/people/10').done(function(data) {
+        //     console.log(data);
+        //     console.log(data["hair_color"]); //To get hair color
+        //     console.log(data.mass);
+        // });
 
-        //Request and seeing the full object data
-        $.ajax("./data/orders.json").done(function(responseData){
-            console.log(responseData);
-        });
 
 
-        //Requesting to log the order number of Silly Shirt
-        $.ajax("./data/orders.json").done(function(responseData){
-            console.log(responseData[1].orderNumber);
-        });
-
-
-        //Requesting to log the item ordered at the first index of the array
-        $.ajax("./data/orders.json").done(function(responseData){
-            console.log(responseData[0].itemOrdered);
-        });
-
-
-        //Requesting to log who ordered the item in the last index of the array
-        $.ajax("./data/orders.json").done(function(responseData){
-            console.log(responseData[responseData.length - 1].orderedBy);
-        });
-
-
-
-        //PRACTICE with making AJAX requests and getting data from the Star Wars API
-        $.ajax('https://swapi.dev/api/people/10').done(function(data) {
-            console.log(data);
-            console.log(data["hair_color"]); //To get hair color
-            console.log(data.mass);
-        });
-
-
-
-        // DOESN'T WORK
+        // DOESN'T WORK: you see undefined in console b/c the log is placed after the responseData = data.
         //     var responseData;
         //     $.ajax('./data/orders.json').done(function(data) {
         //         responseData = data;
         //     }); // .done()
         //
         //     console.log(responseData);
+
+
+            //The log needs more time. You can try this
+            //BUT THIS IS NOT THE IDEAL WAY TO DO WHAT YOU WANT.
+            //DON'T DO THIS
+            // setTimeout(function(){
+            //     console.log(responseData);
+            // }, 10);
+
 
         // simple API request
 
@@ -131,8 +140,11 @@
         // });
 
 
-        // single argument with .done(), .fail() and .always() methods
 
+
+
+        // single argument with .done(), .fail() and .always() methods
+            //The order of properties in the object don't matter, they will still do what you want them to do
         // $.ajax({
         //     "url": "https://swapi.dev/api/films",
         //     "type": "GET",
@@ -143,14 +155,24 @@
         //     // console.log(status);
         //     console.log(data);
         //     console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
-        // }).fail(function(jqXhr, status, error) {
+        // }).fail(function(jqXhr, status, error) { //.fail() method takes in a function that is called when a request completed with an error (e.g. the server sent back a 404).
         //     console.log("Request failed! " + status);
-        // }).always(function() {
+        // }).always(function() {  //.always() method takes in a function that is called for both failed and successful requests.
         //     console.log("Request made.");
         // });
 
 
+        //BEST PRACTICE IS TO ALWAYS HAVE A .fail() method
+        //status: a string representing the status of the request
+        //error: an object that represents the error that occurred, if any. Error messages depend on the api
+
+
+
+
+
+
         // Url first argument and configuration object second argument
+            //ANOTHER WAY TO DO THE SAME THIS AS THE ABOVE EXAMPLE
 
         // $.ajax("https://swapi.dev/api/films", {
         //     "type": "GET",
@@ -162,8 +184,14 @@
         // });
 
 
-        // Storing returned jQuery XML HTTP Response object
 
+
+
+
+
+
+        // Storing returned jQuery XML HTTP Response object
+        //ANOTHER WAY
         // var jqXhr = $.ajax("https://swapi.dev/api/films", {
         //     "type": "GET",
         //     "data": {
@@ -176,6 +204,10 @@
         // jqXhr.done(function(data) {
         //     console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
         // });
+        //
+        // jqXhr.fail(function(jqXhr, status, error) {
+        //     console.log(status);
+        // });
 
 
         // GET short-hand method
@@ -185,6 +217,7 @@
         // }).done(function(data) {
         //     console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
         // });
+
 
     });
 
