@@ -40,11 +40,11 @@ $(document).ready(function() {
     // TODO TOGETHER: store the html of #main-heading in a variable named mainHeading
     // TODO: uncomment the line below
 
-    // var mainHeading = $('#main-heading').html();
+    // var mainHeading = $('#main-heading')orders.html();
     // alert(mainHeading);
     // console.log(mainHeading); // Will log: Sorting Hat
 
-    // $('#main-heading').html('Hogwarts'); //This changes the html content within #main-heading to: Hogwarts
+    // $('#main-heading')orders.html('Hogwarts'); //This changes the html content within #main-heading to: Hogwarts
 
 
     //When someone clicks on the element with #main-heading, it will change html to: Hogwarts
@@ -72,7 +72,7 @@ $(document).ready(function() {
     //    $(this).css('font-size', '75px');
     // });
 
-    //    How can font size be changed using .html()?
+    //    How can font size be changed using orders.html()?
 
 
 
