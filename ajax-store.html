@@ -25,11 +25,33 @@
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
+    var jqXhr = $.ajax("./data/inventory.json");
+
 
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+
+    jqXhr.done(function(tools) {
+        // console.log(tools);
+        addTools(tools);
+    });
+
+
+    function addTools(tools) {
+        var tableBody = "";
+
+        tools.forEach(function(tool){
+            tableBody += "<tr>";
+            tableBody += "<td>"+ tool.title +"</td>";
+            tableBody += "<td>" + tool.quantity + "</td>";
+            tableBody += "<td>" + "$" + tool.price + "</td>";
+            tableBody += "<td>" + tool.categories + "</td></tr>";
+        });
+        $('#insertProducts').prepend(tableBody);
+    }
+
 })();
 </script>
 
