@@ -78,11 +78,43 @@
 
 
 
-        // $.ajax('./data/orders.json'); // jQuery request object
-        //
-        // $.ajax("./data/orders.json").done(function(responseData){
-        //     console.log(responseData);
-        // });
+        //PRACTICE with making AJAX requests and getting data from the orders.json file
+
+        $.ajax("./data/orders.json"); // jQuery request object
+
+        //Request and seeing the full object data
+        $.ajax("./data/orders.json").done(function(responseData){
+            console.log(responseData);
+        });
+
+
+        //Requesting to log the order number of Silly Shirt
+        $.ajax("./data/orders.json").done(function(responseData){
+            console.log(responseData[1].orderNumber);
+        });
+
+
+        //Requesting to log the item ordered at the first index of the array
+        $.ajax("./data/orders.json").done(function(responseData){
+            console.log(responseData[0].itemOrdered);
+        });
+
+
+        //Requesting to log who ordered the item in the last index of the array
+        $.ajax("./data/orders.json").done(function(responseData){
+            console.log(responseData[responseData.length - 1].orderedBy);
+        });
+
+
+
+        //PRACTICE with making AJAX requests and getting data from the Star Wars API
+        $.ajax('https://swapi.dev/api/people/10').done(function(data) {
+            console.log(data);
+            console.log(data["hair_color"]); //To get hair color
+            console.log(data.mass);
+        });
+
+
 
         // DOESN'T WORK
         //     var responseData;
