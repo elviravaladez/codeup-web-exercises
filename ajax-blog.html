@@ -3,12 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <title>Ajax Blog</title>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <!--Custom CSS-->
+    <style>
+        :root {
+            --navbar-color: #f6e1db;
+            --main-background-color: #f9f6ef;
+            --header-text-color: #dd8971;
+            --button-color: #ffb8a3;
+            --hover-btn-color: #f2a48a;
+        }
+        body {
+            background-color: var(--main-background-color);
+        }
+
+        .navbar {
+            background-color: var(--navbar-color);
+        }
+
+        header {
+            background-color: var(--navbar-color);
+            justify-content: center;
+            text-align: center;
+            font-family: 'Lexend Deca', sans-serif;
+            color: var(--header-text-color);
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        .blog-card-body {
+            padding-top: 0.5em !important;
+        }
+
+        .blog-card-text {
+            padding-bottom: 0px !important;
+            margin-bottom: .5em !important;
+        }
+
+        #refresh-btn {
+            background-color: var(--button-color);
+            color: white;
+        }
+
+        #refresh-btn:hover {
+            background-color: var(--hover-btn-color);
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 4em;
+            width: 100%;
+            background-color: white;
+            color: black;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <div id="posts">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">BlogPosts.com</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Me</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Header-->
+    <header>
+        <h1>BLOG COMPANY</h1>
+    </header>
+
+    <!--Blog Posts -->
+    <main>
+        <div id="posts">
+            <!--Blog Post Cards Go Here-->
+
+        </div>
+
+        <!--Refresh Button-->
+        <div class="row justify-content-center m-5">
+            <button id="refresh-btn" class="btn btn-lg text-center btn-block">Refresh</button>
+        </div>
+    </main>
+
+    <!--Footer-->
+    <div class="footer">
+        <p>Privacy Policy<br> ⓒ Company Name 2020</p>
     </div>
-
 
 
 
