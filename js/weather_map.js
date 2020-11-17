@@ -1,25 +1,26 @@
 $(document).ready(function() {
     "use strict";
 
-
-    //Using HTML, CSS, jQuery, AJAX, and the OpenWeatherMap API, start by showing the current conditions for the city you live in on your page.
-
-    //AJAX Request
-    var getWeather = $.get("http://api.openweathermap.org/data/2.5/weather", {
+    // Ajax Request
+    var getOneDayWeather = $.get("http://api.openweathermap.org/data/2.5/weather", {
         APPID: OPEN_WEATHER_APPID,
-        q: "San Antonio, US"
+        lat: 29.423017,
+        lon: -98.48527,
+        units: "imperial"
     });
 
-    //What do to once AJAX Request is complete
-    getWeather.done(function(weatherConditions) {
+
+    //Add 1 Day Weather Conditions to Webpage
+    getOneDayWeather.done(function(weatherConditions) {
         console.log(weatherConditions);
-        add(weatherConditions);
+        addOneCardFor(weatherConditions);
     });
 
-    //Function to add weather conditions to the page
-    function add(weatherConditions) {
+
+    //Function to Add 1 Day Weather Conditions to Webpage
+    function addOneCardFor(weatherConditions) {
         var weatherCard = "";
-        weatherCard += "<div class='card' style='width: 18rem;'>";
+        weatherCard += "<div class='card m-5' style='width: 18rem;'>";
         weatherCard += "<div class='card-header text-center'>" + weatherConditions.dt + "</div>";
         weatherCard += "<ul class='list-group list-group-flush'>";
         weatherCard += "<li class='list-group-item text-center'>";
@@ -32,7 +33,21 @@ $(document).ready(function() {
         weatherCard += "</ul>";
         weatherCard += "</div>";
 
-        $(".map-card-container").html(weatherCard);
+        $(".weather-card-container").html(weatherCard);
     }
 
+
+
+    //Mapbox Token
+    mapboxgl.accessToken = mapboxToken;
+
+    //Customizing the Map
+    var mapOptions = {
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-98.4916, 29.4252], // starting position [lng, lat]
+        zoom: 12 // starting zoom
+    }
+
+    var map = new mapboxgl.Map(mapOptions);
 });

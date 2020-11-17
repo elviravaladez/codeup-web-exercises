@@ -6,20 +6,42 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Map Project</title>
+    <!--Mapbox-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
+    <!--Navbar-->
     <header>
-        <h1>Weather App</h1>
-        <p>Current City: San Antonio</p>
+        <nav class="navbar navbar-dark bg-primary">
+            <span class="navbar-brand mb-0 h1">Weather App</span>
+            <span class="navbar-text text-white font-weight-bold">Current City: <span>San Antonio</span></span>
+        </nav>
     </header>
 
-    <div class="map-card-container">
-        <h2>Weather Cards Here</h2>
-        <!--Cards Will Go Here-->
-    </div>
+
+    <!--Main Content-->
+    <main>
+        <!--Location Search Form and Button-->
+        <form class="form-inline m-5">
+            <p class="m-2">Place </p>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Find</button>
+        </form>
+
+        <!--Weather Card Container-->
+        <div class="weather-card-container mt-5">
+            <!--Weather Cards Will Display Here-->
+        </div>
+
+        <!--Map-->
+        <div id='map' style='width: 100%; height: 600px;'></div>
+    </main>
+
+
 
 
 
@@ -33,7 +55,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
-    <!--Keys-->
+    <!--Keys JS-->
     <script src="js/keys.js"></script>
     <!--Custom JS -->
     <script src="js/weather_map.js"></script>
