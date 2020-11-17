@@ -42,8 +42,12 @@
 
     <!--Blog Posts -->
     <main>
+        <!--Container For Blog Posts-->
         <div class="row" id="posts">
-            <!--Blog Post Cards Will Go Here-->
+            <!--The Image Card Currently Displayed on the Webpage-->
+            <div class="card blog-card m-5">
+                <img src="img/coffee-computer.jpg" class="card-img-top" alt="coffee-computer">
+            </div>
         </div>
 
 
@@ -61,22 +65,43 @@
 
 
 
-
-
-
-
     <!--Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
     <!--jQuery JS-->
     <script src="js/jquery-2.2.4.js"></script>
 
     <script>
         $(document).ready(function() {
             "use strict";
+            function updateBlog() {
+                var blog = $.ajax("./data/blog.json");
 
+                blog.done(function(blogPosts) {
+                    addBlogPosts(blogPosts);
+                });
+
+
+                function addBlogPosts(blogPosts) {
+                    var blogCard = "";
+
+                    blogPosts.forEach(function(blogPost){
+                        blogCard += "<div class='card blog-card m-5'>";
+                        blogCard += "<img src='" + blogPost.image + "' " + "class='card-img-top' alt='blog-image'>";
+                        blogCard += "<div class='card-body blog-card-body'>";
+                        blogCard += "<p class='card-text blog-card-text'><small class='text-muted'>" + blogPost.date + "</small></p>";
+                        blogCard += "<h5 class='card-title'>" + blogPost.title + "</h5>";
+                        blogCard += "<p class='card-text'>" + blogPost.content + "</p>";
+                        blogCard += "<p class='card-text d-flex justify-content-end'><small class='text-muted'>Categories: " + blogPost.categories + "</small></p>";
+                        blogCard += "</div>";
+                        blogCard += "</div>";
+                    });
+                    $('#posts').html(blogCard);
+                }
+            }
+
+            $("#refresh-btn").click(updateBlog);
         });
     </script>
 </body>
