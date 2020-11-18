@@ -1,31 +1,39 @@
 $(document).ready(function() {
     "use strict";
 
-    //Ajax Request for 5 Day Forecast
-    var getFiveDayForecast = $.get("https://api.openweathermap.org/data/2.5/onecall", {
-        APPID: OPEN_WEATHER_APPID,
-        lat: 29.423017,
-        lon: -98.48527,
-        units: "imperial",
-        exclude: "minutely,hourly,alerts,current"
-    });
+
+    //Displaying the Weather Forecast Initially Displayed on the Webpage
+    updateWeather(29.4252,-98.4916);
 
 
-    //Making 5 Day Forecast Cards
-    getFiveDayForecast.done(function(weatherConditions) {
-        var daily = weatherConditions.daily;
+    //Function to Update the Weather on the Webpage
+    function updateWeather(latitude, longitude) {
+        //Ajax Request for 5 Day Forecast
+        var getFiveDayForecast = $.get("https://api.openweathermap.org/data/2.5/onecall", {
+            APPID: OPEN_WEATHER_APPID,
+            lat: latitude,
+            lon: longitude,
+            units: "imperial",
+            exclude: "minutely,hourly,alerts,current"
+        });
 
-        for (var i = 0; i < 5; i++) {
-            makeCard(daily[i]);
-        }
-    });
+        //Making 5 Day Forecast Cards
+        getFiveDayForecast.done(function(weatherConditions) {
+            var daily = weatherConditions.daily;
+            $(".weather-card-container").html("");
+
+            for (var i = 0; i < 5; i++) {
+                makeCard(daily[i]);
+            }
+        });
+    }
 
 
     //Function to Make a Forecast Card
     function makeCard(weatherConditions) {
         var weatherCard = "";
 
-        //Converting Time Stamp Date to Human Readable Date
+        //Converting the Time Stamp Date to a Human Readable Date
         var unixTimeStamp = weatherConditions.dt;
         var milliseconds = unixTimeStamp * 1000;
         var dateObject = new Date(milliseconds);
@@ -33,11 +41,10 @@ $(document).ready(function() {
         var date = humanDateFormat.split(",");
         date = date[0];
 
-
+        //Creating the Forecast Card
         weatherCard += "<div class='d-inline-block'>"
         weatherCard += "<div class='card m-2' style='width: 18rem;'>";
         weatherCard += "<div class='card-header text-center'>" + date + "</div>";
-        // weatherCard += "<div class='card-header text-center'>" + weatherConditions.dt + "</div>";
         weatherCard += "<ul class='list-group list-group-flush'>";
         weatherCard += "<li class='list-group-item text-center'>";
         weatherCard += "<strong>" + weatherConditions.temp.max + "°F / " + weatherConditions.temp.min + "°F" + "</strong><br>";
@@ -50,6 +57,7 @@ $(document).ready(function() {
         weatherCard += "</div>";
         weatherCard += "</div>";
 
+        //Adding the Forecast Card to the div with a class of weather-card-container
         $(".weather-card-container").append(weatherCard);
     }
 
@@ -69,14 +77,6 @@ $(document).ready(function() {
     //Creating the Map
     var map = new mapboxgl.Map(mapOptions);
 
-    //Exercise 6:
-    //Refer to your Mapbox API exercise. Recreate the map below your 5 day forecast.
-    // Read through the documentation for the Mapbox API and figure out how to allow
-    // the user to drop a pin on any place on the map. Once the user drops a pin,
-    // grab its coordinates and feed those into your OpenWeatherMap API. Update
-    // the five-day forecast with the information from those coordinates
-    // (you should also get rid of your input boxes at this point).
-
 
     //Customizing the Marker
     var markerOptions = {
@@ -90,14 +90,10 @@ $(document).ready(function() {
         .addTo(map);
 
 
-    //Function to Get Coordinates of Draggable Marker
-    var coordinates = document.getElementById('coordinates');
-
+    //Function to Get Coordinates of the Draggable Marker and Use Those Coordinates Within the updateWeather Function
     function onDragEnd() {
         var lngLat = marker.getLngLat();
-        coordinates.style.display = 'block';
-        coordinates.innerHTML =
-            'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+        updateWeather(lngLat.lat, lngLat.lng);
     }
 
     marker.on('dragend', onDragEnd);
