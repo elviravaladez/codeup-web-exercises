@@ -25,9 +25,19 @@ $(document).ready(function() {
     function makeCard(weatherConditions) {
         var weatherCard = "";
 
+        //Converting Time Stamp Date to Human Readable Date
+        var unixTimeStamp = weatherConditions.dt;
+        var milliseconds = unixTimeStamp * 1000;
+        var dateObject = new Date(milliseconds);
+        var humanDateFormat = dateObject.toLocaleString();
+        var date = humanDateFormat.split(",");
+        date = date[0];
+
+
         weatherCard += "<div class='d-inline-block'>"
         weatherCard += "<div class='card m-2' style='width: 18rem;'>";
-        weatherCard += "<div class='card-header text-center'>" + weatherConditions.dt + "</div>";
+        weatherCard += "<div class='card-header text-center'>" + date + "</div>";
+        // weatherCard += "<div class='card-header text-center'>" + weatherConditions.dt + "</div>";
         weatherCard += "<ul class='list-group list-group-flush'>";
         weatherCard += "<li class='list-group-item text-center'>";
         weatherCard += "<strong>" + weatherConditions.temp.max + "°F / " + weatherConditions.temp.min + "°F" + "</strong><br>";
@@ -42,7 +52,6 @@ $(document).ready(function() {
 
         $(".weather-card-container").append(weatherCard);
     }
-
 
     /*************** Mapbox JS *****************/
 
@@ -60,7 +69,6 @@ $(document).ready(function() {
     //Creating the Map
     var map = new mapboxgl.Map(mapOptions);
 
-
     //Exercise 6:
     //Refer to your Mapbox API exercise. Recreate the map below your 5 day forecast.
     // Read through the documentation for the Mapbox API and figure out how to allow
@@ -68,6 +76,32 @@ $(document).ready(function() {
     // grab its coordinates and feed those into your OpenWeatherMap API. Update
     // the five-day forecast with the information from those coordinates
     // (you should also get rid of your input boxes at this point).
+
+
+    //Customizing the Marker
+    var markerOptions = {
+        color: "#ff0000",
+        draggable: true
+    };
+
+    //Creating the Marker
+    var marker = new mapboxgl.Marker(markerOptions)
+        .setLngLat([-98.4916, 29.4252])
+        .addTo(map);
+
+
+    //Function to Get Coordinates of Draggable Marker
+    var coordinates = document.getElementById('coordinates');
+
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        coordinates.style.display = 'block';
+        coordinates.innerHTML =
+            'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+    }
+
+    marker.on('dragend', onDragEnd);
+
 
 
     //Exercise 7:
