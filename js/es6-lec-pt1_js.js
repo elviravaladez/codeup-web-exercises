@@ -105,10 +105,8 @@ let greeting = "Hello my name is " + firstName + ' ' + lastName + '.';
 
 //TODO: Refactor code from above, using template strings.
 
-
-
-
-
+let newGreeting = `Hello my name is ${firstName} ${lastName.toUpperCase()}.`;
+// console.log(newGreeting);
 
 
 /*==============================================*/
@@ -131,7 +129,15 @@ itemsHtml += "</ul>";
 
 
 //new way
+let newItemsHtml = `
+	<ul>
+		<li>${items[0]}</li>
+		<li>${items[1]}</li>
+		<li>${items[2]}</li>
+	</ul>
+`;
 
+// console.log(newItemsHtml);
 
 
 
@@ -148,6 +154,10 @@ let program = {
 	technology: "HTML, CSS, JS, Java"
 }
 
+let programLetter = `Hello and thank you for your interest in ${program.name}!
+
+Our program is located in ${program.location}. The program lasts ${program.length}.`;
+// console.log(programLetter);
 
 
 
@@ -163,19 +173,35 @@ let program = {
  *****************************/
 
 
-// const arr = ["one", "two", "three"];
-// for (let ele of arr) {
-//     console.log(ele);
-// }
+const arr = ["one", "two", "three"];
+for (let ele of arr) {
+    console.log(ele);
+    //logs:
+	//one
+	//two
+	//three
+}
 
 
 
 
 
 /*==============================================*/
-//TODO: Using for of loops, log each instructors name
+//TODO: Using for of loops, log each day
 
-// const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+
+for(let day of days) {
+	console.log(day);
+	//logs:
+	//monday
+	//tuesday
+	//wednesday
+	//thursday
+	//friday
+	//saturday
+	//sunday
+}
 
 
 
@@ -186,8 +212,17 @@ let program = {
 
 //TODO: Using for of loops, log each instructors name
 
-// const instructors = ["Vivian", "Sophie", "Justin", "Casey", "David"]
+const instructors = ["Vivian", "Sophie", "Justin", "Casey", "David"]
 
+for(let instructor of instructors) {
+	console.log(instructor);
+	//logs:
+	//Vivian
+	//Sophie
+	//Justin
+	//Casey
+	//David
+}
 
 
 
