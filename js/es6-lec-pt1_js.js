@@ -233,7 +233,7 @@ const instructors = ["Vivian", "Sophie", "Justin", "Casey", "David"]
 //TODO TOGETHER: Rewrite the following function using arrow function syntax
 
 //Function Declaration
-function sayHello(name){
+function sayHello2(name){
 	return `Hello ${name}`;
 }
 
@@ -254,14 +254,14 @@ function sayHello(name){
 // let sayHelloAgain = (name) => `Hello ${name}`;
 
 //remove parens if only 1 input
-let sayHelloAgain = name => `Hello ${name}`;
-
-
-
-
-console.log(sayHelloAgain("Vivian")); //Hello Vivian
-console.log(sayHelloAgain("Justin")); //Hello Justin
-console.log(sayHelloAgain("Sophie")); //Hello Sophie
+// let sayHelloAgain = name => `Hello ${name}`;
+//
+//
+//
+//
+// console.log(sayHelloAgain("Vivian")); //Hello Vivian
+// console.log(sayHelloAgain("Justin")); //Hello Justin
+// console.log(sayHelloAgain("Sophie")); //Hello Sophie
 
 
 
@@ -273,14 +273,17 @@ console.log(sayHelloAgain("Sophie")); //Hello Sophie
 // 	return a + b;
 // }
 
-//ES6
-const sum = (a,b) => a + b;
 
 
 
-console.log(sum(5, 3)); //8
-console.log(sum(5, 20)); //25
-console.log(sum(1, 9)); //10
+// //ES6 VERSION
+// const sum = (a,b) => a + b;
+//
+//
+//
+// console.log(sum(5, 3)); //8
+// console.log(sum(5, 20)); //25
+// console.log(sum(1, 9)); //10
 
 
 
@@ -329,19 +332,26 @@ let addOneD = arg1 => arg1 +  1;
  *****************************/
 //TODO Together: Refactor the following using ES6
 
-// old way
-function sayHello(name) {
-	if (typeof name === 'undefined') {
-		name = 'World';
-	}
-	return 'Hello, ' + name + '!';
-}
+// // old way
+// function sayHello(name) {
+// 	if (typeof name === 'undefined') {
+// 		name = 'World';
+// 	}
+// 	return 'Hello, ' + name + '!';
+// }
 
 
+//ES6 VERSION of if Statement
+// function sayHello(name = 'World'){
+// 	return `Hello ${name}`;
+// }
 
 
-// console.log(sayHello());; // "Hello, World!"
-// console.log(sayHello('codeup'));; // "Hello, codeup!"
+const sayHelloHey = (name = "World") => `Hello ${name}`;
+
+
+console.log(sayHelloHey());; // "Hello, World!"
+console.log(sayHelloHey('codeup'));; // "Hello, codeup!"
 
 
 
