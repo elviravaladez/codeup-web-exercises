@@ -5,7 +5,7 @@
 *****************************************************************/
 //TODO TOGETHER: Create a newDog object using shorthand syntax
 
-let breed = "Pug";
+// let breed = "Pug";
 // let age = 3;
 // let dogName = "Lexie";
 // let isCute = true;
