@@ -358,7 +358,7 @@ console.log(sayHelloHey('codeup'));; // "Hello, codeup!"
 /*==============================================*/
 
 // TODO: Refactor the following function using arrow syntax, default function parameter values, and template strings.
-
+//BONUS
 function helloCohort(greeting, cohort){
 	if(typeof greeting === "undefined"){
 		greeting = "Good Morning";
