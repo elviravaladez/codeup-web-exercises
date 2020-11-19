@@ -174,13 +174,13 @@ Our program is located in ${program.location}. The program lasts ${program.lengt
 
 
 const arr = ["one", "two", "three"];
-for (let ele of arr) {
-    console.log(ele);
-    //logs:
-	//one
-	//two
-	//three
-}
+// for (let ele of arr) {
+//     console.log(ele);
+//     //logs:
+// 	//one
+// 	//two
+// 	//three
+// }
 
 
 
@@ -191,17 +191,17 @@ for (let ele of arr) {
 
 const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
 
-for(let day of days) {
-	console.log(day);
-	//logs:
-	//monday
-	//tuesday
-	//wednesday
-	//thursday
-	//friday
-	//saturday
-	//sunday
-}
+// for(let day of days) {
+// 	console.log(day);
+// 	//logs:
+// 	//monday
+// 	//tuesday
+// 	//wednesday
+// 	//thursday
+// 	//friday
+// 	//saturday
+// 	//sunday
+// }
 
 
 
@@ -214,15 +214,15 @@ for(let day of days) {
 
 const instructors = ["Vivian", "Sophie", "Justin", "Casey", "David"]
 
-for(let instructor of instructors) {
-	console.log(instructor);
-	//logs:
-	//Vivian
-	//Sophie
-	//Justin
-	//Casey
-	//David
-}
+// for(let instructor of instructors) {
+// 	console.log(instructor);
+// 	//logs:
+// 	//Vivian
+// 	//Sophie
+// 	//Justin
+// 	//Casey
+// 	//David
+// }
 
 
 
@@ -232,49 +232,91 @@ for(let instructor of instructors) {
  *****************************/
 //TODO TOGETHER: Rewrite the following function using arrow function syntax
 
-
+//Function Declaration
 function sayHello(name){
 	return `Hello ${name}`;
 }
 
 
 
+// //Function Expression
+// let sayHelloAgain = function(name){
+// 	return `Hello ${name}`;
+// }
+//
+//
+// //refactor. Remove function keyword and add =>
+// let sayHelloAgain = (name) => {
+// 	return `Hello ${name}`;
+// }
+//
+// //remove curly braces (if only one statement)
+// let sayHelloAgain = (name) => `Hello ${name}`;
+
+//remove parens if only 1 input
+let sayHelloAgain = name => `Hello ${name}`;
 
 
-// console.log(sayHelloAgain("Vivian")); //Hello Vivian
-// console.log(sayHelloAgain("Justin")); //Hello Justin
-// console.log(sayHelloAgain("Sophie")); //Hello Sophie
+
+
+console.log(sayHelloAgain("Vivian")); //Hello Vivian
+console.log(sayHelloAgain("Justin")); //Hello Justin
+console.log(sayHelloAgain("Sophie")); //Hello Sophie
 
 
 
 /*==============================================*/
 //TODO TOGETHER: Rewrite the following function using arrow function syntax
 
-function sum(a,b){
-	return a + b;
-}
+//Function Definition
+// function sum(a,b){
+// 	return a + b;
+// }
+
+//ES6
+const sum = (a,b) => a + b;
 
 
 
-// console.log(sum(5, 3)); //8
-// console.log(sum(5, 20)); //25
-// console.log(sum(1, 9)); //10
+console.log(sum(5, 3)); //8
+console.log(sum(5, 20)); //25
+console.log(sum(1, 9)); //10
 
 
 
 
 /*==============================================*/
 //TODO: Rewrite the following function using arrow function syntax
-
+//Function Declaration
 function addOne(arg1) {
     return arg1 + 1;
 }
 
 
+//Function Expression
+let addOneA = function(arg1){
+	return arg1 + 1;
+}
+
+
+//refactor. Remove function keyword and add =>
+let addOneB = (arg1) => {
+	return arg1 + 1;
+}
+
+//remove curly braces (if only one statement)
+let addOneC = (arg1) => arg1 + 1;
+
+//remove parens if only 1 input
+let addOneD = arg1 => arg1 +  1;
+
+
+
+// console.log(addOne(1));
 // console.log(addOneA(2));
 // console.log(addOneB(2));
-// console.log(addOneC(2));
-// console.log(addOneD(2));
+// console.log(addOneC(3));
+// console.log(addOneD(5));
 
 
 
