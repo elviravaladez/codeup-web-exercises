@@ -5,10 +5,13 @@
 *****************************************************************/
 //TODO TOGETHER: Create a newDog object using shorthand syntax
 
-// let breed = "Pug";
+let breed = "Pug";
 // let age = 3;
 // let dogName = "Lexie";
 // let isCute = true;
+
+
+
 //
 // //old way
 // let oldDog = {
@@ -19,19 +22,21 @@
 // }
 //
 // console.log(oldDog);
+
+
+
+
+
+
+// // //new way
+// let newDog = {
+// 	breed,
+// 	age,
+// 	dogName,
+// 	isCute
+// };
 //
-
-
-
-
-
-// //new way
-
-
-
-
-
-
+// console.log(newDog);
 
 
 /*****************************************************************
@@ -40,15 +45,14 @@
  *          Based on the name of the key
  *****************************************************************/
 
-// var person = {
-// 	name: 'codeup',
-// 	age: 4
-// };
+var personA = {
+	name: 'codeup',
+	age: 4
+};
 
 // old way
-//
-// var name = person.name;
-// var age = person.age;
+// var name = personA.name;
+// var age = personA.age;
 //
 //
 // console.log(name); // 'codeup'
@@ -57,9 +61,12 @@
 
 //TODO TOGETHER: REFACTOR the above approach using ES6
 
-
-
-
+// const {name, age} = personA; //{} notate that we are destructuring an object.
+// 							// By doing this, these variables: const name && const age are created
+// 							// So you can then use them
+//
+// console.log(name);
+// console.log(age);
 
 
 /*==============================================*/
@@ -85,11 +92,11 @@ const pals = {
 //TODO TOGETHER: REFACTOR the above approach using ES6
 //new way
 
-
-
-
-
-
+// const {dog: yourDog, cat, mouse} = pals;
+//
+// console.log(yourDog);
+// console.log(cat);
+// console.log(mouse);
 
 
 /*==============================================*/
@@ -105,9 +112,10 @@ const theFlash = {
 
 
 
-
-
-
+// const{alias, powers} = theFlash;
+//
+// console.log(alias);
+// console.log(powers);
 
 
 /*==============================================*/
