@@ -82,7 +82,6 @@ console.log(ones);
 // });
 
 
-
 //Bonus: Refactor your functions using ES6
 const zeroes = binary.filter(num => num === 0);
 console.log(zeroes);
@@ -128,8 +127,23 @@ console.log(vegetables);
 /*********************************************
  *              .reduce
  ******************************************** */
+//.reduce callback function takes in 2 parameters
+    //accumulation(in this case currentSum) represents: the current sum
 
 const numbersArray = [1, 2, 3, 4, 5];
+
+// TODO TOGETHER: Let's reduce our original numbers Array into one single value.
+
+const sum = numbersArray.reduce(function(currentSum, currentNumber){
+    return currentSum + currentNumber;
+}, 0); //the number 0 is the initial starting point for the currentSum A.K.A accumulator
+
+
+console.log(sum);
+
+//When you don't type in a second parameter as your initial accumulator(where the 0
+//above is at, what happens is it will take the data type of the currentNumber(A.K.A element)
+//and set it to 0(if the element is a number) or "" if the element is a string
 
 
 //accumulation = 0
@@ -146,9 +160,21 @@ const numbersArray = [1, 2, 3, 4, 5];
 // final accumulation = 15
 
 
-// TODO TOGETHER: Let's reduce our original numbers Array into one single value.
 
 // TODO: Using .reduce, subtract all numbers in the numbers Array from a starting point of 100.
+
+
+//ES5 Example
+// const diff = numbersArray.reduce(function(currentDifference, currentNumber ){
+//     console.log(currentDifference);
+//     return currentDifference - currentNumber;
+// }, 100);
+
+
+
+
+//Refactored ES6 Version
+const diff = numbersArray.reduce((currentDifference, currentNumber ) => (currentDifference - currentNumber), 100);
 
 const shoppingCarts = [
     {
@@ -175,18 +201,62 @@ const shoppingCarts = [
 ];
 
 // TODO: Using .reduce, return the total number of apples.
+const totalApples = shoppingCarts.reduce((total, shoppingCart) => {
+    return total + shoppingCart.apples;
+}, 0);
+
+console.log(`These are the total apples: ${totalApples}.`);
+
+
+//TRYING TO GET THE NUMBER OF EACH OF THE FRUIT AMOUNTS
+// let totalFruit = shoppingCarts.reduce(function(currentTotal,cart){
+//     let apples = cart.apples;
+//     let bananas = cart.bananas;
+//
+//     if(currentTotal[apples] === undefined) {
+//         currentTotal.apples === apples;
+//     }
+// },{});
 
 
 const colors = ['red','orange','red','blue','blue','green','red'];
 
 // TODO: Count the number of times a color appears in this Array. Hint: your initial value should be an empty object.
+const colorCount = colors.reduce((colorCount, color) => {
+    if(typeof colorCount[color] === 'undefined') { //this line is saying, if that color does not exist in our accumulation it will be returned as undefined.
+        colorCount[color] = 1;
+    } else {
+        colorCount[color] += 1;
+    }
+    return colorCount;
+}, {});
+
+//use bracket notation NOT dot notation b/c dot notation assumes what you're referring to already exists in the object
+
+//The default data type of our initial value is going to be whatever data type is of the element we iterate over,
+//unless we specified otherwise
+
+console.log(colorCount);
 
 
 const lyrics = ['we','all','live','in','a','yellow','submarine'];
 
 //TODO TOGETHER: Using reduce, let's turn this into a string.
 
+const oneLine = lyrics.reduce((currentString, currentWord) => {
+    return `${currentString} ${currentWord}`;
+}, '');
+
+console.log(oneLine);
+
+
 // Bonus: Create an Array of all the unique fur colors! Hint: check out the ES6 'Set' data type.
+//set is a constructor NOT a method
+    //similar to saying a new object. New collection of stuff
+
+//there is a way to transform a set into an array
+//Array.from(insertYourSetHere)
+
 
 var hamsters = [
     {
