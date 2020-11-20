@@ -82,6 +82,7 @@ console.log(ones);
 // });
 
 
+
 //Bonus: Refactor your functions using ES6
 const zeroes = binary.filter(num => num === 0);
 console.log(zeroes);
@@ -117,10 +118,12 @@ const fruitsAndVeggies = [
 
 
 // TODO: filter through the array of objects and return all fruit type objects.
-
+const fruits = fruitsAndVeggies.filter(produce => produce.type === "fruit");
+console.log(fruits);
 
 // TODO: filter through the array of objects and return all vegetable type objects.
-
+const vegetables = fruitsAndVeggies.filter(produce => produce.type === "vegetable");
+console.log(vegetables);
 
 /*********************************************
  *              .reduce
