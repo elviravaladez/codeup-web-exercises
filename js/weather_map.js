@@ -99,9 +99,33 @@ $(document).ready(function() {
     marker.on('dragend', onDragEnd);
 
 
-
     //Exercise 7:
     // Add a Mapbox text input to search by location and have the forecast update when a new location is searched.
+
+    var input = document.forms.searchForm.searchInput;
+
+    function geocode(input, mapboxToken) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + encodeURIComponent(input) + '.json' + "?" + 'access_token=' + mapboxToken)
+            .then(function(res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function(data) {
+                return data.features[0].center;
+            });
+    }
+
+    geocode(input, mapboxToken).then(function(result){
+        //rest of body that tells us what to do with the results
+        console.log(result);
+        map.setCenter(result);
+        map.setZoom(15);
+
+        new mapboxgl.Marker()
+            .setLngLat(result)
+            .addTo(map);
+    });
 
 
     //Exercise 8:
