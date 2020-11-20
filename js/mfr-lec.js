@@ -26,7 +26,6 @@ const numbers = [1,2,3,4,5,6,7,8,9,10];
 
 
 
-
 //refactored using ES6
 let newArray = numbers.map(num => num + 1);
 
@@ -44,13 +43,12 @@ console.log(newArray); // doesn't change the original
 
 
 
+//Bonus: Refactor your functions using ES6
 //refactored using ES6
 let productArray = newArray.map(num => num * 3);
 
 console.log(productArray);
 
-
-//Bonus: Refactor your functions using ES6
 
 
 
@@ -62,9 +60,33 @@ const binary = [1,1,1,1,0,0,1,1,1,1];
 
 // TODO TOGETHER: Let's filter through our binary and return all the true values. We'll store the new array in a variable named 'ones'
 
+//ES5 Example
+// const ones = binary.filter(function(num){
+//     return num;
+//     //return num == true;
+//     //return num === 1;
+// });
+
+
+//Refactored ES6 Example
+const ones = binary.filter(num => num);
+
+console.log(ones);
+
 // TODO: filter through binary again and this time, return all the false values.
 
+//ES5 Example
+// const zeroes = binary.filter(function(num){
+//    return num == false; //evaluates to true
+//    return num === 0;
+// });
+
+
 //Bonus: Refactor your functions using ES6
+const zeroes = binary.filter(num => num === 0);
+console.log(zeroes);
+
+
 
 const fruitsAndVeggies = [
     {
