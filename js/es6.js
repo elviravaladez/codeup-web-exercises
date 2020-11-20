@@ -63,12 +63,27 @@ let emails = [];
 let names = [];
 
 // TODO: rewrite the following using arrow functions
-users.forEach(function(user) {
-  return emails.push(user.email);
-});
-users.forEach(function(user) {
-  return names.push(user.name);
-});
+
+// //old way
+// users.forEach(function(user) {
+//   return emails.push(user.email);
+// });
+
+//new way
+users.forEach(user => emails.push(user.email));
+
+
+
+
+// //old way
+// users.forEach(function(user) {
+//   return names.push(user.name);
+// });
+
+
+//new way
+users.forEach(user => names.push(user.name));
+
 
 // TODO: replace `var` with `let` in the following declaration
 let developers = [];
