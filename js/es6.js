@@ -33,7 +33,7 @@ const users = [
 // to the languages array
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
-const name = 'Elvira';
+const name = 'elvira';
 const email = 'thisEmail@gmail.com';
 const languages = ['html', 'css', 'javascript'];
 
@@ -110,12 +110,24 @@ let developers = [];
 });
 
 // TODO: Use `let` for the following variable
-var list = '<ul>';
+let list = '<ul>';
+
+
+
+// // TODO: rewrite the following loop to use a for..of loop
+// developers.forEach(function (developer) {
+//
+//   // TODO: rewrite the assignment below to use template strings
+//   list += '<li>' + developer + '</li>';
+// });
+// list += '</ul>';
+
 
 // TODO: rewrite the following loop to use a for..of loop
-developers.forEach(function (developer) {
+for(let developer of developers){
+  list += `<li>${developer}</li>`;
+}
 
-  // TODO: rewrite the assignment below to use template strings
-  list += '<li>' + developer + '</li>';
-});
 list += '</ul>';
+
+document.getElementById('main').innerHTML = list;
