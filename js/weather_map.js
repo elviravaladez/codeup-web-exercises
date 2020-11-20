@@ -102,29 +102,20 @@ $(document).ready(function() {
     //Exercise 7:
     // Add a Mapbox text input to search by location and have the forecast update when a new location is searched.
 
-    var input = document.forms.searchForm.searchInput;
+    //Mapbox Text Input
+    var geocoder = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl,
+        // marker: false
+    });
 
-    function geocode(input, mapboxToken) {
-        var baseUrl = 'https://api.mapbox.com';
-        var endPoint = '/geocoding/v5/mapbox.places/';
-        return fetch(baseUrl + endPoint + encodeURIComponent(input) + '.json' + "?" + 'access_token=' + mapboxToken)
-            .then(function(res) {
-                return res.json();
-                // to get all the data from the request, comment out the following three lines...
-            }).then(function(data) {
-                return data.features[0].center;
-            });
-    }
+    map.addControl(geocoder);
 
-    geocode(input, mapboxToken).then(function(result){
-        //rest of body that tells us what to do with the results
-        console.log(result);
-        map.setCenter(result);
-        map.setZoom(15);
+    geocoder.on("result", function(result){
+        var long = result.result.geometry.coordinates[0];
+        var lat = result.result.geometry.coordinates[1];
 
-        new mapboxgl.Marker()
-            .setLngLat(result)
-            .addTo(map);
+        updateWeather(lat, long);
     });
 
 
