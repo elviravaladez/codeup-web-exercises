@@ -51,9 +51,11 @@ const languages = ['html', 'css', 'javascript'];
 // });
 
 //new way
-let user = {
-  name, email, languages
-}
+users.push({
+  name,
+  email,
+  languages
+});
 
 
 // TODO: replace `var` with `let` in the following variable declarations
