@@ -102,8 +102,8 @@ let developers = [];
   users.forEach(user => {
     const {name, email, languages} = user;
 
-//new way
-// TODO: rewrite the assignment below to use template strings
+    //new way
+    // TODO: rewrite the assignment below to use template strings
     developers.push(`${name}'s email is ${email}. ${name} knows ${languages.join(', ')}`);
 
 
