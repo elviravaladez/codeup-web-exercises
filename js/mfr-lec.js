@@ -7,6 +7,9 @@
 
 const numbers = [1,2,3,4,5,6,7,8,9,10];
 
+
+// TODO TOGETHER: Let's map through the array of numbers and add 1 to each element. Console log the new copy of the array.
+// //old way
 // let newArray = [];
 // numbers.forEach(function(number){
 //     newArray.push(number + 1);
@@ -15,12 +18,41 @@ const numbers = [1,2,3,4,5,6,7,8,9,10];
 // console.log(newArray);
 
 
-// TODO TOGETHER: Let's map through the array of numbers and add 1 to each element. Console log the new copy of the array.
+
+//ES5 Example
+// let newArray = numbers.map(function(num){
+//    return num + 1;
+// });
+
+
+
+
+//refactored using ES6
+let newArray = numbers.map(num => num + 1);
+
+//logs
+console.log(numbers); //diff from the newArray
+console.log(newArray); // doesn't change the original
 
 
 //TODO: Map through the new array of numbers and this time multiply each element by 3. Console log the new copy.
 
+//ES5 Example
+// let productArray = newArray.map(function(num){
+//     return num * 3;
+// });
+
+
+
+//refactored using ES6
+let productArray = newArray.map(num => num * 3);
+
+console.log(productArray);
+
+
 //Bonus: Refactor your functions using ES6
+
+
 
 
 /*********************************************
