@@ -243,9 +243,21 @@ const lyrics = ['we','all','live','in','a','yellow','submarine'];
 
 //TODO TOGETHER: Using reduce, let's turn this into a string.
 
-const oneLine = lyrics.reduce((currentString, currentWord) => {
-    return `${currentString} ${currentWord}`;
-}, '');
+
+//THIS IS ONE SOLUTION
+// const oneLine = lyrics.reduce((currentString, currentWord) => {
+//     return `${currentString} ${currentWord}`;
+// }, '');
+
+
+
+//even though in the above, we set the initial value to ' '. You don't need it b/c
+//if you don't set initial value, it will default to the same value as what you have set as the
+//element. In this case the data type of the elements is string, so it will automatically
+// be set as ' ' for the initial value
+
+
+const oneLine = lyrics.reduce((currentString, currentWord) => `${currentString} ${currentWord}`);
 
 console.log(oneLine);
 
