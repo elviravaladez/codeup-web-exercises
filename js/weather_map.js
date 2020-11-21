@@ -48,7 +48,7 @@ $(document).ready(function() {
         weatherCard += "<ul class='list-group list-group-flush'>";
         weatherCard += "<li class='list-group-item text-center'>";
         weatherCard += "<strong>" + weatherConditions.temp.max + "°F / " + weatherConditions.temp.min + "°F" + "</strong><br>";
-        weatherCard += "<p>" + weatherConditions.weather[0].icon + "</p></li>";
+        weatherCard += `<img src='http://openweathermap.org/img/w/${weatherConditions.weather[0].icon}.png>`;
         weatherCard += "<li class='list-group-item'>Description: <strong>" + weatherConditions.weather[0].description + "</strong><br><br>";
         weatherCard += "Humidity: <strong>" + weatherConditions.humidity + "</strong></li>";
         weatherCard += "<li class='list-group-item'>Wind: <strong>" + weatherConditions.wind_speed + "</strong></li>";
@@ -94,6 +94,9 @@ $(document).ready(function() {
     function onDragEnd() {
         var lngLat = marker.getLngLat();
         updateWeather(lngLat.lat, lngLat.lng);
+        reverseGeocode({lng: lngLat.lng, lat: lngLat.lat}, mapboxToken).then(function(data){
+            $('#city').html(data);
+        });
     }
 
     marker.on('dragend', onDragEnd);
@@ -106,22 +109,43 @@ $(document).ready(function() {
     var geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
         mapboxgl: mapboxgl,
-        // marker: false
+        marker: false
     });
 
     map.addControl(geocoder);
 
+    //Exercise 8:
+    //As a bonus make sure you can update the marker's position to the new search result.
     geocoder.on("result", function(result){
+        marker.remove();
         var long = result.result.geometry.coordinates[0];
         var lat = result.result.geometry.coordinates[1];
+        marker = new mapboxgl.Marker(markerOptions)
+            .setLngLat([long, lat])
+            .addTo(map);
+        marker.on('dragend', onDragEnd);
+
+        reverseGeocode({lng: long, lat: lat}, mapboxToken).then(function(data){
+            $('#city').html(data);
+        });
 
         updateWeather(lat, long);
     });
 
 
-    //Exercise 8:
-    //As a bonus make sure you can update the marker's position to the new search result.
-
+    //Updating the location in the Navbar
+    function reverseGeocode(coordinates, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
+            .then(function(res) {
+                return res.json();
+            })
+            // to get all the data from the request, comment out the following three lines...
+            .then(function(data) {
+                return data.features[1].place_name;
+            });
+    }
 
 
 });
