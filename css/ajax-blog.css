@@ -27,6 +27,12 @@ header {
     padding-bottom: 1em;
 }
 
+#posts.row {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .blog-card-body {
     padding-top: 0.5em !important;
 }
