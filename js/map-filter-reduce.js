@@ -83,7 +83,7 @@
 
     //Exercise 6: Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
     const instructorsString = users.reduce((accumStr, {name}) => {
-        return accumStr + name + ", ";
+        return `${accumStr} ${name}, `;
 
     }, 'Your instructors are: ').slice(0, -2).concat('.'); //trims off last space and comma  //if you use negative numbers you will be cutting off the last 2 characters on the array
 
