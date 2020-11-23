@@ -96,16 +96,22 @@
     // The first .then() converts into json
     //The second is where we can start working with the data that was converted into json
 
+
     // jQuery AJAX request example
-    $.ajax('https://swapi.dev/api/people/1')
-        .done(function(data) {
-            console.log(data);
-        })
-        .fail(function(jqXHR, message) {
-            console.log(message);
-        });
+
+    // $.ajax('https://swapi.dev/api/people/1')
+    //     .done(function(data) {
+    //         console.log(data);
+    //     })
+    //     .fail(function(jqXHR, message) {
+    //         console.log(message);
+    //     });
+
+
+
 
     // Fetch API GET example
+
     //     fetch('https://swapi.dev/api/people/1')
     //         .then((response) => {
     //             return response.json(); //have to include .json() b/c if you don't you will not get the data you want
@@ -116,11 +122,39 @@
     //         .catch(console.log);
 
 
-        //Refactored EX of fetch API GET
-        fetch('https://swapi.dev/api/people/1')
-            .then((response) => response.json()) //have to include .json() b/c if you don't you will not get the data you want
-            .then(console.log)
-            .catch(console.log);
+        // //Refactored EX of fetch API GET
+
+        // fetch('https://swapi.dev/api/people/1')
+        //     .then((response) => response.json()) //have to include .json() b/c if you don't you will not get the data you want
+        //     .then(console.log)
+        //     .catch(console.log);
+
+
+
+
+        // //Fetching Character's Name
+        // fetch('https://swapi.dev/api/people/1')
+        //     .then((response) => {
+        //         return response.json();
+        //     })
+        //     .then((data) => {
+        //         console.log(`This character's name is ${data.name}.`);
+        //     })
+        //     .catch(console.log);
+        //
+        // //Fetching Character's Gender
+        // fetch('https://swapi.dev/api/people/1')
+        //     .then((response) => {
+        //         return response.json();
+        //     })
+        //     .then((data) => {
+        //         console.log(`${data.name} is ${data.gender}.`);
+        //     })
+
+
+
+
+
 
     // Fetch API POST example
 
@@ -129,7 +163,7 @@
     //     headers: {
     //         'Content-Type': 'application/json'
     //     },
-    //     body: JSON.stringify({
+    //     body: JSON.stringify({ //turns the info below into one giant string {"username:"bill","password":"pass123"}
     //         username: "bill",
     //         password: "pass123"
     //     })
@@ -152,9 +186,8 @@
 
 
 
-
-
     //  ============ NY Times Articles Based on Forecast of Current Location
+
 
     // function getForecast(coord) {
     //     return fetch(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${darkSkyAPI}/${coord.lat},${coord.lng}`)
@@ -170,7 +203,7 @@
     //     });
     // }
     //
-    // function getLocalForecast() {
+    // function getLocalForecast() {  //this function returns a promise object
     //     return getCurrentLocation()
     //         .then(getForecast)
     // }
@@ -187,7 +220,7 @@
     //             <article>
     //                 <a href="${curr.web_url}">${curr.headline.main}</a>
     //             </article>
-    //         `
+    //         `;
     //     }, "");
     // }
     //
@@ -206,6 +239,7 @@
     // ====================================== ADDITIONAL TOPICS
 
     // ============ Promise Chaining
+    //* When you have two .then() in a row you are using promise chaining
 
     // function countSlow(count) {
     //     return new Promise(function(res) {
@@ -238,6 +272,9 @@
 
 
     // ============ Promise.all()
+    //Doesn't display till all are ready
+    //How we access the data is coming through as an array
+
 
     // const getCoffee = (type) => {
     //     return processOrder(type);
@@ -272,6 +309,7 @@
 
 
     // ============ Promise.race()
+    //Whichever one finishes first with be the one the shows up first
 
     // const color1Promise = new Promise((res) => {
     //     setTimeout(res, 2000, fetch('./data/color.json'));
@@ -284,7 +322,7 @@
     // const getColor = () => Promise.race([color1Promise, color2Promise]);
     //
     // getColor().then(response => response.json()).then(data => console.log(data));
-    //
+
 
 
 
