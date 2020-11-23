@@ -91,4 +91,28 @@
 
 
 
+    //BONUS: Use .reduce to get the unique list of languages from the list of users.
+
+    //STEPS:
+    //add all lang. using reduce
+    //convert to set
+    //convert set back to array
+
+
+    //Creates an array with ALL the languages
+    const allLanguages = users.reduce((accum, curr) => {
+        return accum.concat(curr.languages);
+    }, []);
+    console.log(allLanguages);
+
+
+    //Creates an object new set that trims out any duplicates
+    const uniqueLanguages = new Set(allLanguages); //this will give us a set that will trim out any duplicates
+    console.log(uniqueLanguages);
+
+
+    //This will turn the object into an array
+    const arrUnique = Array.from(uniqueLanguages);
+    console.log(arrUnique);
+
 })();
