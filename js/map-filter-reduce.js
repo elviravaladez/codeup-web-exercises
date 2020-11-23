@@ -47,7 +47,7 @@
     const userEmails = users.map(user => user.email);
 
 
-    //another way
+    //another way: using object destructuring
     // const emails = users.map(({email}) => email);
     // console.log(emails);
 
@@ -55,6 +55,12 @@
     const avgYrs = users.reduce((total, user) =>{
         return total + user.yearsOfExperience;
     }, 0) / users.length;
+
+
+    ////another solution: using object destructuring
+    // const totalYrs = users.reduce((accumYrs, {yearsOfExperience}) =>{
+    //     return accumYrs + yearsOfExperience;
+    // }, 0) / users.length;
 
 
     //Exercise 5: Use .reduce to get the longest email from the list of users.
