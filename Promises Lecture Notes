@@ -36,8 +36,8 @@ Why should you care about this topic?
 
 
 What are promises?
-  - a value that represents an asynch action that may be in a pending, fufilled, or rejected state
-  - provides syntax that exposes the returned values when fufilled/rejected
+  - a value that represents an asynchronous action that may be in a pending, fulfilled, or rejected state
+  - provides syntax that exposes the returned values when fulfilled/rejected
   - avoids 'callback hell' by using a flatter syntax 
 
   (SEE SONG EXAMPLE)
