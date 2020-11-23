@@ -82,13 +82,10 @@
 
 
     //Exercise 6: Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
-    const instructorsString = users.reduce(function(startingStr, user ){
-        // substring remove it add period to end
-        if(user.name == 'justin') {
-            return startingStr + user.name + ".";
-        }
-        return "Your instructors are: " + startingStr + user.name + ",";
-    }, '');
+    const instructorsString = users.reduce((accumStr, {name}) => {
+        return accumStr + name + ", ";
+
+    }, 'Your instructors are: ').slice(0, -2).concat('.'); //trims off last space and comma
 
     console.log(instructorsString);
 
