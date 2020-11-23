@@ -41,30 +41,30 @@
 
     // ============ Basic Example of Promise Creation and Handling
 
-    let goodKid = true;
-
-    // a promise is made to do something
-    const getCake = new Promise((resolve, reject) => {
-        if (goodKid) {
-            resolve("Here is some cake");
-        } else {
-            reject("Bad. No cake. :(");
-        }
-    });
-
-    console.log(getCake); // promise object
-
-    // once the promise is resolved or rejected, take additional action
-
-    getCake.then((data) => { //data is referring to the string in resolve("Here is some cake")
-        console.log(data); //in this case logs "Here is some cake"
-    }).catch((err) => { // err is referring to the string in reject("Bad. No cake. :(")
-        console.log(err); //in this case logs "Bad. No cake. :("
-    });
+    // let goodKid = true;
+    //
+    // // a promise is made to do something
+    // const getCake = new Promise((resolve, reject) => {
+    //     if (goodKid) {
+    //         resolve("Here is some cake");
+    //     } else {
+    //         reject("Bad. No cake. :(");
+    //     }
+    // });
+    //
+    // console.log(getCake); // promise object
+    //
+    // // once the promise is resolved or rejected, take additional action
+    //
+    // getCake.then((data) => { //data is referring to the string in resolve("Here is some cake")
+    //     console.log(data); //in this case logs "Here is some cake"
+    // }).catch((err) => { // err is referring to the string in reject("Bad. No cake. :(")
+    //     console.log(err); //in this case logs "Bad. No cake. :("
+    // });
 
     // ============ Using Promises with jQuery version 3+
 
-    // jQuery AJAX methods
+    //jQuery AJAX methods
     //     $.ajax('https://swapi.dev/api/people/1')
     //         .done(function(data) {
     //             console.log(data);
@@ -73,7 +73,7 @@
     //             console.log(message);
     //         });
 
-    // Using promise methods (jQuery version 3.x.x and after)
+    //Using promise methods (jQuery version 3.x.x and after)
     //     $.ajax('https://swapi.dev/api/people/1')
     //         .then(function(data) {
     //             console.log(data);
@@ -85,30 +85,42 @@
 
 
 
-
     // ====================================== FETCH API
 
 
     // ============ Fetch API
 
+
+    //When working with Fetch, you need 2 .then()s.
+    //
+    // The first .then() converts into json
+    //The second is where we can start working with the data that was converted into json
+
     // jQuery AJAX request example
-    // $.ajax('https://swapi.dev/api/people/1')
-    //     .done(function(data) {
-    //         console.log(data);
-    //     })
-    //     .fail(function(jqXHR, message) {
-    //         console.log(message);
-    //     });
+    $.ajax('https://swapi.dev/api/people/1')
+        .done(function(data) {
+            console.log(data);
+        })
+        .fail(function(jqXHR, message) {
+            console.log(message);
+        });
 
     // Fetch API GET example
     //     fetch('https://swapi.dev/api/people/1')
     //         .then((response) => {
-    //             return response.json();
+    //             return response.json(); //have to include .json() b/c if you don't you will not get the data you want
     //         })
     //         .then((data) => {
     //             console.log(data);
     //         })
     //         .catch(console.log);
+
+
+        //Refactored EX of fetch API GET
+        fetch('https://swapi.dev/api/people/1')
+            .then((response) => response.json()) //have to include .json() b/c if you don't you will not get the data you want
+            .then(console.log)
+            .catch(console.log);
 
     // Fetch API POST example
 
