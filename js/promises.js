@@ -7,17 +7,9 @@
 
     function wait(milliseconds) {
         return new Promise((resolve, reject) => {
-               if(milliseconds === 1000) {
-                   setTimeout(function(){
-                       resolve(milliseconds);
-                   }, 1000);
-               } else if(milliseconds === 3000) {
-                   setTimeout(function(){
-                       resolve(milliseconds);
-                   }, 3000);
-               } else {
-                   reject(milliseconds);
-               }
+            setTimeout(() => {
+                resolve();
+            }, milliseconds);
         });
     }
 
