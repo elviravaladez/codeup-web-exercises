@@ -56,16 +56,16 @@
 
     // once the promise is resolved or rejected, take additional action
 
-    getCake.then((data) => {
-        console.log(data);
-    }).catch((err) => {
-        console.log(err);
+    getCake.then((data) => { //data is referring to the string in resolve("Here is some cake")
+        console.log(data); //in this case logs "Here is some cake"
+    }).catch((err) => { // err is referring to the string in reject("Bad. No cake. :(")
+        console.log(err); //in this case logs "Bad. No cake. :("
     });
 
     // ============ Using Promises with jQuery version 3+
 
     // jQuery AJAX methods
-    //     $.ajax('https://swapi.co/api/people/1')
+    //     $.ajax('https://swapi.dev/api/people/1')
     //         .done(function(data) {
     //             console.log(data);
     //         })
@@ -74,7 +74,7 @@
     //         });
 
     // Using promise methods (jQuery version 3.x.x and after)
-    //     $.ajax('https://swapi.co/api/people/1')
+    //     $.ajax('https://swapi.dev/api/people/1')
     //         .then(function(data) {
     //             console.log(data);
     //         })
@@ -92,7 +92,7 @@
     // ============ Fetch API
 
     // jQuery AJAX request example
-    // $.ajax('https://swapi.co/api/people/1')
+    // $.ajax('https://swapi.dev/api/people/1')
     //     .done(function(data) {
     //         console.log(data);
     //     })
@@ -101,7 +101,7 @@
     //     });
 
     // Fetch API GET example
-    //     fetch('https://swapi.co/api/people/1')
+    //     fetch('https://swapi.dev/api/people/1')
     //         .then((response) => {
     //             return response.json();
     //         })
