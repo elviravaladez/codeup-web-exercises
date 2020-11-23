@@ -73,6 +73,14 @@
         });
 
 
+    // //another solution for exercise 5
+    // const thisEmail = users.reduce((accum, curr) => {
+    //     return (curr.email.length > accum.length) ? curr.email : accum;
+    // }, '');
+    //
+    // console.log(thisEmail);
+
+
     //Exercise 6: Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
     const instructorsString = users.reduce(function(startingStr, user ){
         // substring remove it add period to end
