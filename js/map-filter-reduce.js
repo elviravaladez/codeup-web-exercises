@@ -47,7 +47,7 @@
     const userEmails = users.map(user => user.email);
 
 
-    //another way
+    //another way: using object destructuring
     // const emails = users.map(({email}) => email);
     // console.log(emails);
 
@@ -55,6 +55,12 @@
     const avgYrs = users.reduce((total, user) =>{
         return total + user.yearsOfExperience;
     }, 0) / users.length;
+
+
+    ////another solution: using object destructuring
+    // const totalYrs = users.reduce((accumYrs, {yearsOfExperience}) =>{
+    //     return accumYrs + yearsOfExperience;
+    // }, 0) / users.length;
 
 
     //Exercise 5: Use .reduce to get the longest email from the list of users.
@@ -67,14 +73,19 @@
         });
 
 
+    // //another solution for exercise 5
+    // const thisEmail = users.reduce((accum, curr) => {
+    //     return (curr.email.length > accum.length) ? curr.email : accum;
+    // }, '');
+    //
+    // console.log(thisEmail);
+
+
     //Exercise 6: Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
-    const instructorsString = users.reduce(function(startingStr, user ){
-        // substring remove it add period to end
-        if(user.name == 'justin') {
-            return startingStr + user.name + ".";
-        }
-        return "Your instructors are: " + startingStr + user.name + ",";
-    }, '');
+    const instructorsString = users.reduce((accumStr, {name}) => {
+        return `${accumStr} ${name}, `;
+
+    }, 'Your instructors are: ').slice(0, -2).concat('.'); //trims off last space and comma  //if you use negative numbers you will be cutting off the last 2 characters on the array
 
     console.log(instructorsString);
 
