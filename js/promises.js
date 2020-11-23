@@ -5,11 +5,20 @@
     //1. Write a function named wait that accepts a number as a parameter,
     // and returns a promise that resolves after the passed number of milliseconds.
 
+
+    ////initial function
+    // function wait(milliseconds) {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             resolve(); //no argument within the () b/c we didn't want to access anything or do anything other than console.log what's down below.
+    //         }, milliseconds);
+    //     });
+    // }
+
+    //refactored function
     function wait(milliseconds) {
         return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(); //no argument within the () b/c we didn't want to access anything or do anything other than console.log what's down below.
-            }, milliseconds);
+            setTimeout(resolve, milliseconds);
         });
     }
 
