@@ -47,6 +47,10 @@
     const userEmails = users.map(user => user.email);
 
 
+    //another way
+    // const emails = users.map(({email}) => email);
+    // console.log(emails);
+
     //Exercise 4: Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
     const avgYrs = users.reduce((total, user) =>{
         return total + user.yearsOfExperience;
