@@ -5,24 +5,25 @@
     //1. Write a function named wait that accepts a number as a parameter,
     // and returns a promise that resolves after the passed number of milliseconds.
 
+
+    ////initial function
+    // function wait(milliseconds) {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             resolve(); //no argument within the () b/c we didn't want to access anything or do anything other than console.log what's down below.
+    //         }, milliseconds);
+    //     });
+    // }
+
+    //refactored function
     function wait(milliseconds) {
         return new Promise((resolve, reject) => {
-               if(milliseconds === 1000) {
-                   setTimeout(function(){
-                       resolve(milliseconds);
-                   }, 1000);
-               } else if(milliseconds === 3000) {
-                   setTimeout(function(){
-                       resolve(milliseconds);
-                   }, 3000);
-               } else {
-                   reject(milliseconds);
-               }
+            setTimeout(resolve, milliseconds);
         });
     }
 
     //.then() method for the above function
-    wait(1000).then(() => console.log('You\'ll see this after 1 second'));
+    wait(1000).then(() => console.log('You\'ll see this after 1 second')); //nothing is passed to between the then.() parenthesis, which is why we didn't pass anything to resolve() parenthesis
     wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
 
 })();
