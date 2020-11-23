@@ -85,7 +85,7 @@
     const instructorsString = users.reduce((accumStr, {name}) => {
         return accumStr + name + ", ";
 
-    }, 'Your instructors are: ').slice(0, -2).concat('.'); //trims off last space and comma
+    }, 'Your instructors are: ').slice(0, -2).concat('.'); //trims off last space and comma  //if you use negative numbers you will be cutting off the last 2 characters on the array
 
     console.log(instructorsString);
 
