@@ -36,7 +36,7 @@
     // returning just the date of the last commit that user made. Reference the github api documentation to achieve this.
 
     function getDate(userName) {
-        const githubFetch = fetch(`https://api.github.com/users/${userName}/events`, {headers: {'Authorization': 'token' + githubToken}})
+        fetch(`https://api.github.com/users/${userName}/events`, {headers: {'Authorization': 'token' + githubToken}})
             .then(res => res.json())
             .then((commit) => {
                 console.log(`The most recent commit for ${userName} was made on ${commit[0].created_at.slice(0, 10)}.`);
@@ -48,7 +48,7 @@
 
     ////Focusing on the most recent commit in the codeup-web-exercises repo
     // function getGithubDate(userName) {
-    //     const githubFetch = fetch(`https://api.github.com/repos/${userName}/codeup-web-exercises/commits`, {headers: {'Authorization': 'token' + githubToken}})
+    //     fetch(`https://api.github.com/repos/${userName}/codeup-web-exercises/commits`, {headers: {'Authorization': 'token' + githubToken}})
     //         .then(res => res.json())
     //         .then((data) => {
     //             console.log(`The most recent commit for ${userName} was made a commit on ${data[0].commit.author.date}.`);
