@@ -26,4 +26,19 @@
     wait(1000).then(() => console.log('You\'ll see this after 1 second')); //nothing is passed to between the then.() parenthesis, which is why we didn't pass anything to resolve() parenthesis
     wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
 
+
+    //Handle An API Promise
+
+    // We will use the GitHub token so that we don't get rate limited when talking to the GitHub API. You can add the token to your requests like this:
+
+
+    //Create a function that accepts a GitHub username, and returns a promise that resolves
+    // returning just the date of the last commit that user made. Reference the github api documentation to achieve this.
+
+    fetch('https://api.github.com/events', {headers: {'Authorization': 'token' + githubToken}})
+        .then(res => res.json())
+        .then((data) => {
+            console.log(data);
+        })
+        .catch(console.error);
 })();
