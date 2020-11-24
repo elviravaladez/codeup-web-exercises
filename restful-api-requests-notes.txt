@@ -1,0 +1,37 @@
+
+CRUD stands for Create Read Update Delete
+
+
+C: Create a post
+R: Read-View all blog posts or view a specific post
+U: Update-Edit a blog post
+D: Delete a post or comment
+
+
+
+-- CREATE
+POST https://justinblog.net/posts // create a new post
+
+-- READ
+GET https://justinblog.net/posts // get all the posts
+GET https://justinblog.net/posts/1 // get back a specific post
+
+-- UPDATE
+PUT https://justinblog.net/posts/1 // update the post
+
+-- DELETE
+DELETE https://justinblog.net/posts/1 // delete the post
+
+
+*We can create a user interface for a web-application that allows users to send and receive requests.
+
+FRONT-END: Making a UI to send requests
+BACK-END: Receives the requests
+
+
+
+
+We will use fetch requests to CRUD.
+
+Implementing IDs: Never reassigning IDs.
+
