@@ -35,10 +35,26 @@
     //Create a function that accepts a GitHub username, and returns a promise that resolves
     // returning just the date of the last commit that user made. Reference the github api documentation to achieve this.
 
-    fetch('https://api.github.com/events', {headers: {'Authorization': 'token' + githubToken}})
-        .then(res => res.json())
-        .then((data) => {
-            console.log(data);
-        })
-        .catch(console.error);
+    function getDate(userName) {
+        fetch(`https://api.github.com/users/${userName}/events`, {headers: {'Authorization': 'token' + githubToken}})
+            .then(res => res.json())
+            .then((commit) => {
+                console.log(`The most recent commit for ${userName} was made on ${commit[0].created_at.slice(0, 10)}.`);
+            })
+            .catch(console.error);
+    }
+
+    getDate('elviravaladez');
+
+    ////Focusing on the most recent commit in the codeup-web-exercises repo
+    // function getGithubDate(userName) {
+    //     fetch(`https://api.github.com/repos/${userName}/codeup-web-exercises/commits`, {headers: {'Authorization': 'token' + githubToken}})
+    //         .then(res => res.json())
+    //         .then((data) => {
+    //             console.log(`The most recent commit for ${userName} was made a commit on ${data[0].commit.author.date}.`);
+    //         })
+    //         .catch(console.error);
+    // }
+    //
+    // getGithubDate('elviravaladez');
 })();
