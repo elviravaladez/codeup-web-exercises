@@ -35,26 +35,38 @@
     //Create a function that accepts a GitHub username, and returns a promise that resolves
     // returning just the date of the last commit that user made. Reference the github api documentation to achieve this.
 
-    function getDate(userName) {
-        fetch(`https://api.github.com/users/${userName}/events`, {headers: {'Authorization': 'token' + githubToken}})
-            .then(res => res.json())
-            .then((commit) => {
-                console.log(`The most recent commit for ${userName} was made on ${commit[0].created_at.slice(0, 10)}.`);
-            })
-            .catch(console.error);
-    }
 
-    getDate('elviravaladez');
-
-    ////Focusing on the most recent commit in the codeup-web-exercises repo
-    // function getGithubDate(userName) {
-    //     fetch(`https://api.github.com/repos/${userName}/codeup-web-exercises/commits`, {headers: {'Authorization': 'token' + githubToken}})
+    //INITIAL
+    // function getDate(userName) {
+    //     fetch(`https://api.github.com/users/${userName}/events`, {headers: {'Authorization': 'token' + githubToken}})
     //         .then(res => res.json())
-    //         .then((data) => {
-    //             console.log(`The most recent commit for ${userName} was made a commit on ${data[0].commit.author.date}.`);
+    //         .then((commit) => {
+    //             console.log(`The most recent commit for ${userName} was made on ${commit[0].created_at.slice(0, 10)}.`);
     //         })
     //         .catch(console.error);
     // }
     //
-    // getGithubDate('elviravaladez');
+    // getDate('elviravaladez');
+
+
+    function extractDateOfLastPushEvent(events) {
+        for (let event of events) {
+            if (event.type === 'PusEvent') {
+                return new Date(event.created_at).toDateString();
+            }
+        }
+    }
+
+
+    function lastPushDate(username) {
+        const url = `https://api.github/users/${username}/events`;
+        const options = {headers: {'Authorization': 'token' + githubToken}};
+        return fetch(url, options)
+            .then(res => res.json())
+            .then(extractDateOfLastPushEvent)
+            .catch(console.error);
+    }
+
+    lastPushDate('elviravaladez').then(console.log);
+
 })();
