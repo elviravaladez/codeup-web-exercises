@@ -1,0 +1,30 @@
+# Intro to Java
+
+## Java Highlights
+
+- one of the most widely used programming languages in history
+- strong continuing demand for Java developers
+- often used in Computer Science programs as an introduction to programming
+- predominantly used in enterprise web app development and Android mobile development
+- developed at Sun Microsystems in the early nineties (primary designer, James Gosling)
+- Java was made to be fast, secure, and flexible enough to run on any hardware and OS
+
+## JavaScript vs. Java
+
+- Hamburger vs. Ham (languages are not directly related)
+- JavaScript primarily runs on a browser engine... Java on any JVM on any machine
+- JavaScript is dynamically types (variables may be reassigned a different data type)... Java variables must be of a declared types and cannot be changed to a different type
+- Objects in JavaScript were mostly equivalent to a named index array... Java objects are entirely different
+- JavaScript statements may be inside or outside functions, arrays, objects, etc.... Java statements must be written inside methods inside a class
+- We will use JavaScript during this program for client-side (browser or front-end) scripting... we will use Java for server-side (back end) scripting
+- JavaScript is single-threaded... Java is multi-threaded
+- JavaScript is a relatively high-level language (lower performance, simpler syntax)... Java is more a mid-level language (higher performance, more explicit syntax)
+
+
+
+## How Java Runs
+
+1. Programmer writes source code in a .java file (the following additional steps may be done automatically by an IDE or manually)
+1. .java file is compiled by the Java Compiler into a .class file that contains Java bytecode instructions (normally hexadecimal/binary code that map to Java opcodes)
+1. .class file may then be run on the JVM (Java Virtual Machine)
+1. the JVM implements the bytecode instructions in a specific operating system way, depending on which JVM version the code is running on
