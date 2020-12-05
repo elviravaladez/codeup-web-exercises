@@ -20,7 +20,6 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
@@ -33,12 +32,10 @@
         </div>
     </nav>
 
-
     <!--Header-->
     <header>
         <h1>BLOG COMPANY</h1>
     </header>
-
 
     <!--Blog Posts -->
     <main>
@@ -50,26 +47,23 @@
             </div>
         </div>
 
-
         <!--Refresh Button-->
         <div class="row justify-content-center m-5">
             <button id="refresh-btn" class="btn btn-lg text-center btn-block">Refresh</button>
         </div>
     </main>
 
-
     <!--Footer-->
     <div class="footer">
         <p>Privacy Policy<br> ⓒ Company Name 2020</p>
     </div>
-
 
     <!--jQuery-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!--Bootstrap JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    <!--Custom JS-->
     <script>
         $(document).ready(function() {
             "use strict";
@@ -79,7 +73,6 @@
                 blog.done(function(blogPosts) {
                     addBlogPosts(blogPosts);
                 });
-
 
                 function addBlogPosts(blogPosts) {
                     var blogCard = "";
