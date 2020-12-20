@@ -48,7 +48,7 @@ $(document).ready(function() {
         weatherCard += "<ul class='list-group list-group-flush'>";
         weatherCard += "<li class='list-group-item text-center'>";
         weatherCard += "<strong>" + weatherConditions.temp.max + "°F / " + weatherConditions.temp.min + "°F" + "</strong><br>";
-        weatherCard += `<a class="card-text" href="#"><img src='http://openweathermap.org/img/wn/${weatherConditions.weather[0].icon}.png'></a>`;
+        weatherCard += `<img src='http://openweathermap.org/img/wn/${weatherConditions.weather[0].icon}.png'>`;
         weatherCard += "<li class='list-group-item'>Description: <strong>" + weatherConditions.weather[0].description + "</strong><br><br>";
         weatherCard += "Humidity: <strong>" + weatherConditions.humidity + "</strong></li>";
         weatherCard += "<li class='list-group-item'>Wind: <strong>" + weatherConditions.wind_speed + "</strong></li>";
